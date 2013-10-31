@@ -1,0 +1,14 @@
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\ProjectTemplates\Test\FsMsTest.zip
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\FsUnitTestVSIX.vsix
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\extension.vsixmanifest
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.dll
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.pdb
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\extension.vsixmanifest
+C:\git\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.csprojResolveAssemblyReference.cache
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\ProjectTemplates\Test\FsMsTest.zip
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\FsUnitTestVSIX.vsix
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\bin\Debug\extension.vsixmanifest
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.csprojResolveAssemblyReference.cache
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.dll
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\FsUnitTestVSIX.pdb
+C:\Users\dmohl\Documents\GitHub\FsMsTestTemplate\FsUnitTestVSIX\FsUnitTestVSIX\obj\Debug\extension.vsixmanifest

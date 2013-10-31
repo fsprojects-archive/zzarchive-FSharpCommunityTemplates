@@ -1,0 +1,12 @@
+C:\Users\Daniel Mohl\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.0\\extension.vsixmanifest
+C:\Users\Daniel Mohl\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.0\ProjectTemplates\Test\\FsMsTest.zip
+C:\Users\Daniel Mohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.1\\extension.vsixmanifest
+C:\Users\Daniel Mohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.1\ProjectTemplates\Test\\FsMsTest.zip
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.2\\extension.vsixmanifest
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.2\ProjectTemplates\Test\\FsMsTest.zip
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.3\\extension.vsixmanifest
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.3\ProjectTemplates\Test\\FsMsTest.zip
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.3\\extension.vsixmanifest
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.3\ProjectTemplates\Test\\FsMsTest.zip
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.4\\extension.vsixmanifest
+C:\Users\dmohl\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Daniel Mohl\F# MsTest Project\1.4\ProjectTemplates\Test\\FsMsTest.zip

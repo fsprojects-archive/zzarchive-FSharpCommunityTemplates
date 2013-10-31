@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="VSIX.Microsoft.aabb5115-15d2-4c39-ab63-98bd00bfa3ac">
+    <Name>F# Empty Windows App (WPF)</Name>
+    <Author>Daniel Mohl</Author>
+    <Version>1.9</Version>
+    <Description xml:space="preserve">F# Empty Windows Application (WPF)</Description>
+    <Locale>1033</Locale>
+    <License>MicrosoftPublicLicense.txt</License>
+    <SupportedProducts>
+      <VisualStudio Version="13.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="12.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>IntegratedShell</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <Assembly AssemblyName="FsWpfEmptyTemplateWizard, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ba79043a32149735">FsWpfEmptyTemplateWizard.dll</Assembly>
+    <ProjectTemplate>ProjectTemplates</ProjectTemplate>
+  </Content>
+</Vsix>

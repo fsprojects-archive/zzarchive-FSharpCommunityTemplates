@@ -1,0 +1,8 @@
+This is a F# template that generates a WPF solution with the minimal amount of files that are likely to be needed to start developing an F# WPF application. For a template that provides a complete WPF example, see http://visualstudiogallery.msdn.microsoft.com/ad49fd5c-930c-4fe6-a30e-2d0d6778c565. For other F# only and/or F#/C# project templates that I have created, visit http://visualstudiogallery.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=mohl&x=0&y=0
+
+Releases: 
+
+Version 1.0 - Initial release with support for Visual Studio 2010 and 11. It includes the following files:
+- MainWindow.xaml
+- ApplicationResource.xaml
+- App.fs
