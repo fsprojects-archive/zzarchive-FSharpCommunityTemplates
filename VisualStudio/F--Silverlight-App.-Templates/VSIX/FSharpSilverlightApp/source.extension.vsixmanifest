@@ -2,14 +2,14 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="FSharpSilverlightApp..c73a9c5d-80ed-40b7-b2d3-9f27247585ae">
     <Name>F# Web Application (Silverlight)</Name>
-    <Author>DM</Author>
+    <Author>fsharp.org</Author>
     <Version>1.6</Version>
     <Description xml:space="preserve">F# Web Application (Silverlight) project template by Daniel Mohl.</Description>
     <Locale>1033</Locale>
     <License>MicrosoftPublicLicense.txt</License>
     <PreviewImage>FSharpSilverlightApp.png</PreviewImage>
     <SupportedProducts>
-      <VisualStudio Version="13.0">
+      <VisualStudio Version="14.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>

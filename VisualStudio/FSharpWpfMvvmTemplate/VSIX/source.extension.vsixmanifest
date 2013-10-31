@@ -2,7 +2,7 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="VSIX.Microsoft.d73d5115-15d2-4c39-ab63-98bd00bfa3ac">
     <Name>F# Windows App (WPF, MVVM)</Name>
-    <Author>Daniel Mohl</Author>
+    <Author>fsharp.org</Author>
     <Version>1.11</Version>
     <Description xml:space="preserve">F# Windows Application (WPF, MVVM) with examples of: Event to Command, value converter, RelayCommand, etc.</Description>
     <Locale>1033</Locale>
