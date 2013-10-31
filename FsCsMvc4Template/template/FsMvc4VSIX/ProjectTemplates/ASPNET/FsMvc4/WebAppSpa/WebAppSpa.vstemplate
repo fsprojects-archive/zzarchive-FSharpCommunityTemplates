@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>WebAppSpa</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebAppSpa</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="WebAppSpa.fsproj" File="WebAppSpa.fsproj" ReplaceParameters="true">
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Contact.fs">Contact.fs</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="false" TargetFileName="HomeController.fs">HomeController.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ContactsController.fs">ContactsController.fs</ProjectItem>
+     </Folder>
+     <ProjectItem TargetFileName="App.config" ReplaceParameters="true">App.config</ProjectItem>
+     <ProjectItem TargetFileName="packages.config" ReplaceParameters="true">packages.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

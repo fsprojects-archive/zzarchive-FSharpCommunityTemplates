@@ -1,0 +1,18 @@
+﻿<div class="nine.columns.centered" data-ng-controller="appFsMvc.Controllers.contactDetailController">
+    <p class="row">
+        <a href="#/create" class="small button radius">Create Contact</a>
+    </p>
+    <div class="row">
+        <div class="five columns header">FirstName</div>
+        <div class="five columns header">LastName</div>
+        <div class="two columns header">Phone</div>
+    </div>
+    
+    <div data-ng-repeat="contract in contacts">
+        <div class="row">
+            <div class="five columns">{{contract.firstName}}</div>
+            <div class="five columns">{{contract.lastName}}</div>
+            <div class="two columns">{{contract.phone}}</div>
+        </div>
+    </div>
+</div>

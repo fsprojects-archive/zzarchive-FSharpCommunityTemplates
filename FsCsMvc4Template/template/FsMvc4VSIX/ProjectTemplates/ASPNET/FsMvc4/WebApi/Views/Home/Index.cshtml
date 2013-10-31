@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Web API</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">       
+            <div class="float-left">
+                <p class="site-title"><a href="/">ASP.NET Web API</a></p>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>Welcome to ASP.NET Web API!</h1>
+                    <h2>Modify the code in this template to jump-start your ASP.NET Web API development.</h2>
+                </hgroup>
+                <p>
+                    ASP.NET Web API allows you to expose your applications, data and services to the web directly over HTTP. 
+                </p>
+                <p>
+                    To learn more about ASP.NET Web API visit <a href="http://go.microsoft.com/fwlink/?LinkID=238195" title="ASP.NET Web API Website">http://asp.net/web-api</a>. 
+                    The page features <span class="highlight">videos, tutorials, and samples</span> to help you get the most from 
+                    ASP.NET Web API. If you have any questions about ASP.NET Web API, visit 
+                    <a href="http://go.microsoft.com/fwlink/?LinkID=238196" title="ASP.NET Web API Forum">our forums</a>.
+                </p>
+            </div>
+        </section>
+        <section class="content-wrapper main-content clear-fix">
+            <h3>We suggest the following steps:</h3>
+            <ol class="round">
+                <li class="one">
+                    <h5>Name your Web API</h5>
+                    Requests are routed to Web APIs based on their name. The Web API in this template will respond to requests
+                    sent to <code>/api/values</code>, but you can change this by renaming the <code>ValuesController</code> type. 
+                    Your Web API name should end with <code>Controller</code>. 
+                </li>
+                <li class="two">
+                    <h5>Implement your Web API actions</h5>
+                    By convention, Web API actions map directly to HTTP methods, like GET, POST, PUT, and DELETE. To handle a 
+                    given HTTP method just prefix your action name with the HTTP method you want to handle. Action parameters 
+                    are bound to data from the request through model binding. Data returned from an action is formatted in the 
+                    response as JSON or XML as requested by the client.
+                </li>
+                <li class="three">
+                    <h5>Add Web APIs and routes</h5>
+                    Add additional Web APIs using the Add New Item dialog. You can also fully control the URI space for your 
+                    Web APIs in Global.asax by adding routes to the <code>HttpConfiguration</code> object passed to the 
+                    <code>RegisterApis</code> method.
+                </li>
+            </ol>
+
+            <section class="features">
+                <section class="feature">
+                    <img src="@Url.Content("~/Images/aspNetHome.png")" alt="ASP.NET Home" />
+                    <h3>Home of ASP.NET</h3>
+                    <p>
+                        ASP.NET is a free, fully supported Web application framework that helps you create standards-based web solutions. 
+                        Whether you're new to ASP.NET or an experienced developer, the <a href="http://asp.net">ASP.NET website</a> 
+                        is your source for news, training, downloads, and support.
+                    </p>
+                </section>
+                <section class="feature">
+                    <img src="@Url.Content("~/Images/NuGetGallery.png")" alt="NuGet Gallery" />
+                    <h3>NuGet Gallery</h3>
+                    <p>
+                        NuGet is a Visual Studio extension that makes it easy to install and update open source libraries and tools in 
+                        Visual Studio. To see available packages, visit the <a href="http://nuget.org">NuGet gallery</a>.
+                        You can also develop your own package and share it in the gallery.
+                    </p>
+                </section>
+                <section class="feature">
+                    <img src="@Url.Content("~/Images/findHosting.png")" alt="Find Hosting" />
+                    <h3>Find Web Hosting</h3>
+                    <p>
+                        You can easily find a web hosting company that offers the right mix of features and price for your applications. 
+                        Visit <a href="http://microsoft.com/web/hosting" title="Microsoft/Web Website">Microsoft.com/web</a> to 
+                        explore offerings from many providers.
+                    </p>
+                </section>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

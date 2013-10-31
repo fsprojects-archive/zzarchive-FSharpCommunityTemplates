@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>FsSpa-Knockout-Bundler</id>
+    <version>0.1.1.0</version>
+    <authors>Daniel Mohl</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FsSpa-Knockout-Bundler adds the Global.fs file to the F# project.</description>
+    <summary>Supports the F#/C# project template by adding the appropriate Global.fs file to the F# project.</summary>
+      <language>en-US</language>
+      <licenseUrl>http://www.opensource.org/licenses/ms-pl.html</licenseUrl>
+  </metadata>
+  <files>
+	  <file src="Content\Bundler\*.*" target="Content" />
+  </files>
+</package>

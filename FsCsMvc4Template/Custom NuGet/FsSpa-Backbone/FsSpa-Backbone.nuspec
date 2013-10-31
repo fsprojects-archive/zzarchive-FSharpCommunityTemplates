@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>FsSpa-Backbone</id>
+    <version>0.1.1.0</version>
+    <authors>Daniel Mohl</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FsSpa-backbone adds several Backbone.js JS files.</description>
+    <summary>Supports the F#/C# project template in creating a Single Page Application project with Backbone.</summary>
+      <language>en-US</language>
+      <licenseUrl>http://www.opensource.org/licenses/ms-pl.html</licenseUrl>
+  </metadata>
+  <files>
+	  <file src="Content\Scripts\app\*.*" target="Content\Scripts\app" />
+	  <file src="Content\Scripts\models\*.*" target="Content\Scripts\models" />
+	  <file src="Content\Scripts\views\*.*" target="Content\Scripts\views" />
+	  <file src="Content\Templates\*.*" target="Content\Templates" />
+ 	  <file src="Content\Views\Shared\*.*" target="Content\Views\Shared" />
+  	  <file src="Content\Views\Home\*.*" target="Content\Views\Home" />	
+  </files>
+</package>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="FsMvc4VSIX.f1253b08c9b8-9da71234">
+    <Name>F# C# MVC 4</Name>
+    <Author>DM</Author>
+    <Version>1.19</Version>
+    <Description xml:space="preserve">F# and C# Web Application template by Daniel Mohl that produces a ASP.NET MVC 4 solution (ASPX or Razor View Engine). Note: You need to have ASP.NET MVC4 installed (see http://www.asp.net/mvc/mvc4).</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://msdn.microsoft.com/en-us/magazine/hh456399.aspx</MoreInfoUrl>
+    <License>MicrosoftPublicLicense.txt</License>
+    <SupportedProducts>
+      <VisualStudio Version="13.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>      
+	  <VisualStudio Version="12.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <Assembly AssemblyName="|FsMvc4TemplateWizard;AssemblyName|">|FsMvc4TemplateWizard|</Assembly>
+    <Assembly AssemblyName="|FsCsMvc4Dialog;AssemblyName|">|FsCsMvc4Dialog|</Assembly>
+    <ProjectTemplate>ProjectTemplates</ProjectTemplate>
+  </Content>
+</Vsix>

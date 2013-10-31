@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<VSTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>FsCsMvc4Template</Name>
+    <Description>No Description</Description>
+    <Icon>__Template_small.png</Icon>
+    <PreviewImage>__Template_large.png</PreviewImage>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType />
+    <SortOrder>1000</SortOrder>
+    <DefaultName>FsCsMvc4Template</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <LocationField>Enabled</LocationField>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Razor.csproj" TargetFileName="Razor.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="site.css" ReplaceParameters="false">content\site.css</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_flat_0_aaaaaa_40x100.png" ReplaceParameters="false">content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_flat_75_ffffff_40x100.png" ReplaceParameters="false">content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_glass_55_fbf9ee_1x400.png" ReplaceParameters="false">content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_glass_65_ffffff_1x400.png" ReplaceParameters="false">content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_glass_75_dadada_1x400.png" ReplaceParameters="false">content\themes\base\images\ui-bg_glass_75_dadada_1x400.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_glass_75_e6e6e6_1x400.png" ReplaceParameters="false">content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_glass_95_fef1ec_1x400.png" ReplaceParameters="false">content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-bg_highlight-soft_75_cccccc_1x100.png" ReplaceParameters="false">content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-icons_222222_256x240.png" ReplaceParameters="false">content\themes\base\images\ui-icons_222222_256x240.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-icons_2e83ff_256x240.png" ReplaceParameters="false">content\themes\base\images\ui-icons_2e83ff_256x240.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-icons_454545_256x240.png" ReplaceParameters="false">content\themes\base\images\ui-icons_454545_256x240.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-icons_888888_256x240.png" ReplaceParameters="false">content\themes\base\images\ui-icons_888888_256x240.png</ProjectItem>
+      <ProjectItem TargetFileName="ui-icons_cd0a0a_256x240.png" ReplaceParameters="false">content\themes\base\images\ui-icons_cd0a0a_256x240.png</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.accordion.css" ReplaceParameters="false">content\themes\base\jquery.ui.accordion.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.all.css" ReplaceParameters="false">content\themes\base\jquery.ui.all.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.autocomplete.css" ReplaceParameters="false">content\themes\base\jquery.ui.autocomplete.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.base.css" ReplaceParameters="false">content\themes\base\jquery.ui.base.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.button.css" ReplaceParameters="false">content\themes\base\jquery.ui.button.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.core.css" ReplaceParameters="false">content\themes\base\jquery.ui.core.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.datepicker.css" ReplaceParameters="false">content\themes\base\jquery.ui.datepicker.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.dialog.css" ReplaceParameters="false">content\themes\base\jquery.ui.dialog.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.progressbar.css" ReplaceParameters="false">content\themes\base\jquery.ui.progressbar.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.resizable.css" ReplaceParameters="false">content\themes\base\jquery.ui.resizable.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.selectable.css" ReplaceParameters="false">content\themes\base\jquery.ui.selectable.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.slider.css" ReplaceParameters="false">content\themes\base\jquery.ui.slider.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.tabs.css" ReplaceParameters="false">content\themes\base\jquery.ui.tabs.css</ProjectItem>
+      <ProjectItem TargetFileName="jquery.ui.theme.css" ReplaceParameters="false">content\themes\base\jquery.ui.theme.css</ProjectItem>
+      <ProjectItem TargetFileName="global.asax" ReplaceParameters="true">global.asax</ProjectItem>
+      <ProjectItem TargetFileName="assemblyinfo.cs" ReplaceParameters="true">properties\assemblyinfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="jquery-1.6.2-vsdoc.js" ReplaceParameters="false">scripts\jquery-1.6.2-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery-1.6.2.js" ReplaceParameters="false">scripts\jquery-1.6.2.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery-1.6.2.min.js" ReplaceParameters="false">scripts\jquery-1.6.2.min.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery-ui-1.8.11.js" ReplaceParameters="false">scripts\jquery-ui-1.8.11.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery-ui-1.8.11.min.js" ReplaceParameters="false">scripts\jquery-ui-1.8.11.min.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.unobtrusive-ajax.js" ReplaceParameters="false">scripts\jquery.unobtrusive-ajax.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.unobtrusive-ajax.min.js" ReplaceParameters="false">scripts\jquery.unobtrusive-ajax.min.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.validate-vsdoc.js" ReplaceParameters="false">scripts\jquery.validate-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.validate.js" ReplaceParameters="false">scripts\jquery.validate.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.validate.min.js" ReplaceParameters="false">scripts\jquery.validate.min.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.validate.unobtrusive.js" ReplaceParameters="false">scripts\jquery.validate.unobtrusive.js</ProjectItem>
+      <ProjectItem TargetFileName="jquery.validate.unobtrusive.min.js" ReplaceParameters="false">scripts\jquery.validate.unobtrusive.min.js</ProjectItem>
+      <ProjectItem TargetFileName="knockout-1.3.0beta.debug.js" ReplaceParameters="false">scripts\knockout-1.3.0beta.debug.js</ProjectItem>
+      <ProjectItem TargetFileName="knockout-1.3.0beta.js" ReplaceParameters="false">scripts\knockout-1.3.0beta.js</ProjectItem>
+      <ProjectItem TargetFileName="modernizr-2.0.6-development-only.js" ReplaceParameters="false">scripts\modernizr-2.0.6-development-only.js</ProjectItem>
+      <ProjectItem TargetFileName="_viewstart.cshtml" ReplaceParameters="false">views\_viewstart.cshtml</ProjectItem>
+      <ProjectItem TargetFileName="index.cshtml" ReplaceParameters="false">views\home\index.cshtml</ProjectItem>
+      <ProjectItem TargetFileName="_layout.cshtml" ReplaceParameters="false">views\shared\_layout.cshtml</ProjectItem>
+      <ProjectItem TargetFileName="error.cshtml" ReplaceParameters="false">views\shared\error.cshtml</ProjectItem>
+      <ProjectItem TargetFileName="web.config" ReplaceParameters="false">views\web.config</ProjectItem>
+      <ProjectItem TargetFileName="web.config" ReplaceParameters="true">web.config</ProjectItem>
+      <ProjectItem TargetFileName="web.debug.config" ReplaceParameters="false">web.debug.config</ProjectItem>
+      <ProjectItem TargetFileName="web.release.config" ReplaceParameters="false">web.release.config</ProjectItem>
+    </Project>
+    <CustomParameters />
+  </TemplateContent>
+</VSTemplate>
