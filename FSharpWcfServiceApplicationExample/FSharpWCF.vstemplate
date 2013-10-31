@@ -1,0 +1,26 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>F# and C# Web Service (ASP.NET, WSDL)</Name>
+        <Description>F# and C# Web Service (ASP.NET, WSDL)</Description>
+        <Icon>__TemplateIcon.ico</Icon>
+        <ProjectType>FSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <ProjectTemplateLink ProjectName="Web">
+                src\Web\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="Services">
+                src\Services\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="Contracts">
+                src\Contracts\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+    <WizardExtension>
+	<Assembly>FSharpWcfTemplateWizard, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ba79043a32149735</Assembly>
+	<FullClassName>FSharpWcfTemplateWizard.TemplateWizard</FullClassName>
+    </WizardExtension>	
+</VSTemplate>

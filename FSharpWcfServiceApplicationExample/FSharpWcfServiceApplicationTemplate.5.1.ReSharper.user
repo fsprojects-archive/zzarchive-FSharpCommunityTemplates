@@ -1,0 +1,39 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BD7AF5DA-25B8-41FA-A0E8-7A277BD65673/f:TemplateWizard.fs" caret="33" fromTop="0" />
+      <File id="d:Miscellaneous Files/f:Web.csproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Web?Web.csproj" caret="877" fromTop="8" />
+      <File id="d:Miscellaneous Files/f:Services.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Services?Services.fsproj" caret="1899" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:Contracts.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Contracts?Contracts.fsproj" caret="1912" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BD7AF5DA-25B8-41FA-A0E8-7A277BD65673/f:TemplateWizard.fs" caret="1757" fromTop="12" />
+      <File id="BD7AF5DA-25B8-41FA-A0E8-7A277BD65673/f:TemplateWizard.fs" caret="33" fromTop="0" />
+      <File id="d:Miscellaneous Files/f:Web.csproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Web?Web.csproj" caret="877" fromTop="8" />
+      <File id="d:Miscellaneous Files/f:Services.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Services?Services.fsproj" caret="683" fromTop="11" />
+      <File id="d:Miscellaneous Files/f:Contracts.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Contracts?Contracts.fsproj" caret="689" fromTop="11" />
+      <File id="d:Miscellaneous Files/f:Contracts.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Contracts?Contracts.fsproj" caret="3134" fromTop="13" />
+      <File id="d:Miscellaneous Files/f:Services.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Services?Services.fsproj" caret="3326" fromTop="13" />
+      <File id="d:Miscellaneous Files/f:Services.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Services?Services.fsproj" caret="1931" fromTop="14" />
+      <File id="d:Miscellaneous Files/f:Services.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Services?Services.fsproj" caret="1899" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:Contracts.fsproj/l:C!?git?FSharpWcfServiceApplicationExample?src?Contracts?Contracts.fsproj" caret="1912" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.3\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

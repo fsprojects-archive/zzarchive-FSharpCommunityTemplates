@@ -1,0 +1,6 @@
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\bin\Release\DataContracts.XML
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\bin\Release\Contracts.dll
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\bin\Release\Contracts.pdb
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\obj\Release\ResolveAssemblyReference.cache
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\obj\Release\Contracts.dll
+C:\git\FSharpWcfServiceApplicationExample\src\Contracts\obj\Release\Contracts.pdb

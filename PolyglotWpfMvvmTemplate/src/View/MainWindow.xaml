@@ -1,0 +1,5 @@
+﻿<Window x:Class="WpfMvvmTemplate.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:uc="clr-namespace:WpfMvvmTemplate.View" Title="ExpenseIt" Height="450" Width="500">
+    <uc:ExpenseItHome/>
+</Window>

@@ -1,0 +1,34 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="2BA2E92E-A3FB-4999-9FA2-0F9CA749A76B/f:CompositeType.fs" caret="45" fromTop="0" />
+      <File id="FEE4B319-624C-4A9C-89BC-7E16DDBCA715/f:Service1.svc" caret="124" fromTop="0" />
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:IService1.fs" caret="0" fromTop="0" />
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:Service1.svc.fs" caret="79" fromTop="3" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:IService1.fs" caret="37" fromTop="0" />
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:IService1.fs" caret="112" fromTop="0" />
+      <File id="FEE4B319-624C-4A9C-89BC-7E16DDBCA715/f:Service1.svc" caret="124" fromTop="0" />
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:Service1.svc.fs" caret="45" fromTop="0" />
+      <File id="88EB4774-51A2-4BF7-874C-009A0C3B3ADD/f:Service1.svc.fs" caret="79" fromTop="3" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.3\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

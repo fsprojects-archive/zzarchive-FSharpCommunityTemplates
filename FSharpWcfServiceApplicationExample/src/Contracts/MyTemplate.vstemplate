@@ -1,0 +1,22 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>F# WCF Service Application</Name>
+    <Description>FSharp WCF Service Application Template Contracts</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FSharpWcfServiceApplicationTemplateContracts</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Contracts.fsproj" File="Contracts.fsproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="CompositeType.fs">CompositeType.fs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="IService1.fs">IService1.fs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

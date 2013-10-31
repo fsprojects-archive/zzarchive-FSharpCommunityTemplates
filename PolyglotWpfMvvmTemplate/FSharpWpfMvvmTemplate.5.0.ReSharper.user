@@ -1,0 +1,70 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="d:Miscellaneous Files/f:MainWindow.g.cs/l:C!?git?FSharpWpfMvvmTemplate?src?FSharpWpfMvvmTemplate?obj?x86?Debug?MainWindow.g.cs" caret="1236" fromTop="4" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/f:App.xaml" caret="47" fromTop="0" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/f:MainWindowResources.xaml" caret="327" fromTop="0" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/f:MainWindow.xaml.cs" caret="71" fromTop="1" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/d:View/f:CustomerView.xaml.cs" caret="123" fromTop="2" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/d:View/f:AllCustomersView.xaml.cs" caret="31" fromTop="0" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/d:View/f:CustomerView.xaml" caret="242" fromTop="0" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/d:View/f:AllCustomersView.xaml" caret="47" fromTop="0" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/f:MainWindow.xaml" caret="241" fromTop="3" />
+      <File id="341B4C47-BDAB-4489-854C-68A0BFFDCECE/f:App.xaml.cs" caret="1444" fromTop="25" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="534" fromTop="14" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:ViewModelBase.fs" caret="616" fromTop="6" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="376" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="43" fromTop="0" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowCommandViewModel.fs" caret="343" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="608" fromTop="0" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="534" fromTop="5" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="534" fromTop="8" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="534" fromTop="7" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="147" fromTop="6" />
+      <File id="0C488889-C3E7-4D79-8F14-A032CE50E290/f:RelayCommand.fs" caret="534" fromTop="2" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="689" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="689" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="689" fromTop="6" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="111" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="346" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="346" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:ViewModelBase.fs" caret="616" fromTop="6" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:WorkspaceViewModule.fs" caret="546" fromTop="8" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1433" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="343" fromTop="8" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="41" fromTop="0" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1391" fromTop="4" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1433" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1433" fromTop="0" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1391" fromTop="7" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1393" fromTop="8" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="1433" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="624" fromTop="0" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="848" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowViewModel.fs" caret="392" fromTop="3" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowCommandViewModel.fs" caret="358" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowCommandViewModel.fs" caret="4076" fromTop="9" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowCommandViewModel.fs" caret="56" fromTop="1" />
+      <File id="622F59E3-CD2A-4B26-9CD9-EEEB2CF5148A/f:MainWindowCommandViewModel.fs" caret="343" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.3\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
