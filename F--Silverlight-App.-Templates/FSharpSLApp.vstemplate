@@ -1,0 +1,16 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>F# Web Application (Silverlight)</Name>
+        <Description>F# Web Application (Silverlight)</Description>
+        <Icon>__TemplateIcon.ico</Icon>
+        <ProjectType>FSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <ProjectTemplateLink ProjectName="App">
+                src\App\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

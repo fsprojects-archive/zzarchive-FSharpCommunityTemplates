@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>App</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="App.fsproj" File="App.fsproj" ReplaceParameters="true">
+      <Folder Name="Model" TargetFolderName="Model">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Expense.fs">Expense.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ExpenseReport.fs">ExpenseReport.fs</ProjectItem>
+      </Folder>
+      <Folder Name="Repository" TargetFolderName="Repository">
+        <ProjectItem ReplaceParameters="false" TargetFileName="ExpenseReportRepository.fs">ExpenseReportRepository.fs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModel" TargetFolderName="ViewModel">
+        <ProjectItem ReplaceParameters="false" TargetFileName="RelayCommand.fs">RelayCommand.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ViewModelBase.fs">ViewModelBase.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MainWindowViewModel.fs">MainWindowViewModel.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ExpenseItHomeViewModel.fs">ExpenseItHomeViewModel.fs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="App.fs">App.fs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationResources.xaml">ApplicationResources.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainWindow.xaml">MainWindow.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="watermark.png">watermark.png</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ExpenseItHome.xaml">ExpenseItHome.xaml</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

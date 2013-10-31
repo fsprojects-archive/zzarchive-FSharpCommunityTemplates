@@ -1,0 +1,108 @@
+﻿<UserControl 
+    x:Class="FSharpSilverlightMvvmTemplate.ExpenseItHome"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="clr-namespace:FSharpSilverlightMvvmTemplate.ViewModel;assembly=App"
+    Height="300" Width="400">
+
+    <!-- mc:Ignorable="d" 
+        d:DesignHeight="300" 
+    d:DesignWidth="400">
+    -->
+
+    <UserControl.DataContext>
+        <ViewModel:ExpenseItHomeViewModel></ViewModel:ExpenseItHomeViewModel>
+    </UserControl.DataContext>
+    <Grid Margin="10,0,10,10" VerticalAlignment="Stretch">
+
+        <Grid.Resources>
+            <!-- Name item template -->
+            <DataTemplate x:Key="nameItemTemplate">
+                <sdk:Label Content="{Binding Path=Name}"/>
+            </DataTemplate>
+            <!-- Expense Type template -->
+            <DataTemplate x:Key="typeItemTemplate">
+                <sdk:Label Content="{Binding Path=ExpenseType}"/>
+            </DataTemplate>
+            <!-- Amount item template -->
+            <DataTemplate x:Key="amountItemTemplate">
+                <sdk:Label Content="{Binding Path=ExpenseAmount}"/>
+            </DataTemplate>
+
+        </Grid.Resources>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png"  />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!-- People list -->
+        <sdk:Label Foreground="#0066cc" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" >
+            View Expense Report
+        </sdk:Label>
+        <Grid Margin="10" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Height="35" Padding="5" Background="#4E87D4" Grid.Row="1">
+                <sdk:Label Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left">Names</sdk:Label>
+            </Border>
+
+            <ListBox Name="peopleListBox" Grid.Row="2" 
+                 ItemsSource="{Binding Path=ExpenseReports}"
+                 ItemTemplate="{StaticResource nameItemTemplate}"
+                 SelectedItem="{Binding Path=SelectedExpenseReport,Mode=TwoWay}">
+            </ListBox>
+
+            <!-- View report button -->
+        </Grid>
+        <Grid Margin="10" Grid.Column="1" Grid.Row="1" DataContext="{Binding SelectedExpenseReport}" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="57*" />
+                <ColumnDefinition Width="125*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- Name -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <sdk:Label FontWeight="Bold" Margin="0,0,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Name:</sdk:Label>
+                <sdk:Label FontWeight="Bold" Margin="0,0,0,5" VerticalAlignment="Top" HorizontalAlignment="Left" Content="{Binding Path=Name}"></sdk:Label>
+            </StackPanel>
+            <!-- Department -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+                <sdk:Label FontWeight="Bold" Margin="0,0,0,5" VerticalAlignment="Top" HorizontalAlignment="Left">Department:</sdk:Label>
+                <sdk:Label FontWeight="Bold" Margin="0,0,0,5" VerticalAlignment="Top" HorizontalAlignment="Left" Content="{Binding Path=Department}"></sdk:Label>
+            </StackPanel>
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <!-- Expense type and Amount table -->
+                <sdk:DataGrid Height="Auto" Padding="5" Background="#4E87D4" Foreground="White" AutoGenerateColumns="False" ItemsSource="{Binding Path=ExpenseLineItems}" Margin="0,0,-139,0">
+                    <!--  -->
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Header="ExpenseType" Binding="{Binding Path=ExpenseType}" />
+                        <sdk:DataGridTextColumn Header="Amount" Binding="{Binding Path=ExpenseAmount}"  />
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+            </Grid>
+            <Button Height="25" Grid.Row="3" Command="{Binding ApproveExpenseReportCommand}" Grid.ColumnSpan="2" Margin="0,10,57,0" Name="ApproveButton">Approve</Button>
+        </Grid>        
+    </Grid>
+</UserControl>

@@ -1,8 +1,0 @@
-C:\git\FsCsMvc4Template\tests\WebAppTests\bin\Debug\WebAppTests.XML
-C:\git\FsCsMvc4Template\tests\WebAppTests\bin\Debug\WebAppTests.dll
-C:\git\FsCsMvc4Template\tests\WebAppTests\bin\Debug\WebAppTests.pdb
-C:\git\FsCsMvc4Template\tests\WebAppTests\bin\Debug\FSharp.Core.dll
-C:\git\FsCsMvc4Template\tests\WebAppTests\bin\Debug\FSharp.Core.xml
-C:\git\FsCsMvc4Template\tests\WebAppTests\obj\Debug\ResolveAssemblyReference.cache
-C:\git\FsCsMvc4Template\tests\WebAppTests\obj\Debug\WebAppTests.dll
-C:\git\FsCsMvc4Template\tests\WebAppTests\obj\Debug\WebAppTests.pdb

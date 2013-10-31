@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{f2a71f9b-5d33-465a-a702-920d77279786}</ProjectTypeGuids>
+    <ProjectGuid>{9f5b63b5-b707-457e-8e37-66bcb9a1b7ef}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>App</AssemblyName>
+    <RootNamespace>FSharpSilverlightMvvmTemplate</RootNamespace>
+    <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>App.xap</XapFilename>
+    <SilverlightManifestTemplate>AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>FSharpSilverlightMvvmTemplate.App</SilverlightAppEntry>
+    <AllowCrossTargeting>true</AllowCrossTargeting>
+    <Name>App</Name>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <ValidateXaml>false</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <RootNamespace>Core</RootNamespace>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <CreateTestPage>true</CreateTestPage>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Debug\Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Release\Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.5\Microsoft.FSharp.Targets" Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.5\Microsoft.FSharp.Targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition="(!Exists('$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.5\Microsoft.FSharp.Targets')) And (Exists('$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets'))" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.Common.targets" />
+  <ItemGroup>
+    <None Include="AppManifest.xml" />
+    <Compile Include="Model\Expense.fs" />
+    <Compile Include="Model\ExpenseReport.fs" />
+    <Compile Include="RemoteFacade\ExpenseReportServiceFacade.fs" />
+    <Compile Include="ViewModel\RelayCommand.fs" />
+    <Compile Include="ViewModel\ViewModelBase.fs" />
+    <Compile Include="ViewModel\ExpenseItHomeViewModel.fs" />
+    <Resource Include="MainPage.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ExpenseItHome.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="App.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Compile Include="AppLogic.fs" />
+    <Resource Include="watermark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core">
+      <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft F#\Silverlight\Libraries\Client\$(SilverlightVersion)\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+	  <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\Silverlight\$(SilverlightVersion)\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls.Data">
+	  <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\Silverlight\$(SilverlightVersion)\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Input">
+	  <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\Silverlight\$(SilverlightVersion)\Libraries\Client\System.Windows.Controls.Data.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input">
+      <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\Silverlight\$(SilverlightVersion)\Libraries\Client\System.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Data">
+	  <HintPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\Silverlight\$(SilverlightVersion)\Libraries\Client\System.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties Guid="{a1591282-1198-4647-a2b1-27e5ff5f6f3b}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+      <FlavorProperties Guid="{a1591282-1198-4647-a2b1-27e5ff5f6f3b}" User="">
+        <SilverlightProjectProperties>
+          <StartPageUrl>\debug\bin\TestPage.html</StartPageUrl>
+          <StartAction>DynamicPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <ShowWebRefOnDebugPrompt>True</ShowWebRefOnDebugPrompt>
+          <OutOfBrowserProjectToDebug>
+          </OutOfBrowserProjectToDebug>
+          <ShowRiaSvcsOnDebugPrompt>True</ShowRiaSvcsOnDebugPrompt>
+        </SilverlightProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
