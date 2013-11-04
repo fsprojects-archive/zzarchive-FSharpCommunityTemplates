@@ -29,8 +29,8 @@ type BundleConfig() =
                                  "~/Scripts/app/utility.js",
                                  "~/Scripts/viewModels/*.js",
                                  "~/Scripts/app/router.js"))
-		
-        bundles.Add(ScriptBundler("~/bundlers/sammy").Include("~/Scripts/sammy/sammy.js", "~/Scripts/sammy/plugins/sammy.cache.js")						 
+
+        bundles.Add(ScriptBundle("~/bundles/sammy").Include("~/Scripts/sammy/sammy.js", "~/Scripts/sammy/plugins/sammy.cache.js"))
 
         bundles.Add(ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"))
 
