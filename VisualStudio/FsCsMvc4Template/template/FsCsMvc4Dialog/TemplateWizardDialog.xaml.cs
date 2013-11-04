@@ -15,6 +15,7 @@ namespace FsCsMvc4Dialog
         protected bool IsOnlyRazor { get; set; }
         public int SelectedProjectTypeIndex { get; protected set; }
         public string SelectedJsFramework { get; protected set; }
+        public string SelectedUnitTestFramework { get; protected set; }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
@@ -31,6 +32,7 @@ namespace FsCsMvc4Dialog
             }
             SelectedProjectTypeIndex = lvwProjectType.SelectedIndex;
             SelectedJsFramework = ((ComboBoxItem)cbJsFramework.SelectedItem).Tag.ToString();
+            SelectedUnitTestFramework = ((ComboBoxItem)cbUnitTestFramework.SelectedItem).Tag.ToString();
             DialogResult = true;
             Close();
         }
@@ -51,6 +53,12 @@ namespace FsCsMvc4Dialog
         private bool IsSpa()
         {
             return lvwProjectType.SelectedIndex == 2;
+        }
+
+        private void cbIncludeTestsProject_Click(object sender, RoutedEventArgs e)
+        {
+            spTestFramework.Visibility = cbIncludeTestsProject.IsChecked.HasValue && 
+                cbIncludeTestsProject.IsChecked.Value ? Visibility.Visible : Visibility.Collapsed;
         } 
     }
 }

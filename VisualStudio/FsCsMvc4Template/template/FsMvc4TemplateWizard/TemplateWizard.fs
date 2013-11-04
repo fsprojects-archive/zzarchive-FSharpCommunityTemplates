@@ -24,6 +24,7 @@ type TemplateWizard() =
     [<DefaultValue>] val mutable isWebApi : bool
     [<DefaultValue>] val mutable isSpa : bool
     [<DefaultValue>] val mutable selectedJsFramework : string
+    [<DefaultValue>] val mutable selectedUnitTestFramework : string
 
     let mutable selectedWebProjectName = "Razor"
     interface IWizard with
@@ -44,6 +45,7 @@ type TemplateWizard() =
             | true -> 
                 this.includeTestProject <- dialog.IncludeTestsProject
                 selectedWebProjectName <- dialog.SelectedViewEngine
+                this.selectedUnitTestFramework <- dialog.SelectedUnitTestFramework
                 match dialog.SelectedProjectTypeIndex with
                 | 1 -> this.isWebApi <- true
                 | 2 -> 
@@ -115,7 +117,14 @@ type TemplateWizard() =
                              ("Microsoft.Net.Http", "2.0.20710.0"); ("Microsoft.Web.Infrastructure", "1.0.0.0"); ("Newtonsoft.Json", "4.5.6")]
 
                         let appTestNuGetPackages = 
-                            [("EntityFramework", "5.0.0"); ("Microsoft.AspNet.Mvc", "4.0.20710.0")]
+                            match this.selectedUnitTestFramework with
+                            | "FsUnit.Sample" -> 
+                                [("EntityFramework", "5.0.0"); ("Microsoft.AspNet.Mvc", "4.0.20710.0"); ("NUnit", "2.6.3");
+                                 ("FsUnit.Sample", "1.2.1.0")]
+                            | "FsUnit.xUnit.Sample" -> 
+                                [("EntityFramework", "5.0.0"); ("Microsoft.AspNet.Mvc", "4.0.20710.0"); ("xunit", "1.9.1");
+                                 ("FsUnit.xUnit.Sample", "1.2.1.2")]
+                            | _ -> [("EntityFramework", "5.0.0"); ("Microsoft.AspNet.Mvc", "4.0.20710.0")]
 
                         let nugetPackages = 
                             match this.isSpa, this.selectedJsFramework with
@@ -139,10 +148,10 @@ type TemplateWizard() =
 //                        (projects.TryFind webAppName).Value |> InstallPackages this.serviceProvider (templatePath.Replace("FsMvc4.vstemplate", ""))
 //                        <| appNuGetPackages                   
      
-//                        if this.includeTestProject then               
-//                            this.dte2.StatusBar.Text <- "Adding NuGet packages to the unit test project..."
-//                            (projects.TryFind webAppTestsName).Value |> InstallPackages this.serviceProvider (templatePath.Replace("FsMvc4.vstemplate", ""))
-//                            <| appTestNuGetPackages
+                        if this.includeTestProject then               
+                            this.dte2.StatusBar.Text <- "Adding NuGet packages to the unit testing project..."
+                            (projects.TryFind webAppTestsName).Value |> InstallPackages this.serviceProvider (templatePath.Replace("FsMvc4.vstemplate", ""))
+                            <| appTestNuGetPackages
                     with
                     | ex -> failwith (sprintf "%s\n\r%s\n\r%s\n\r%s\n\r%s" 
                                 "The NuGet installation process failed."

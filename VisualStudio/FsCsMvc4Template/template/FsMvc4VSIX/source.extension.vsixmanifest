@@ -15,7 +15,13 @@
         <Edition>Pro</Edition>
         <Edition>VWDExpress</Edition>
       </VisualStudio>      
-	  <VisualStudio Version="12.0">
+      <VisualStudio Version="13.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>      
+      <VisualStudio Version="12.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>

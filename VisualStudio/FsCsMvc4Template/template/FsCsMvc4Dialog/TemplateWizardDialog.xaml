@@ -9,21 +9,34 @@
                 <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Canvas VerticalAlignment="Center" Margin="29,142,31,35" Height="134">
-            <CheckBox Name="cbIncludeTestsProject" IsChecked="True" Content="Include a Tests project" Canvas.Left="6" Canvas.Top="40" Width="180" />
-            <Button Name="btnOk" Content="OK" Width="50px" Height="20" Canvas.Left="291" Canvas.Top="108" Click="btnOk_Click" />
-            <Button Name="btnCancel" Canvas.Left="347" Canvas.Top="108" Content="Cancel" Height="20" Width="74" Click="btnCancel_Click" />
-            <ComboBox Canvas.Left="89" Canvas.Top="6" Height="23" Name="cbViewEngine" Width="332">
+        <Canvas VerticalAlignment="Center" Margin="29,150,31,0" Height="177">
+            <CheckBox Name="cbIncludeTestsProject" IsChecked="True" Content="Include a Tests project" Canvas.Left="6" Canvas.Top="45" Width="180" Click="cbIncludeTestsProject_Click" />
+            <Button Name="btnOk" Content="OK" Width="50px" Height="20" Canvas.Left="291" Canvas.Top="145" Click="btnOk_Click" />
+            <Button Name="btnCancel" Canvas.Left="347" Canvas.Top="145" Content="Cancel" Height="20" Width="74" Click="btnCancel_Click" />
+            <ComboBox Canvas.Left="143" Canvas.Top="6" Height="23" Name="cbViewEngine" Width="278">
                 <ComboBoxItem Content="Razor" IsSelected="True" />
                 <ComboBoxItem Content="ASPX" />
             </ComboBox>
             <Label Canvas.Left="0" Canvas.Top="6" Content="View Engine:" Height="28" Name="lblViewEngine" />
-            <ComboBox Canvas.Left="128" Canvas.Top="67" Height="23" Name="cbJsFramework" Width="293">
+            <Grid Name="spTestFramework" Canvas.Top="64" Width="421">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="371*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Unit Testing Framework:" Height="28" Name="lblTestFramework" Grid.ColumnSpan="3" Margin="0,1,0,-1" />
+                <ComboBox Height="23" Name="cbUnitTestFramework" Width="278" HorizontalAlignment="Stretch" Margin="93,3,0,2" Grid.Column="2">
+                    <ComboBoxItem Content="None" IsSelected="True" Tag=""/>
+                    <ComboBoxItem Content="FsUnit with NUnit" Tag="FsUnit.Sample" />
+                    <ComboBoxItem Content="FsUnit with xUnit" Tag="FsUnit.xUnit.Sample" />
+                </ComboBox>
+            </Grid>
+            <ComboBox Canvas.Left="143" Canvas.Top="108" Height="23" Name="cbJsFramework" Width="278">
                 <ComboBoxItem Content="Angular.js" Tag="FsSpa-Angular" IsSelected="True" />
                 <ComboBoxItem Content="Backbone.js" Tag="FsSpa-Backbone" />
                 <ComboBoxItem Content="Knockout.js" Tag="FsSpa-Knockout" />
             </ComboBox>
-            <Label Canvas.Left="0" Canvas.Top="67" Content="JavaScript Framwork:" Height="28" Name="lblJsFramework" />
+            <Label Canvas.Left="0" Canvas.Top="108" Content="JavaScript Framwork:" Height="28" Name="lblJsFramework" />
         </Canvas>
         <Label HorizontalContentAlignment="Center" Content="Please select the desired options for this project." Height="28" HorizontalAlignment="Center" Margin="29,0,27,0" VerticalAlignment="Top" Width="447" />
         <ListView Height="75" HorizontalAlignment="Left" Margin="29,34,0,0" Name="lvwProjectType" VerticalAlignment="Top" Width="443" SelectionMode="Single" SelectionChanged="lvwProjectType_SelectionChanged">
