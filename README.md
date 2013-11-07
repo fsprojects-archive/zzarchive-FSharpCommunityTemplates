@@ -3,7 +3,7 @@ community-templates
 
 Templates for F# projects, by the F# community, for use in Visual Studio, Xamarin Studio and other editors
 
-The plan is that there will ne multiple directories, for Visual Studio, MonoDevelop etc.
+The plan is that there will be multiple directories, for Visual Studio, MonoDevelop etc.
 
 The Visual Studio templates are shipped on Visual Studio Gallery.
 
