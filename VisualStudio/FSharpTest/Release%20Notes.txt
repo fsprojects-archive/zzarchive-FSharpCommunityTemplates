@@ -1,0 +1,13 @@
+Release 1.1:
+
+1) FsCheck 0.9.2.0
+2) added links to test frameworks' documentation in comments
+3) added example failing FsUnit tests
+4) additional FsCheck failing test examples
+
+Release 1.0:
+
+NUnit 2.6.2
+FsUnit 1.2.1.0
+FsCheck 0.9.1.0
+Unquote 2.2.2
