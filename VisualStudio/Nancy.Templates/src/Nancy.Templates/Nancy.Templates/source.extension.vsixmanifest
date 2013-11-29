@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="0640dbb9-555b-4041-8b43-1dc895633e17">
+  <Identifier Id="06fffff9-555b-4041-8b43-1dc8956fffff">
     <Name>Nancy.FSharp.Templates</Name>
     <Author>fsharp.org</Author>
     <Version>0.1.0</Version>
     <Description xml:space="preserve">Provides Visual Studio F# templates for Nancy projects by Ryan Riley and Daniel Mohl.</Description>
     <Locale>1033</Locale>
-    <InstalledByMsi>false</InstalledByMsi>
     <License>license.txt</License>
     <Icon>icon.jpg</Icon>
     <PreviewImage>preview.jpg</PreviewImage>
@@ -44,12 +43,7 @@
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
   </Identifier>
-  <References>
-    <Reference Id="NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5" MinVersion="1.5.20902.9026">
-      <Name>NuGet Package Manager</Name>
-      <MoreInfoUrl>http://docs.nuget.org/</MoreInfoUrl>
-    </Reference>
-  </References>
+  <References />
   <Content>
     <ProjectTemplate>ProjectTemplates</ProjectTemplate>
   </Content>
