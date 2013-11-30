@@ -81,9 +81,6 @@
     <Content Include="ProjectTemplates\FSharp\Web\AspNetHost.zip">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\FSharp\Web\CsFsAspNet.zip">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="ProjectTemplates\FSharp\Web\AspNetHostWithRazor.zip">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

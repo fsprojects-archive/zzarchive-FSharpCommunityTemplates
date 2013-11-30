@@ -8,12 +8,13 @@
     <ProjectGuid>{f592392f-6971-45a4-a0a3-7df3388237c4}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>$safeprojectname$</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <Name>Nancy.Templates.FSharp.AspNetHostWithRazor</Name>
+    <Name>AspNetHostWithRazor</Name>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -55,13 +56,11 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.fs" />
     <Compile Include="IndexModule.fs" />
-    <None Include="packages.config" />
     <Content Include="Content\nancy-logo.png" />
     <Content Include="Views\index.cshtml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.config" />
-    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
