@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.0" Language="en-US" Publisher="fsharp.org" />
@@ -19,6 +19,5 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="Output\ItemTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="feed.pkgdef" />
   </Assets>
 </PackageManifest>
