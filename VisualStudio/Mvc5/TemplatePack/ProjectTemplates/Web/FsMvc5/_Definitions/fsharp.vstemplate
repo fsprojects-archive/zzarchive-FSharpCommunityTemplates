@@ -15,8 +15,15 @@
   <TemplateContent>
     <Project TargetFileName="FSharpWeb.fsproj" File="FSharpWeb.fsproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.fs">AssemblyInfo.fs</ProjectItem>
-      <Folder Name="Scripts" TargetFolderName="Scripts" />
-      <Folder Name="fonts" TargetFolderName="fonts" />
+      <Folder Name="Scripts" TargetFolderName="Scripts" >
+        <ProjectItem ReplaceParameters="true" TargetFileName="modernizr-2.6.2.js">modernizr-2.6.2.js</ProjectItem>
+      </Folder>
+      <Folder Name="fonts" TargetFolderName="fonts" >
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.eot">glyphicons-halflings-regular.eot</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.svg">glyphicons-halflings-regular.svg</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.ttf">glyphicons-halflings-regular.ttf</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.woff">glyphicons-halflings-regular.woff</ProjectItem>
+      </Folder>
       <Folder Name="Content" TargetFolderName="Content">
         <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
       </Folder>
