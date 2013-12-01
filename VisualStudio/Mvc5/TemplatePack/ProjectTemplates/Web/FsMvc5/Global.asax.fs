@@ -17,7 +17,7 @@ type Startup() =
         // Wire up Web API
         let config = new HttpConfiguration()
         // Use attribute routing
-        config.MapHttpAttributeRoutes()
+        // config.MapHttpAttributeRoutes()
         config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}", { id = RouteParameter.Optional } ) |> ignore
 
         app.UseWebApi(config) |> ignore

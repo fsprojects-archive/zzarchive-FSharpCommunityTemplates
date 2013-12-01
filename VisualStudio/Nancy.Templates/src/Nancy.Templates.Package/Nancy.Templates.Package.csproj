@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC0EB355-6ECF-4357-80E9-C70098877741}</ProjectGuid>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fsharporg.Nancy_Templates_Package</RootNamespace>
+    <AssemblyName>Nancy.Templates.Package</AssemblyName>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0">
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EnvDTE">
+      <Guid>{80CC9F66-E7D8-4DDD-85B6-D9E6CD0E93E2}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EnvDTE100">
+      <Guid>{26AD1324-4B7C-44BC-84F8-B86AED45729F}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EnvDTE80">
+      <Guid>{1A31287A-4D7D-413E-8E32-3B374931BD89}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EnvDTE90">
+      <Guid>{2CE2370E-D744-4936-A090-3FFFE667B0E1}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.VisualStudio.CommandBars">
+      <Guid>{1CBA492E-7263-47BB-87FE-639000619B15}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Guids.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Nancy.Templates.PackagePackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Nancy.0.17.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Nancy.Hosting.Aspnet.0.17.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Nancy.Hosting.Self.0.17.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Nancy.Viewengines.Razor.0.17.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\System.Web.Razor.Unofficial.2.0.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\Bootstrapper.fs" />
+    <Resource Include="ProjectTemplates\Web\AspNetHostWithRazor\Content\nancy-logo.png" />
+    <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\IndexModule.fs" />
+    <Resource Include="ProjectTemplates\Web\AspNetHostWithRazor\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\AspNetHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\AspNetHost\Bootstrapper.fs" />
+    <Resource Include="ProjectTemplates\Web\AspNetHost\Content\nancy-logo.png" />
+    <Content Include="ProjectTemplates\Web\AspNetHost\IndexModule.fs" />
+    <Resource Include="ProjectTemplates\Web\AspNetHost\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\Demo\Bootstrapper.fs" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\bootstrap-responsive.css" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\bootstrap.css" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\default.min.css" />
+    <Resource Include="ProjectTemplates\Web\Demo\Content\img\glyphicons-halflings-white.png" />
+    <Resource Include="ProjectTemplates\Web\Demo\Content\img\glyphicons-halflings.png" />
+    <Resource Include="ProjectTemplates\Web\Demo\Content\nancy-vertical-bf-tb.png" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\scripts\bootstrap.js" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\scripts\highlight.min.js" />
+    <Content Include="ProjectTemplates\Web\Demo\Content\scripts\jquery.min.js" />
+    <Content Include="ProjectTemplates\Web\Demo\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\Demo\Modules\IndexModule.fs" />
+    <Content Include="ProjectTemplates\Web\Demo\Views\index.html" />
+    <Content Include="ProjectTemplates\Web\Demo\Views\layout.html" />
+    <Resource Include="ProjectTemplates\Web\Demo\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Resource Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\EmptyAspNetHost\_Definitions\fsharp.vstemplate" />
+    <Resource Include="ProjectTemplates\Web\EmptyAspNetHost\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHostWithRazor\Program.fs" />
+    <Resource Include="ProjectTemplates\Web\EmptySelfHostWithRazor\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHost\Program.fs" />
+    <Resource Include="ProjectTemplates\Web\EmptySelfHost\__TemplateIcon.jpg" />
+    <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Nancy.Templates.FSharp.AspNetHostWithRazor.fsproj" />
+    <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Views\index.cshtml" />
+    <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Web.config" />
+    <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Web.Debug.config" />
+    <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Web.Release.config" />
+    <None Include="ProjectTemplates\Web\AspNetHost\Nancy.Templates.FSharp.AspNetHost.fsproj" />
+    <None Include="ProjectTemplates\Web\AspNetHost\Views\index.sshtml" />
+    <None Include="ProjectTemplates\Web\AspNetHost\Web.config" />
+    <None Include="ProjectTemplates\Web\AspNetHost\Web.Debug.config" />
+    <None Include="ProjectTemplates\Web\AspNetHost\Web.Release.config" />
+    <None Include="ProjectTemplates\Web\Demo\Nancy.Templates.FSharp.Demo.fsproj" />
+    <None Include="ProjectTemplates\Web\Demo\Web.config" />
+    <None Include="ProjectTemplates\Web\Demo\Web.Debug.config" />
+    <None Include="ProjectTemplates\Web\Demo\Web.Release.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\Nancy.Templates.FSharp.EmptyAspNetHostWithRazor.fsproj" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\Web.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\Web.Debug.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\Web.Release.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHost\Nancy.Templates.FSharp.EmptyAspNetHost.fsproj" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHost\Web.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHost\Web.Debug.config" />
+    <None Include="ProjectTemplates\Web\EmptyAspNetHost\Web.Release.config" />
+    <None Include="ProjectTemplates\Web\EmptySelfHostWithRazor\app.config" />
+    <None Include="ProjectTemplates\Web\EmptySelfHostWithRazor\Nancy.Templates.FSharp.EmptySelfHostWithRazor.fsproj" />
+    <None Include="ProjectTemplates\Web\EmptySelfHostWithRazor\web.config" />
+    <None Include="ProjectTemplates\Web\EmptySelfHost\App.config" />
+    <None Include="ProjectTemplates\Web\EmptySelfHost\Nancy.Templates.FSharp.EmptySelfHost.fsproj" />
+    <None Include="ProjectTemplates\Web\SelfHostWithRazor\app.config" />
+    <None Include="ProjectTemplates\Web\SelfHostWithRazor\Nancy.Templates.FSharp.SelfHostWithRazor.fsproj" />
+    <None Include="ProjectTemplates\Web\SelfHostWithRazor\Views\index.cshtml" />
+    <None Include="ProjectTemplates\Web\SelfHostWithRazor\web.config" />
+    <None Include="ProjectTemplates\Web\SelfHost\App.config" />
+    <None Include="ProjectTemplates\Web\SelfHost\Nancy.Templates.FSharp.SelfHost.fsproj" />
+    <None Include="ProjectTemplates\Web\SelfHost\Views\index.sshtml" />
+    <None Include="Properties\template-builder.props" />
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\Bootstrapper.fs" />
+    <Resource Include="ProjectTemplates\Web\SelfHostWithRazor\Content\nancy-logo.png" />
+    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\IndexModule.fs" />
+    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\Program.fs" />
+    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Resource Include="ProjectTemplates\Web\SelfHostWithRazor\__TemplateIcon.jpg" />
+    <Content Include="ProjectTemplates\Web\SelfHost\Bootstrapper.fs" />
+    <Resource Include="ProjectTemplates\Web\SelfHost\Content\nancy-logo.png" />
+    <Content Include="ProjectTemplates\Web\SelfHost\IndexModule.fs" />
+    <Content Include="ProjectTemplates\Web\SelfHost\Program.fs" />
+    <Content Include="ProjectTemplates\Web\SelfHost\_Definitions\fsharp.vstemplate" />
+    <Resource Include="ProjectTemplates\Web\SelfHost\__TemplateIcon.jpg" />
+    <Content Include="Resources\Package.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <UseCodebase>true</UseCodebase>
+  </PropertyGroup>
+  <PropertyGroup Label="TemplateBuilder">
+    <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.22-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(TemplateBuilderTargets)" Condition="Exists('$(TemplateBuilderTargets)')" Label="TemplateBuilder" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
