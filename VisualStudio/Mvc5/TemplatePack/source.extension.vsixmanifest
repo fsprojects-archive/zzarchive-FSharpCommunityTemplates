@@ -3,7 +3,8 @@
   <Metadata>
     <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.0" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# MVC 5</DisplayName>
-    <Description xml:space="preserve">F# Web Application template with MVC and Web API using OWIN.</Description>
+    <Description xml:space="preserve">F# Web Application template with MVC and Web API using OWIN by Ryan Riley and Daniel Mohl.</Description>
+    <License>license.txt</License>
     <Tags>F#, fsharp, ASP.NET MVC, ASP.NET Web API</Tags>
   </Metadata>
   <Installation>
