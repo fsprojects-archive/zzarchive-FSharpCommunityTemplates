@@ -55,8 +55,12 @@
     <None Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="Content\nancy-logo.png" />
-    <Content Include="Views\index.sshtml" />
+    <Content Include="Content\nancy-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\index.sshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Bootstrapper.fs" />
     <Compile Include="IndexModule.fs" />
     <Compile Include="Program.fs" />

@@ -52,8 +52,12 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
   <ItemGroup>
-    <Content Include="Content\nancy-logo.png" />
-    <Content Include="Views\index.cshtml" />
+    <Content Include="Content\nancy-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Bootstrapper.fs" />
     <Compile Include="IndexModule.fs" />
     <Compile Include="Program.fs" />
