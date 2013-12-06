@@ -114,6 +114,23 @@
     <Content Include="packages\WebGrease.1.5.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="ProjectTemplates\Web\WebApi\AssemblyInfo.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi\Content\Site.css" />
+    <Content Include="ProjectTemplates\Web\WebApi\Controllers\CarsController.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ProjectTemplates\Web\WebApi\fsharp-logo-256x256.png" />
+    <Content Include="ProjectTemplates\Web\WebApi\fsharp-logo-32x32.png" />
+    <Content Include="ProjectTemplates\Web\WebApi\Global.asax" />
+    <Content Include="ProjectTemplates\Web\WebApi\Global.asax.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi\icon.png" />
+    <Content Include="ProjectTemplates\Web\WebApi\Index.html" />
+    <Content Include="ProjectTemplates\Web\WebApi\Models\Car.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi\Scripts\main.js" />
+    <Content Include="ProjectTemplates\Web\WebApi\Scripts\modernizr-2.6.2.js" />
+    <Content Include="ProjectTemplates\Web\WebApi\_Definitions\fsharp.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProjectTemplates\Web\WebApi\__TemplateIcon.ico" />
     <None Include="packages.config" />
     <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -135,6 +152,12 @@
     <None Include="ProjectTemplates\Web\FsMvc5\Views\Web.config" />
     <None Include="ProjectTemplates\Web\FsMvc5\Views\_ViewStart.cshtml" />
     <None Include="ProjectTemplates\Web\FsMvc5\Web.config" />
+    <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="ProjectTemplates\Web\WebApi\fsharp-logo-32x32.pdn" />
+    <None Include="ProjectTemplates\Web\WebApi\FSharpWeb.fsproj" />
+    <None Include="ProjectTemplates\Web\WebApi\Web.config" />
     <None Include="Properties\template-builder.props">
       <SubType>Designer</SubType>
     </None>
