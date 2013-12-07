@@ -20,4 +20,13 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="MSTest.runsettings">MSTest.runsettings</ProjectItem>
     </Project>
   </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="FsUnitTestVSIX..fcb6988c-00ac-4b50-a1c0-2fcfd8b71da0">
+      <package id="MSBuild.Extension.Pack" version="1.3.0"/>      
+    </packages>
+  </WizardData>  
 </VSTemplate>

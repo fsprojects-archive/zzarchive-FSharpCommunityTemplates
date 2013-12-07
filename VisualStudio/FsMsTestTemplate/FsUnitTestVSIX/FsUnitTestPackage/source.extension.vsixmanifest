@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FsUnitTestVSIX..fcb6988c-00ac-4b50-a1c0-2fcfd8b71da0" Version="1.5" Language="en-US" Publisher="fsharp.org" />
+    <Identity Id="FsUnitTestVSIX..fcb6988c-00ac-4b50-a1c0-2fcfd8b71da0" Version="1.6" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# MsTest Project</DisplayName>
     <Description xml:space="preserve">F# MsTest Project Template by Daniel Mohl.</Description>
     <License>license.txt</License>
