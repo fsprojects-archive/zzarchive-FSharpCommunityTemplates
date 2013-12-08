@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FsUnitTestVSIX..fcb6988c-00ac-4b50-a1c0-2fcfd8b71da0" Version="1.7" Language="en-US" Publisher="fsharp.org" />
+    <Identity Id="FsUnitTestVSIX..fcb6988c-00ac-4b50-a1c0-2fcfd8b71da0" Version="1.7.2" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# MsTest Project</DisplayName>
     <Description xml:space="preserve">F# MsTest Project Template by Daniel Mohl.</Description>
     <License>license.txt</License>
@@ -15,10 +15,9 @@
     <InstallationTarget Version="[12.0,14.0)" Id="Microsoft.VisualStudio.VSWinDesktopExpress" />
   </Installation>
   <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.0, 4.5)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="Output\ItemTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
   </Assets>
 </PackageManifest>
