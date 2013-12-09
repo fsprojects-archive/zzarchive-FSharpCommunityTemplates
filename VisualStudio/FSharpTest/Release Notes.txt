@@ -1,3 +1,8 @@
+Release 1.3:
+
+1) added a custom AfterBuild process to automatically update the binding redirect information appropriately.
+2) added support for an additional edition of VS2013
+
 Release 1.2:
 
 1) added support for VS2013

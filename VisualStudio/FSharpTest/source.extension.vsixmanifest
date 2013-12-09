@@ -3,7 +3,7 @@
   <Identifier Id="FSharpTest..ed2abef4-bffd-4ae8-95ca-6434efb5b157">
     <Name>FSharpTest</Name>
     <Author>fsharp.org</Author>
-    <Version>1.2</Version>
+    <Version>1.3</Version>
     <Description xml:space="preserve">FSharpTest is an F# project template for creating test projects by Jack Fox. The project references NUnit, FsUnit, FsCheck, and Unquote and provides sample failing tests for FsCheck, FsUnit, and Unquote.</Description>
     <Locale>1033</Locale>
     <License>LICENSE.txt</License>
@@ -13,19 +13,19 @@
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VWDExpress</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
       </VisualStudio>
-      <VisualStudio Version="12.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-        <Edition>VWDExpress</Edition>
-      </VisualStudio>	
       <VisualStudio Version="13.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VWDExpress</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
+      </VisualStudio>	
+      <VisualStudio Version="12.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
       </VisualStudio>	
       <VisualStudio Version="11.0">
         <Edition>Ultimate</Edition>
