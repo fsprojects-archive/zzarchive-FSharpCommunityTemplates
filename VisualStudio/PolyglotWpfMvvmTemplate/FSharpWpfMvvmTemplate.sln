@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIX", "VSIX\VSIX.csproj", "{47FC9AD9-F7AB-4191-8D03-401D4A5A2070}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSCSWpfTemplateWizard", "TemplateWizard\FSCSWpfTemplateWizard.fsproj", "{BD7AF5DA-25B8-41FA-A0E8-7A277BD65673}"

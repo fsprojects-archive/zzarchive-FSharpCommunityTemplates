@@ -3,7 +3,7 @@
   <Identifier Id="PolyglotWpfMvvmVSIX..c82e7573-1c51-4f81-a9f9-dd4118843d63">
     <Name>F# and C# Win App (WPF, MVVM)</Name>
     <Author>fsharp.org</Author>
-    <Version>1.11</Version>
+    <Version>1.12</Version>
     <Description xml:space="preserve">F# and C# Windows Application (WPF, MVVM) by Daniel Mohl</Description>
     <Locale>1033</Locale>
     <MoreInfoUrl>http://bloggemdano.blogspot.com/2010/06/wpf-mvvm-multi-project-template.html</MoreInfoUrl>
@@ -14,11 +14,19 @@
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="13.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="12.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
+        <Edition>VSWinDesktopExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="11.0">
         <Edition>Ultimate</Edition>
