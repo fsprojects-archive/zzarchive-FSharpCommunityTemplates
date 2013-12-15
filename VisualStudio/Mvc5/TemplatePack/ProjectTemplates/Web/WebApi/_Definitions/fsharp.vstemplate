@@ -53,6 +53,7 @@
       <package id="Microsoft.AspNet.WebApi.Core" version="5.0.0" skipAssemblyReferences="true"/>
       <package id="Microsoft.AspNet.WebApi.WebHost" version="5.0.0" skipAssemblyReferences="true"/>
       <package id="Newtonsoft.Json" version="4.5.11" skipAssemblyReferences="true"/>
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
     </packages>
   </WizardData>
 </VSTemplate>
