@@ -198,6 +198,9 @@
     <Content Include="ProjectTemplates\Web\EmptySelfHost\_Definitions\fsharp.vstemplate" />
     <Content Include="ProjectTemplates\Web\EmptySelfHost\Program.fs" />
     <Resource Include="ProjectTemplates\Web\EmptySelfHost\__TemplateIcon.jpg" />
+    <Content Include="packages\FsWebAddRegistryEntries.0.1.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Nancy.Templates.FSharp.AspNetHostWithRazor.fsproj" />
     <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Views\index.cshtml" />
     <None Include="ProjectTemplates\Web\AspNetHostWithRazor\Web.config" />

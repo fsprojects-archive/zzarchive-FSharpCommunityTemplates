@@ -27,6 +27,7 @@
     <packages repository="extension" repositoryId="06fffff9-555b-4041-8b43-1dc8956fffff">
       <package id="Nancy" version="0.17.1" />
       <package id="Nancy.Hosting.Self" version="0.17.1" />
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
     </packages>
   </WizardData>    
 </VSTemplate>
