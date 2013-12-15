@@ -70,6 +70,7 @@
       <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" skipAssemblyReferences="true"/>
       <package id="Microsoft.AspNet.Web.Optimization" version="1.1.2" skipAssemblyReferences="true"/>
       <package id="Newtonsoft.Json" version="4.5.11" skipAssemblyReferences="true"/>
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
     </packages>
   </WizardData>
 </VSTemplate>
