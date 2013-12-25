@@ -1,0 +1,3109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simple.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Simple.Web.Application">
+            <summary>
+            The running application.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Application.Run(System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task})">
+            <summary>
+            The OWIN standard application method.
+            </summary>
+            <param name="env"> Request life-time general variable storage.</param>
+            <param name="next">The next app/component in the OWIN pipeline.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> which will complete the request.</returns>
+        </member>
+        <member name="T:Simple.Web.Authentication.IUser">
+            <summary>
+            Represents an authenticated user.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Authentication.IUser.Guid">
+            <summary>
+            Gets the GUID that uniquely identifies the user in the system.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Authentication.IUser.Name">
+            <summary>
+            Gets the user's name.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Authentication.IUser.IsAuthenticated">
+            <summary>
+            Gets a value indicating whether this user is authenticated.
+            </summary>
+            <value>
+            	<c>true</c> if this user is authenticated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Behaviors.BehaviorAttribute">
+            <summary>
+            Base class for <see cref="T:Simple.Web.Behaviors.RequestBehaviorAttribute"/>, <see cref="T:Simple.Web.Behaviors.ResponseBehaviorAttribute"/> and <see cref="T:Simple.Web.Behaviors.OutputBehaviorAttribute"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.BehaviorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Behaviors.BehaviorAttribute"/> class.
+            </summary>
+            <param name="implementingType">The type which implements the behavior.</param>
+        </member>
+        <member name="P:Simple.Web.Behaviors.BehaviorAttribute.ImplementingType">
+            <summary>
+            Gets the type that implements the behaviour.
+            </summary>
+            <value>
+            The implementing type.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.BehaviorAttribute.Priority">
+            <summary>
+            Gets or sets the priority, allowing control over the order in which behaviors are processed.
+            </summary>
+            <value>
+            The priority.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Behaviors.CookieAttribute">
+            <summary>
+            Apply this attribute to a property on a handler class to have it persisted as a cookie.
+            Primitive properties (including strings and guids) will be persisted as single-value cookies.
+            Complex properties will be persisted as multi-value cookies.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.CookieAttribute.Name">
+            <summary>
+            Gets or sets the name of the HTTP cookie.
+            </summary>
+            <value>
+            The name of the HTTP cookie. If not set, this will be the same as the property name.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.CookieAttribute.TimeOut">
+            <summary>
+            Gets or sets the time in seconds the cookie is valid for.
+            </summary>
+            <value>The time out. Set to 0 (the default) for a session-only cookie.</value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.CookieAttribute.HttpOnly">
+            <summary>
+            Gets or sets a value indicating whether the cookie is HTTP only, that is, cannot be read by client-side script.
+            </summary>
+            <value>
+            <c>true</c> if HTTP only, <c>false</c> if not. Default is <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.CookieAttribute.Secure">
+            <summary>
+            Gets or sets a value indicating whether the cookie is sent over HTTPS.
+            </summary>
+            <value>
+            <c>true</c> if secure, <c>false</c> if not. Default is <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.CookieAttribute.Path">
+            <summary>
+            Gets or sets a value specifying the path below which the cooki
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IETag">
+            <summary>
+            Indicates that the resource for a handler has an ETag.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IETag.InputETag">
+            <summary>
+            Used by the framework to set the ETag from the Request.
+            </summary>
+            <value>
+            The input ETag.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IETag.OutputETag">
+            <summary>
+            The ETag to include as a header in the Response.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.GetInput">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.GetInput.Impl``1(Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <typeparam name="T">The input model type.</typeparam>
+            <param name="context">The context.</param>
+            <returns>The model de-serialized from the input stream.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.OptionalAuthentication">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.OptionalAuthentication.Impl(Simple.Web.Behaviors.IOptionalAuthentication,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns><c>true</c></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.WriteOutputAsync">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.WriteOutputAsync.Impl``1(Simple.Web.Behaviors.IOutputAsync{``0},Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <typeparam name="T">The output type.</typeparam>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> which will complete when the output has been written.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IOptionalAuthentication">
+            <summary>
+            Indicates that a handler resource behaves differently for authenticated users.
+            </summary>
+            <remarks>If a user is authenticated, the <see cref="P:Simple.Web.Behaviors.IOptionalAuthentication.CurrentUser"/> property will be set.
+            Either way, the resource will still be loaded.</remarks>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOptionalAuthentication.CurrentUser">
+            <summary>
+            Used by the framework to set the current user.
+            </summary>
+            <value>
+            The current user.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IOutputStream">
+            <summary>
+            Adds functionality for handlers which return raw streams.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOutputStream.ContentType">
+            <summary>
+            Gets the text to use as the <c>Content-Type</c> header.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOutputStream.ContentDisposition">
+            <summary>
+            Gets the text to use in the <c>Content-Disposition header</c>.
+            </summary>
+            <remarks>Return <c>null</c> to omit the <c>Content-Disposition</c> header.
+            Use a string like &quot;attachment; filename=myfile.txt&quot; to force the browser to download
+            the content as a file instead of displaying it.</remarks>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOutputStream.Output">
+            <summary>
+            Gets the output.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.OutputBehaviorAttribute">
+            <summary>
+            Should be applied to behavior interfaces that work in the Output phase of a request/response cycle.
+            </summary>
+            <remarks>The Output phase occurs after the Response phase is complete.
+            HEAD requests prevent the Output phase from being called.</remarks>
+        </member>
+        <member name="M:Simple.Web.Behaviors.OutputBehaviorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Behaviors.OutputBehaviorAttribute"/> class.
+            </summary>
+            <param name="implementingType">The type that implements the behavior for the interface.</param>
+        </member>
+        <member name="M:Simple.Web.Behaviors.OutputBehaviorAttribute.Get(System.Type)">
+            <summary>
+            Gets the <see cref="T:Simple.Web.Behaviors.OutputBehaviorAttribute"/> for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The <see cref="T:Simple.Web.Behaviors.OutputBehaviorAttribute"/>, or <c>null</c> if it is not applied to the type.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.RequestBehaviorAttribute">
+            <summary>
+            Should be applied to behavior interfaces that work in the Request phase of a request/response cycle.
+            </summary>
+            <remarks>The Request phase occurs before a handler has been run.</remarks>
+        </member>
+        <member name="M:Simple.Web.Behaviors.RequestBehaviorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Behaviors.RequestBehaviorAttribute"/> class.
+            </summary>
+            <param name="implementingType">The type that implements the behavior for the interface.</param>
+        </member>
+        <member name="M:Simple.Web.Behaviors.RequestBehaviorAttribute.Get(System.Type)">
+            <summary>
+            Gets the <see cref="T:Simple.Web.Behaviors.RequestBehaviorAttribute"/> for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The <see cref="T:Simple.Web.Behaviors.RequestBehaviorAttribute"/>, or <c>null</c> if it is not applied to the type.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.ResponseBehaviorAttribute">
+            <summary>
+            Should be applied to behavior interfaces that work in the Response phase of a request/response cycle.
+            </summary>
+            <remarks>The Response phase occurs after a handler has been run, before the Output phase.</remarks>
+        </member>
+        <member name="M:Simple.Web.Behaviors.ResponseBehaviorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Behaviors.ResponseBehaviorAttribute"/> class.
+            </summary>
+            <param name="implementingType">The type that implements the behavior for the interface.</param>
+        </member>
+        <member name="M:Simple.Web.Behaviors.ResponseBehaviorAttribute.Get(System.Type)">
+            <summary>
+            Gets the <see cref="T:Simple.Web.Behaviors.ResponseBehaviorAttribute"/> for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The <see cref="T:Simple.Web.Behaviors.ResponseBehaviorAttribute"/>, or <c>null</c> if it is not applied to the type.</returns>
+        </member>
+        <member name="T:Simple.Web.CodeGeneration.AsyncRunner">
+            <summary>
+            Runs asynchronous handlers. Should only be used from hosting code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.CodeGeneration.AsyncRunner.#ctor(System.Func{System.Object,Simple.Web.Http.IContext,System.Threading.Tasks.Task{Simple.Web.Status}},System.Action{System.Object,Simple.Web.Http.IContext,Simple.Web.Status})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.CodeGeneration.AsyncRunner"/> class.
+            </summary>
+            <param name="start">The start function.</param>
+            <param name="end">The end action.</param>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.AsyncRunner.End">
+            <summary>
+            Gets the end action.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.AsyncRunner.Start">
+            <summary>
+            Gets the start function.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.CodeGeneration.IScopedHandler">
+            <summary>
+            A scoped wrapper around a Handler for use by Dependency Injection libraries.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.IScopedHandler.Handler">
+            <summary>
+            Gets the handler.
+            </summary>
+            <value>
+            The handler.
+            </value>
+        </member>
+        <member name="M:Simple.Web.CodeGeneration.PipelineFunctionFactory.BuildAsyncRunMethod(System.String)">
+            <summary>
+            Generates a compiled method to run a Handler.
+            </summary>
+            <returns>A compiled delegate to run the Handler asynchronously.</returns>
+        </member>
+        <member name="T:Simple.Web.Authentication.DefaultAuthenticationProvider">
+            <summary>
+            Default implementation of <see cref="T:Simple.Web.Authentication.IAuthenticationProvider"/>. Not for production use.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Authentication.IAuthenticationProvider">
+            <summary>
+            Provides methods for supplying user information from a request context.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Authentication.IAuthenticationProvider.GetLoggedInUser(Simple.Web.Http.IContext)">
+            <summary>
+            Gets the logged in user from the context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A user, or <c>null</c> if no user is authenticated.</returns>
+        </member>
+        <member name="M:Simple.Web.Authentication.IAuthenticationProvider.SetLoggedInUser(Simple.Web.Http.IContext,Simple.Web.Authentication.IUser)">
+            <summary>
+            Sets the logged in user.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="user">The user.</param>
+        </member>
+        <member name="M:Simple.Web.Authentication.DefaultAuthenticationProvider.GetLoggedInUser(Simple.Web.Http.IContext)">
+            <summary>
+            Gets the logged in user from the context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>
+            A user, or <c>null</c> if no user is authenticated.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Authentication.DefaultAuthenticationProvider.SetLoggedInUser(Simple.Web.Http.IContext,Simple.Web.Authentication.IUser)">
+            <summary>
+            Sets the logged in user.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="user">The user.</param>
+        </member>
+        <member name="T:Simple.Web.CodeGeneration.ScopedHandler">
+            <summary>
+            Default implementation of <see cref="T:Simple.Web.CodeGeneration.IScopedHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.CodeGeneration.ScopedHandler.#ctor(System.Object,Simple.Web.DependencyInjection.ISimpleContainerScope)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.CodeGeneration.ScopedHandler"/> class.
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="scope">The scope.</param>
+        </member>
+        <member name="M:Simple.Web.CodeGeneration.ScopedHandler.Create(System.Object,Simple.Web.DependencyInjection.ISimpleContainerScope)">
+            <summary>
+            Creates the specified handler.
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="scope">The scope.</param>
+            <returns>An <see cref="T:Simple.Web.CodeGeneration.IScopedHandler"/> wrapped around a handler object.</returns>
+        </member>
+        <member name="M:Simple.Web.CodeGeneration.ScopedHandler.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.ScopedHandler.Handler">
+            <summary>
+            Gets the handler.
+            </summary>
+            <value>
+            The handler.
+            </value>
+        </member>
+        <member name="T:Simple.Web.ExplicitGenericResolverAttribute">
+            <summary>
+            Provides a list of Generic URI types from a regular expression.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.GenericResolverAttribute">
+            <summary>
+            Base class for attributes that resolve Generic UriTemplate parameters.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.GenericResolverAttribute.GetTypes">
+            <summary>
+            When implemented in a derived class, should return a list of all valid types for the generic parameter.
+            </summary>
+            <returns>A list of valid types.</returns>
+        </member>
+        <member name="M:Simple.Web.GenericResolverAttribute.GetNames(System.Type)">
+            <summary>
+            Returns a list of string names that are valid in a URI for the given type.
+            </summary>
+            <param name="type">The type from which to derive the valid names.</param>
+            <returns>A list of names.</returns>
+        </member>
+        <member name="P:Simple.Web.GenericResolverAttribute.UriTemplateName">
+            <summary>
+            The name of the type in the UriTemplate.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.ExplicitGenericResolverAttribute.#ctor(System.String,System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.RegexGenericResolverAttribute"/> class.
+            </summary>
+            <param name="uriTemplateName">Name of the URI template part.</param>
+            <param name="types">All the types for which the UriTemplate is valid.</param>
+        </member>
+        <member name="M:Simple.Web.ExplicitGenericResolverAttribute.GetTypes">
+            <summary>
+            When implemented in a derived class, should return a list of all valid types for the generic parameter.
+            </summary>
+            <returns>
+            A list of valid types.
+            </returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.AsyncExtensions">
+            <summary>
+            Extension methods for Async operations
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.AsyncExtensions.WriteAsync(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Write a byte array to a Stream asynchronously.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="bytes">The bytes to write to the stream.</param>
+            <param name="offset">The index within the byte array from which to write.</param>
+            <param name="length">The number of bytes to write to the stream.</param>
+            <returns>A Task which will complete when all bytes have been written to the Stream.</returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.IFileUtility">
+            <summary>
+            Provides methods for working with files in an application server.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.IFileUtility.Exists(System.String)">
+            <summary>
+            Checks to see whether a path exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the path exists; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.NameValueCollectionEx">
+            <summary>
+            Extension method class for <see cref="T:System.Collections.Specialized.NameValueCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.NameValueCollectionEx.ToLookup(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Converts a <see cref="T:System.Collections.Specialized.NameValueCollection"/> to an ILookup.
+            </summary>
+            <param name="nameValueCollection">The name value collection.</param>
+            <returns>An <see cref="T:System.Linq.ILookup`2"/> representation of the <see cref="T:System.Collections.Specialized.NameValueCollection"/>.</returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.StringHelpers">
+            <summary>
+            Handy extensions for strings.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.StringHelpers.SubstringBefore(System.String,System.Char)">
+            <summary>
+            Return the substring up to but not including the first instance of 'c'.
+            </summary>
+            <param name="src">The source string.</param>
+            <param name="c">The character to look for.</param>
+            <returns>The substring up to but not including the first instance of 'c'. If 'c' is not found, the entire string is returned.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.StringHelpers.SubstringBeforeLast(System.String,System.Char)">
+            <summary>
+            Return the substring up to but not including the last instance of 'c'.
+            </summary>
+            <param name="src">The source string.</param>
+            <param name="c">The character to look for.</param>
+            <returns>The substring up to but not including the last instance of 'c'. If 'c' is not found, the entire string is returned.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.StringHelpers.SubstringAfter(System.String,System.Char)">
+            <summary>
+            Return the substring after but not including the first instance of 'c'.
+            </summary>
+            <param name="src">The source string.</param>
+            <param name="c">The character to look for.</param>
+            <returns>The substring after but not including the first instance of 'c'. If 'c' is not found, the entire string is returned.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.StringHelpers.SubstringAfterLast(System.String,System.Char)">
+            <summary>
+            Return the substring after but not including the last instance of 'c'.
+            </summary>
+            <param name="src">The source string.</param>
+            <param name="c">The character to look for.</param>
+            <returns>The substring after but not including the last instance of 'c'. If 'c' is not found, the entire string is returned.</returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.TaskHelper">
+            <summary>
+            Helper methods for creating completed or faulted Tasks.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.TaskHelper.Completed``1(``0)">
+            <summary>
+            Creates a completed <see cref="T:System.Threading.Tasks.Task"/> with the specified <c>Result</c> value.
+            </summary>
+            <typeparam name="T">The type of the <c>Result</c> value.</typeparam>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> set to completed with the specified value as the <c>Result</c>.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.TaskHelper.Completed">
+            <summary>
+            Creates a completed <see cref="T:System.Threading.Tasks.Task"/> with the specified <c>Result</c> value.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> set to completed with the specified value as the <c>null</c>.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.TaskHelper.Exception(System.Exception)">
+            <summary>
+            Creates a faulted <see cref="T:System.Threading.Tasks.Task"/>.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns>A faulted <see cref="T:System.Threading.Tasks.Task"/> with the <c>Exception</c> property set to the specified value.</returns>
+        </member>
+        <member name="T:Simple.Web.Http.CacheLevel">
+            <summary>
+            Represents the HTTP cacheability levels.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.CacheLevel.None">
+            <summary>
+            No caching; sets the Cache-Control header to &quot;no-cache&quot;
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.CacheLevel.Public">
+            <summary>
+            Public caching (allows caching by client and proxies); sets the Cache-Control header to &quot;public&quot;
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.CacheLevel.Private">
+            <summary>
+            Private caching (allows caching by server only); sets the Cache-Control header to &quot;private&quot;
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Http.CacheOptions">
+            <summary>
+            Carries information on how to cache a resource.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.CacheOptions.DisableCaching">
+            <summary>
+            Use this single instance to disable caching.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Http.CacheOptions.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Http.CacheOptions"/> class.
+            </summary>
+            <param name="absoluteExpiry">The absolute expiry time.</param>
+            <remarks>Use this constructor when you want to specify absolute expiry.</remarks>
+        </member>
+        <member name="M:Simple.Web.Http.CacheOptions.#ctor(System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Http.CacheOptions"/> class.
+            </summary>
+            <param name="slidingExpiry">The sliding expiry time.</param>
+            <remarks>Use this constructor when you want to specify sliding expiry.</remarks>
+        </member>
+        <member name="M:Simple.Web.Http.CacheOptions.ToHeaderString">
+            <summary>
+            Formats the options as a Cache-Control header value.
+            </summary>
+            <returns>The Cache-Control header string.</returns>
+        </member>
+        <member name="P:Simple.Web.Http.CacheOptions.SlidingExpiry">
+            <summary>
+            Gets the sliding expiry time.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.CacheOptions.AbsoluteExpiry">
+            <summary>
+            Gets the absolute expiry time.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.CacheOptions.Disable">
+            <summary>
+            Gets a value indicating whether caching should be disabled for a resource.
+            </summary>
+            <value>
+              <c>true</c> if caching should be disabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Http.CacheOptions.Level">
+            <summary>
+            Gets or sets a value indicating the level at which the response may be cached.
+            </summary>
+            <value>A <see cref="T:Simple.Web.Http.CacheLevel"/> value.</value>
+        </member>
+        <member name="P:Simple.Web.Http.CacheOptions.VaryByHeaders">
+            <summary>
+            Gets or sets names of headers which should be considered by the caching systems.
+            </summary>
+            <value>
+            The headers to vary by.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetIfModifiedSince">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetIfModifiedSince.Impl(Simple.Web.Behaviors.IModified,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetInputETag">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetInputETag.Impl(Simple.Web.Behaviors.IETag,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetLastModified">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetLastModified.Impl(Simple.Web.Behaviors.IModified,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetOutputETag">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetOutputETag.Impl(Simple.Web.Behaviors.IETag,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetUserCookie">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetUserCookie.Impl(Simple.Web.Behaviors.ILogin,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler which processed the login.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Http.HeaderKeys">
+            <summary>
+            Provides string constants for HTTP Header keys
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlAllowOrigin">
+            <summary>
+            The <c>Access-Control-Allow-Origin</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlAllowMethods">
+            <summary>
+            The <c>Access-Control-Allow-Methods</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlAllowHeaders">
+            <summary>
+            The <c>Access-Control-Allow-Headers</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlExposeHeaders">
+            <summary>
+            The <c>Access-Control-Expose-Headers</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlMaxAge">
+            <summary>
+            The <c>Access-Control-Max-Age</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AccessControlAllowCredentials">
+            <summary>
+            The <c>Access-Control-Allow-Credentials</c> response header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Accept">
+            <summary>
+            The <c>Accept</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AcceptCharset">
+            <summary>
+            The <c>Accept-Charset</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AcceptEncoding">
+            <summary>
+            The <c>Accept-Encoding</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AcceptLanguage">
+            <summary>
+            The <c>Accept-Language</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.AcceptRanges">
+            <summary>
+            The <c>Accept-Ranges</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Age">
+            <summary>
+            The <c>Age</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Allow">
+            <summary>
+            The <c>Allow</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Authorization">
+            <summary>
+            The <c>Authorization</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.CacheControl">
+            <summary>
+            The <c>Cache-Control</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Connection">
+            <summary>
+            The <c>Connection</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentEncoding">
+            <summary>
+            The <c>Content-Encoding</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentLanguage">
+            <summary>
+            The <c>Content-Language</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentLength">
+            <summary>
+            The <c>Content-Length</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentLocation">
+            <summary>
+            The <c>Content-Location</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentMd5">
+            <summary>
+            The <c>Content-MD5</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentRange">
+            <summary>
+            The <c>Content-Range</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ContentType">
+            <summary>
+            The <c>Content-Type</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Cookie">
+            <summary>
+            The <c>Cookie</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Date">
+            <summary>
+            The <c>Date</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ETag">
+            <summary>
+            The <c>ETag</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Expect">
+            <summary>
+            The <c>Expect</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Expires">
+            <summary>
+            The <c>Expires</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.From">
+            <summary>
+            The <c>From</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Host">
+            <summary>
+            The <c>Host</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.IfMatch">
+            <summary>
+            The <c>If-Match</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.IfModifiedSince">
+            <summary>
+            The <c>If-Modified-Since</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.IfNoneMatch">
+            <summary>
+            The <c>If-None-Match</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.IfRange">
+            <summary>
+            The <c>If-Range</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.IfUnmodifiedSince">
+            <summary>
+            The <c>If-Unmodified-Since</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.LastModified">
+            <summary>
+            The <c>Last-Modified</c> entity-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Location">
+            <summary>
+            The <c>Location</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.MaxForwards">
+            <summary>
+            The <c>Max-Forwards</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Pragma">
+            <summary>
+            The <c>Pragma</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ProxyAuthenticate">
+            <summary>
+            The <c>Proxy-Authenticate</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.ProxyAuthorization">
+            <summary>
+            The <c>Proxy-Authorization</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Range">
+            <summary>
+            The <c>Range</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Referer">
+            <summary>
+            The <c>Referer</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.RetryAfter">
+            <summary>
+            The <c>Retry-After</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Server">
+            <summary>
+            The <c>Server</c> response-header field.
+            </summary>
+            <remarks>Don't use this, it's a relic of information-addicted academicians who never had to worry about people hacking their web site.</remarks>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.SetCookie">
+            <summary>
+            The <c>Set-Cookie</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.TE">
+            <summary>
+            The <c>TE</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Trailer">
+            <summary>
+            The <c>Trailer</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.TransferEncoding">
+            <summary>
+            The <c>Transfer-Encoding</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Upgrade">
+            <summary>
+            The <c>Upgrade</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.UserAgent">
+            <summary>
+            The <c>User-Agent</c> request-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Vary">
+            <summary>
+            The <c>Vary</c> response-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Via">
+            <summary>
+            The <c>Via</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.Warning">
+            <summary>
+            The <c>Warning</c> general-header field.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Http.HeaderKeys.WwwAuthenticate">
+            <summary>
+            The <c>WWW-Authenticate</c> response-header field.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Http.RequestExtensions">
+            <summary>
+            Extension methods for the <see cref="T:Simple.Web.Http.IRequest"/> interface.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Http.RequestExtensions.GetAccept(Simple.Web.Http.IRequest)">
+            <summary>
+            Gets the Accept header entry.
+            </summary>
+            <param name="request">The <see cref="T:Simple.Web.Http.IRequest"/> instance.</param>
+            <returns>The Accept header value(s), or a wildcard if not in the Headers collection.</returns>
+        </member>
+        <member name="M:Simple.Web.Http.RequestExtensions.GetContentType(Simple.Web.Http.IRequest)">
+            <summary>
+            Gets the Content-Type header entry.
+            </summary>
+            <param name="request">The <see cref="T:Simple.Web.Http.IRequest"/> instance.</param>
+            <returns>The Content-Type header value, or a wildcard if not in the Headers collection.</returns>
+        </member>
+        <member name="M:Simple.Web.Http.RequestExtensions.GetOrigin(Simple.Web.Http.IRequest)">
+            <summary>
+            Gets the Origin header entry.
+            </summary>
+            <param name="request">The <see cref="T:Simple.Web.Http.IRequest"/> instance.</param>
+            <returns>The Origin header value, or <c>null</c> if not in the Headers collection.</returns>
+        </member>
+        <member name="M:Simple.Web.Http.RequestExtensions.TryGetCookieValue(Simple.Web.Http.IRequest,System.String,System.String@)">
+            <summary>
+            Tries to get the value of a Cookie.
+            </summary>
+            <param name="request">The <see cref="T:Simple.Web.Http.IRequest"/> instance.</param>
+            <param name="name">The name of the cookie.</param>
+            <param name="value">The value of the cookie if found; otherwise, <c>null</c>.</param>
+            <returns><c>true</c> if the cookie is found in the request; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Simple.Web.Http.ResponseExtensions">
+            <summary>
+            Extension methods for the <see cref="T:Simple.Web.Http.IResponse"/> interface.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetContentType(Simple.Web.Http.IResponse,System.String)">
+            <summary>
+            Sets the response Content-Type header.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="contentType">The content type. This should be a valid media type.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetContentLength(Simple.Web.Http.IResponse,System.Int64)">
+            <summary>
+            Sets the response Content-Length header.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="contentLength">The content length.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetLastModified(Simple.Web.Http.IResponse,System.DateTimeOffset)">
+            <summary>
+            Sets the response Last-Modified header.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="time">The time the resource was last modified.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetHeader(Simple.Web.Http.IResponse,System.String,System.String)">
+            <summary>
+            Sets a response header. Any current values for the specified header field are replaced.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="header">The header key.</param>
+            <param name="value">The header value.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.TryGetHeader(Simple.Web.Http.IResponse,System.String,System.String@)">
+            <summary>
+            Gets a response header if it is set.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="header">The header key.</param>
+            <param name="value">The header value if it is set; otherwise, <c>null</c>.</param>
+            <returns><c>true</c> if the header is set; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the header is set but has multiple values.</exception>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.AddHeader(Simple.Web.Http.IResponse,System.String,System.String)">
+            <summary>
+            Adds a response header. Current values for the specified header field are retained.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="header">The header key.</param>
+            <param name="value">The header value.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetCookie(Simple.Web.Http.IResponse,System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Sets a cookie.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="name">The name of the cookie to set.</param>
+            <param name="value">The value of the cookie to set.</param>
+            <param name="timeOut">The time (in seconds) after which the cookie expires.</param>
+            <param name="httpOnly">A flag indicating whether the cookie is readable only via HTTP (i.e., not by client-side script). Default is <c>true</c>.</param>
+            <param name="secure">A flag indicating whether the cookie should only be sent over HTTPS. Default is <c>false</c>.</param>
+            <param name="path">The path below which the cookie applies.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetETag(Simple.Web.Http.IResponse,System.String)">
+            <summary>
+            Sets the ETag header.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="etag">The ETag value.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.RemoveCookie(Simple.Web.Http.IResponse,System.String)">
+            <summary>
+            Removes a cookie (by setting its Expiry one year in the past).
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="name">The name of the cookie to remove.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetLastModified(Simple.Web.Http.IResponse,System.DateTime)">
+            <summary>
+            Sets the Last-Modified header.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="dateTime">The time the resource was last modified.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetAccessControl(Simple.Web.Http.IResponse,Simple.Web.Cors.IAccessControlEntry)">
+            <summary>
+            Sets the Access-Control-* headers.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="accessControl">A <see cref="T:Simple.Web.Cors.IAccessControlEntry"/> containing the header values.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.DisableCache(Simple.Web.Http.IResponse)">
+            <summary>
+            Disables response caching by setting the Cache-Control header to "no-cache&amp; no-store".
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+        </member>
+        <member name="M:Simple.Web.Http.ResponseExtensions.SetCacheOptions(Simple.Web.Http.IResponse,Simple.Web.Http.CacheOptions)">
+            <summary>
+            Sets the Cache-Control header and optionally the Expires and Vary headers.
+            </summary>
+            <param name="response">The <see cref="T:Simple.Web.Http.IResponse"/> instance.</param>
+            <param name="cacheOptions">A <see cref="T:Simple.Web.Http.CacheOptions"/> object to specify the cache settings.</param>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.IContent">
+            <summary>
+            Represents content to be returned to the client.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.IContent.Uri">
+            <summary>
+            Gets the URI used to request the resource.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.IContent.Handler">
+            <summary>
+            Gets the handler which generated the model.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.IContent.Model">
+            <summary>
+            Gets the model.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.IContent.Variables">
+            <summary>
+            Gets the variables from the handler.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.IContent.Links">
+            <summary>
+            Gets the links which are valid for the model type, based on the <see cref="T:Simple.Web.Links.LinksFromAttribute"/> on handlers.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.IMediaTypeHandler">
+            <summary>
+            Represents a handler for a specific content type.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.IMediaTypeHandler.Read``1(System.IO.Stream)">
+            <summary>
+            Reads content from the specified input stream.
+            </summary>
+            <typeparam name="T">The type of object to read from the stream.</typeparam>
+            <param name="inputStream">The input stream.</param>
+            <returns>A model constructed from the content in the input stream.</returns>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.IMediaTypeHandler.Write``1(Simple.Web.MediaTypeHandling.IContent,System.IO.Stream)">
+            <summary>
+            Writes the specified content.
+            </summary>
+            <typeparam name="T">The type of the object to write to the stream.</typeparam>
+            <param name="content">The content.</param>
+            <param name="outputStream">The output stream.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> that completes when the output has been written.</returns>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.ObjectToDictionary">
+            <summary>
+            Extension method for copying an object's properties to a dictionary.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.ObjectToDictionary.ToDictionary(System.Object)">
+            <summary>
+            Copies all readable properties from an object to a dictionary.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A dictionary representation of the object's properties.</returns>
+        </member>
+        <member name="T:Simple.Web.Hosting.HandlerFactory">
+            <summary>
+            Builds handlers. To be used by Hosting plug-ins.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Hosting.HandlerFactory.#ctor(Simple.Web.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Hosting.HandlerFactory"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <remarks>For testing only. In production, use the singleton <see cref="P:Simple.Web.Hosting.HandlerFactory.Instance"/>.</remarks>
+        </member>
+        <member name="M:Simple.Web.Hosting.HandlerFactory.GetHandler(Simple.Web.Hosting.HandlerInfo)">
+            <summary>
+            Gets the handler.
+            </summary>
+            <param name="handlerInfo">The handler info.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerFactory.Instance">
+            <summary>
+            Gets the singleton instance.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Helpers.AssemblyExtensions">
+            <summary>
+            Helpful extension methods for <see cref="T:System.Reflection.Assembly"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.AssemblyExtensions.GetPath(System.Reflection.AssemblyName)">
+            <summary>
+            Gets the local path from an <see cref="T:System.Reflection.AssemblyName"/>.
+            </summary>
+            <param name="assemblyName"><see cref="T:System.Reflection.AssemblyName"/> identifying an assembly.</param>
+            <returns>The local path of the assembly.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.AssemblyExtensions.GetPath(System.Reflection.Assembly)">
+            <summary>
+            Gets the local path from an <see cref="T:System.Reflection.Assembly"/>.
+            </summary>
+            <param name="assembly">A loaded <see cref="T:System.Reflection.Assembly"/>.</param>
+            <returns>The local path of the assembly.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.CheckAuthentication">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.CheckAuthentication.Impl(Simple.Web.Behaviors.IRequireAuthentication,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns><c>true</c> if the user is authenticated; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetCacheOptions">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetCacheOptions.Impl(Simple.Web.Behaviors.ICacheability,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.CodeGeneration.IMethodLookup">
+            <summary>
+            Provides methods for the code generator
+            </summary>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.IMethodLookup.WriteStatusCode">
+            <summary>
+            Gets a method to write the status code to the response.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.CodeGeneration.IMethodLookup.WriteView">
+            <summary>
+            Gets a method to render a view to the response.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.Redirect">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.Redirect.Impl(Simple.Web.Behaviors.IMayRedirect,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns><c>false</c> (to prevent response output) if the status is a redirect code; otherwise, <c>true</c>.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.Redirect2">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.Redirect2.Impl(System.Object,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns><c>false</c> (to prevent response output) if the status is a redirect code; otherwise, <c>true</c>.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetFiles">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetFiles.Impl(Simple.Web.Behaviors.IUploadFiles,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.SetInput">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.SetInput.Impl``1(Simple.Web.Behaviors.IInput{``0},Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <typeparam name="T">The input model type.</typeparam>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.WriteOutput">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.WriteOutput.Impl``1(Simple.Web.Behaviors.IOutput{``0},Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <typeparam name="T">The output model type.</typeparam>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Simple.Web.Behaviors.Implementations.WriteStreamResponse">
+            <summary>
+            This type supports the framework directly and should not be used from your code.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Behaviors.Implementations.WriteStreamResponse.Impl(Simple.Web.Behaviors.IOutputStream,Simple.Web.Http.IContext)">
+            <summary>
+            This method supports the framework directly and should not be used from your code
+            </summary>
+            <param name="handler">The handler.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Configuration">
+            <summary>
+                Default implementation of <see cref="T:Simple.Web.IConfiguration"/>.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.IConfiguration">
+            <summary>
+            Provides configuration details for the application.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.PublicFolders">
+            <summary>
+            Gets the list of public folders.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.PublicFileMappings">
+            <summary>
+            Gets a dictionary representing URLs which should be mapped directly to files.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.AuthenticatedFileMappings">
+            <summary>
+            Gets a dictionary representing URLs which map to files but are only for authenticated users.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.AccessControl">
+            <summary>
+            Gets the Set of Origins which are allowed to access this application.
+            To allow full CORS from any origin, add the wildcard &quot;*&quot; to this Set.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.Container">
+            <summary>
+            Gets or sets the IoC container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.LoginPage">
+            <summary>
+            Gets or sets the type of the handler which provides the login page for Forms-based Authentication.
+            </summary>
+            <value>
+            The login page.
+            </value>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.AuthenticationProvider">
+            <summary>
+            Gets or sets the authentication provider.
+            </summary>
+            <value>
+            The authentication provider.
+            </value>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.ExceptionHandler">
+            <summary>
+            Gets or sets a Handler for Exceptions to write something meaningful to the response.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IConfiguration.DefaultMediaTypeHandler">
+            <summary>
+            Gets or sets the MediaTypeHandler to use when Accept is */*
+            </summary>
+            <value>
+            An <see cref="T:Simple.Web.MediaTypeHandling.IMediaTypeHandler"/> instance
+            </value>
+        </member>
+        <member name="P:Simple.Web.Configuration.PublicFileMappings">
+            <summary>
+                Gets a dictionary representing URLs which should be mapped directly to files.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Configuration.PublicFolders">
+            <summary>
+                Gets the list of public folders.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Configuration.AuthenticatedFileMappings">
+            <summary>
+                Gets a dictionary representing URLs which map to files but are only for authenticated users.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Configuration.Container">
+            <summary>
+                Gets or sets the IoC container.
+            </summary>
+            <value>
+                The container.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Configuration.LoginPage">
+            <summary>
+                Gets or sets the type of the handler which provides the login page for Forms-based Authentication.
+            </summary>
+            <value>
+                The login page.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Configuration.AuthenticationProvider">
+            <summary>
+                Gets or sets the authentication provider.
+            </summary>
+            <value>
+                The authentication provider.
+            </value>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.MediaType">
+            <summary>
+            Constants for common hypermedia content types
+            </summary>
+        </member>
+        <member name="F:Simple.Web.MediaTypeHandling.MediaType.Json">
+            <summary>
+            application/json
+            </summary>
+        </member>
+        <member name="F:Simple.Web.MediaTypeHandling.MediaType.Html">
+            <summary>
+            text/html
+            </summary>
+        </member>
+        <member name="F:Simple.Web.MediaTypeHandling.MediaType.XHtml">
+            <summary>
+            application/xhtml+xml
+            </summary>
+        </member>
+        <member name="F:Simple.Web.MediaTypeHandling.MediaType.Xml">
+            <summary>
+            application/xml
+            </summary>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.MediaTypeHandlerEx.GetContentType(Simple.Web.MediaTypeHandling.IMediaTypeHandler,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Gets the first content-type match for the handler from a list of accepted types
+            </summary>
+            <param name="mediaTypeHandler">The content type handler.</param>
+            <param name="acceptedTypes">The accepted types.</param>
+            <returns>The MIME content type, or <c>null</c> if no match is found.</returns>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.MediaTypesAttribute">
+            <summary>
+            Specifies which content types an implementation of <see cref="T:Simple.Web.MediaTypeHandling.IMediaTypeHandler"/> is used for.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.MediaTypesAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.MediaTypeHandling.MediaTypesAttribute"/> class.
+            </summary>
+            <param name="contentTypes">The content types.</param>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.MediaTypesAttribute.Get(System.Type)">
+            <summary>
+            Gets a collection of <see cref="T:Simple.Web.MediaTypeHandling.MediaTypesAttribute"/> instances for a specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A list of <see cref="T:Simple.Web.MediaTypeHandling.MediaTypesAttribute"/> attributes applied to the type.</returns>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.MediaTypesAttribute.ContentTypes">
+            <summary>
+            Gets the content types.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.DependencyInjection.ISimpleContainer">
+            <summary>
+            Interface to implement for Dependency Injection.
+            </summary>
+            <remarks>Wrap this around your favorite IoC container.</remarks>
+        </member>
+        <member name="M:Simple.Web.DependencyInjection.ISimpleContainer.BeginScope">
+            <summary>
+            Begins a nested container / child container / activation block scope
+            </summary>
+            <returns>A container that you should dispose to end the block scope.</returns>
+        </member>
+        <member name="T:Simple.Web.DependencyInjection.ISimpleContainerScope">
+            <summary>
+            Interface to implement for scoped objects created by IoC containers.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.DependencyInjection.ISimpleContainerScope.Get``1">
+            <summary>
+            Gets an instance of <c>T</c>.
+            </summary>
+            <typeparam name="T">The type of thing to construct.</typeparam>
+            <returns>A new instance of T.</returns>
+        </member>
+        <member name="M:Simple.Web.DependencyInjection.ISimpleContainerScope.Get(System.Type)">
+            <summary>
+            Gets an instance of <c>objectType</c>.
+            </summary>
+            <param name="objectType">The type of thing to construct.</param>
+            <returns>A new instance of objectType.</returns>
+        </member>
+        <member name="T:Simple.Web.Hosting.HandlerInfo">
+            <summary>
+            Provides useful information about handlers.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Hosting.HandlerInfo.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Hosting.HandlerInfo"/> class.
+            </summary>
+            <param name="handlerType">Type of the handler.</param>
+            <param name="httpMethod">The HTTP method.</param>
+        </member>
+        <member name="M:Simple.Web.Hosting.HandlerInfo.#ctor(System.Type,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Hosting.HandlerInfo"/> class.
+            </summary>
+            <param name="handlerType">Type of the handler.</param>
+            <param name="variables">The variables.</param>
+            <param name="httpMethod">The HTTP method.</param>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.HttpMethod">
+            <summary>
+            Gets the HTTP method.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.Variables">
+            <summary>
+            Gets the variables.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.HandlerType">
+            <summary>
+            Gets the type of the handler.
+            </summary>
+            <value>
+            The type of the handler.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.RequiresAuthentication">
+            <summary>
+            Gets a value indicating whether the Handler requires authentication.
+            </summary>
+            <value>
+            	<c>true</c> if the Handler requires authentication; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.InputType">
+            <summary>
+            Gets the type of the input.
+            </summary>
+            <value>
+            The type of the input.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.OutputType">
+            <summary>
+            Gets the type of the output.
+            </summary>
+            <value>
+            The type of the output.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Hosting.HandlerInfo.IsAsync">
+            <summary>
+            Gets a value indicating whether the handler is asynchronous.
+            </summary>
+            <value>
+              <c>true</c> if the handler is asynchronous; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Helpers.ExportedTypeHelper">
+            <summary>
+            For working with type reflection at runtime.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.ExportedTypeHelper.FromCurrentAppDomain(System.Func{System.Type,System.Boolean})">
+            <summary>
+            Gets the exported types from all assemblies currently loaded, except for those which are dynamically generated or in the GAC.
+            </summary>
+            <param name="predicate">A predicate to filter the types.</param>
+            <returns>A list of types.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.FileUtility.Exists(System.String)">
+            <summary>
+            Checks to see whether a path exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>
+              <c>true</c> if the path exists; otherwise <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.FormDeserializer.Read``1(System.IO.Stream)">
+            <summary>
+            Reads content from the specified input stream, which is assumed to be in x-www-form-urlencoded format.
+            </summary>
+            <param name="inputStream">The input stream.</param>
+            <returns>
+            A model constructed from the content in the input stream.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.MediaTypeHandling.FormDeserializer.Write``1(Simple.Web.MediaTypeHandling.IContent,System.IO.Stream)">
+            <summary>
+            Writes the specified content as x-www-form-urlencoded.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="outputStream">The output stream.</param>
+        </member>
+        <member name="T:Simple.Web.Helpers.ErrorHelper">
+            <summary>
+            Used for writing error messages to a response.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.ErrorHelper.#ctor(Simple.Web.Http.IContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Helpers.ErrorHelper"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Simple.Web.Helpers.ErrorHelper.WriteError(System.Exception)">
+            <summary>
+            Writes the error to the Response.
+            </summary>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:Simple.Web.IDelete">
+            <summary>
+            Represents a synchronous handler for a DELETE operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IDelete.Delete">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IDeleteAsync">
+            <summary>
+            Represents an asynchronous handler for a DELETE operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IDeleteAsync.Delete">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.IHead">
+            <summary>
+            Represents a synchronous handler for a HEAD operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IHead.Head">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IHeadAsync">
+            <summary>
+            Represents an asynchronous handler for a HEAD operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IHeadAsync.Head">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.ILogin">
+            <summary>
+            Represents the handler which processes the login for a Forms-based authentication application.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.ILogin.LoggedInUser">
+            <summary>
+            Sets the URL that the application should return to once login is complete.
+            </summary>
+            <value>
+            The return URL.
+            </value>
+            <remarks>
+            This property will be set by the framework.
+            </remarks>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IModified">
+            <summary>
+            Indicates that a handler works with the If-Modified-Since and Last-Modified headers.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IModified.IfModifiedSince">
+            <summary>
+            The If-Modified-Since value from the Request header.
+            </summary>
+            <value>
+            If modified since.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IModified.LastModified">
+            <summary>
+            The value for the Last-Modified header in the Response.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.IPatch">
+            <summary>
+            Represents a synchronous handler for a PATCH operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPatch.Patch">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPatchAsync">
+            <summary>
+            Represents an asynchronous handler for a PATCH operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPatchAsync.Patch">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.IPatch`1">
+            <summary>
+            Represents a synchronous handler for a PATCH operation where the input model is passes as a parameter.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPatch`1.Patch(`0)">
+            <summary>
+            The entry point for the Handler.
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPatchAsync`1">
+            <summary>
+            Represents an asynchronous handler for a PATCH operation.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPatchAsync`1.Patch(`0)">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is either returning a Task (using <see cref="T:Simple.Web.Behaviors.IOutputAsync`1"/>)
+            or that the result is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.IPut">
+            <summary>
+            Represents a synchronous handler for a PUT operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPut.Put">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPutAsync">
+            <summary>
+            Represents an asynchronous handler for a PUT operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPutAsync.Put">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.IPut`1">
+            <summary>
+            Represents a synchronous handler for a PUT operation where the input model is passes as a parameter.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPut`1.Put(`0)">
+            <summary>
+            The entry point for the Handler.
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPutAsync`1">
+            <summary>
+            Represents an asynchronous handler for a PUT operation.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPutAsync`1.Put(`0)">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.Links.CanonicalAttribute">
+            <summary>
+            Apply this attribute to a Handler to denote that it is the canonical URI for a resource.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Links.LinkAttributeBase">
+            <summary>
+            Base class for <see cref="T:Simple.Web.Links.CanonicalAttribute"/> and <see cref="T:Simple.Web.Links.LinksFromAttribute"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Links.LinkAttributeBase.GetRel">
+            <summary>
+            Gets the rel: the relationship of the linked resource to the current one.
+            </summary>
+            <returns>The <c>rel</c> type, e.g. <c>self</c> for canonical links.</returns>
+        </member>
+        <member name="M:Simple.Web.Links.LinkAttributeBase.Exists(System.Type)">
+            <summary>
+            Checks to see if the attribute exists on a type.
+            </summary>
+            <param name="type">The handler.</param>
+            <returns><c>true</c> if the attribute is applied to the type; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Simple.Web.Links.LinkAttributeBase.Get(System.Type,System.Type)">
+            <summary>
+            Gets a list of this type of attribute for a handler type and a model type.
+            </summary>
+            <param name="handlerType">The handler type.</param>
+            <param name="modelType">Type of the model.</param>
+            <returns>A list of <see cref="T:Simple.Web.Links.CanonicalAttribute"/> or <see cref="T:Simple.Web.Links.LinksFromAttribute"/> objects.</returns>
+        </member>
+        <member name="P:Simple.Web.Links.LinkAttributeBase.UriTemplate">
+            <summary>
+            Gets the URI template.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Links.LinkAttributeBase.ModelType">
+            <summary>
+            Gets the type of the model.
+            </summary>
+            <value>
+            The type of the model.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Links.LinkAttributeBase.Type">
+            <summary>
+            Gets or sets the Content-Type of the resource.
+            </summary>
+            <value>
+            The Content-Type.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Links.LinkAttributeBase.Title">
+            <summary>
+            Gets or sets the title: a human-readable name for the link.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="M:Simple.Web.Links.CanonicalAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Links.CanonicalAttribute"/> class.
+            </summary>
+            <param name="modelType">Type of the model.</param>
+            <param name="uriTemplate">The URI template.</param>
+            <remarks>The URI template works in reverse here. The {X} variables will be replaced with the
+            relevant properties from an instance of the model to create an actual URI to be returned to
+            the client.</remarks>
+        </member>
+        <member name="M:Simple.Web.Links.CanonicalAttribute.GetRel">
+            <summary>
+            Gets the "rel" attribute for the link; for canonical links, this is always "self".
+            </summary>
+            <returns>"self"</returns>
+        </member>
+        <member name="T:Simple.Web.Links.LinkHelper">
+            <summary>
+            Helper methods for working with RESTful links.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Links.LinkHelper.GetLinksForModel(System.Object)">
+            <summary>
+            Gets the links for a model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>A readonly <see cref="T:System.Collections.Generic.ICollection`1"/> containing all available links for the model.</returns>
+        </member>
+        <member name="M:Simple.Web.Links.LinkHelper.GetCanonicalLinkForModel(System.Object)">
+            <summary>
+            Gets the canonical link for a model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>A <see cref="T:Simple.Web.Links.Link"/> object representing the canonical URI for the model, if one is found.</returns>
+        </member>
+        <member name="T:Simple.Web.Helpers.ResponseExtensions">
+            <summary>
+            Extension methods for <see cref="T:Simple.Web.Http.IResponse"/>.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.ResponseExtensions.Write(Simple.Web.Http.IResponse,System.String)">
+            <summary>
+            Writes text to the response body.
+            </summary>
+            <param name="response">The response.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="T:Simple.Web.Helpers.UriFromType">
+            <summary>
+            Helper class to build URIs from a Handler's type
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.UriFromType.Get``1">
+            <summary>
+            Gets the URI for a handler without template parameters.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <returns>The URI.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.UriFromType.Get(System.Type)">
+            <summary>
+            Gets the URI for a handler without template parameters.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The URI.</returns>
+        </member>
+        <member name="M:Simple.Web.Helpers.UriFromType.Get``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the URI for a handler with template parameters.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <param name="expression">An expression specifying values for properties on the Handler.</param>
+            <returns>A URI with the necessary values incorporated.</returns>
+        </member>
+        <member name="T:Simple.Web.Http.HttpMethodAttribute">
+            <summary>
+            Specifies which HTTP method (e.g. GET, POST, HEAD) a Handler interface deals with.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Http.HttpMethodAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Http.HttpMethodAttribute"/> class.
+            </summary>
+            <param name="httpMethod">The HTTP Method.</param>
+        </member>
+        <member name="M:Simple.Web.Http.HttpMethodAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Http.HttpMethodAttribute"/> class.
+            </summary>
+            <param name="httpMethod">The HTTP Method.</param>
+            <param name="method">The name of the entry-point method in the type.</param>
+        </member>
+        <member name="M:Simple.Web.Http.HttpMethodAttribute.Get(System.Type,System.String,System.Boolean)">
+            <summary>
+            Gets the <see cref="T:Simple.Web.Http.HttpMethodAttribute"/> specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="httpMethod">The HTTP method to look for.</param>
+            <param name="excludeInterfaces">If <c>true</c>, interfaces will not be included in the search.</param>
+            <returns><c>null</c> if the attribute does not exist.</returns>
+        </member>
+        <member name="M:Simple.Web.Http.HttpMethodAttribute.GetMethod(System.Type,System.String)">
+            <summary>
+            Gets the entry-point method name for a handler type.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="httpMethod">The HTTP method to match against the type.</param>
+            <returns>The value of the <see cref="P:Simple.Web.Http.HttpMethodAttribute.Method"/> property, or <c>null</c> if the attribute is not applied to the type.</returns>
+        </member>
+        <member name="M:Simple.Web.Http.HttpMethodAttribute.IsAppliedTo(System.Type)">
+            <summary>
+            Determines whether the <see cref="T:Simple.Web.Http.HttpMethodAttribute"/> is applied to the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>
+              <c>true</c> if <see cref="T:Simple.Web.Http.HttpMethodAttribute"/> is applied to the specified type; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.Http.HttpMethodAttribute.Method">
+            <summary>
+            Gets the entry-point method name.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.HttpMethodAttribute.HttpMethod">
+            <summary>
+            Gets the HTTP Method.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Http.IContext">
+            <summary>
+            Represents the context for a request/response cycle.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IContext.Request">
+            <summary>
+            Gets the request.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IContext.Response">
+            <summary>
+            Gets the response.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IContext.Variables">
+            <summary>
+            Gets a general-purpose store for variables that can be used for storing stuff for the lifetime of the request.
+            </summary>
+            <value>
+            The variables.
+            </value>
+        </member>
+        <member name="T:Simple.Web.IGet">
+            <summary>
+            Represents a synchronous handler for a GET operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IGet.Get">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IGetAsync">
+            <summary>
+            Represents an asynchronous handler for a GET operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IGetAsync.Get">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IInput`1">
+            <summary>
+            Represents a handler that is expecting input.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IInput`1.Input">
+            <summary>
+            Used by the framework to provide the input model.
+            </summary>
+            <value>
+            The input model.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Behaviors.ILoginPage">
+            <summary>
+            Represents the handler which serves the Login Page for a Forms-based authentication application.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.ILoginPage.ReturnUrl">
+            <summary>
+            Sets the URL that the application should return to once login is complete.
+            </summary>
+            <value>
+            The return URL.
+            </value>
+            <remarks>
+            This property will be set by the framework.
+            </remarks>
+        </member>
+        <member name="T:Simple.Web.Behaviors.ICacheability">
+            <summary>
+            Indicates that a handler exposes caching information.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.ICacheability.CacheOptions">
+            <summary>
+            Gets the cache options.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IOutput`1">
+            <summary>
+            Adds output functionality to an handler.
+            </summary>
+            <typeparam name="TOutput">The type of the output.</typeparam>
+            <remarks>For asynchronous handlers, consider using <see cref="T:Simple.Web.Behaviors.IOutputAsync`1"/></remarks>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOutput`1.Output">
+            <summary>
+            Gets the output.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IOutputAsync`1">
+            <summary>
+            Adds asynchronous output functionality to an handler.
+            </summary>
+            <typeparam name="TOutput">The type of the output.</typeparam>
+            <remarks>Use this interface instead of <see cref="T:Simple.Web.Behaviors.IOutput`1"/> to preserve an asynchronous pipeline.</remarks>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IOutputAsync`1.Output">
+            <summary>
+            Gets a <see cref="T:System.Threading.Tasks.Task`1"/> which asynchronously returns the output.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Helpers.IPathUtility">
+            <summary>
+            Provides methods for working with virtual paths in an application server.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Helpers.IPathUtility.MapPath(System.String)">
+            <summary>
+            Maps a virtual path to its internal file-system representation.
+            </summary>
+            <param name="virtualPath">The virtual path.</param>
+            <returns>The local file-system path.</returns>
+        </member>
+        <member name="T:Simple.Web.IPost">
+            <summary>
+            Represents a synchronous handler for a POST operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPost.Post">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPostAsync">
+            <summary>
+            Represents an asynchronous handler for a POST operation.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IPostAsync.Post">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.IPost`1">
+            <summary>
+            Represents a synchronous handler for a POST operation where the input model is passes as a parameter.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPost`1.Post(`0)">
+            <summary>
+            The entry point for the Handler.
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:Simple.Web.Status"/> representing the status of the operation.</returns>
+            <remarks>You can also return an <see cref="T:System.Int32"/> from this method, as long as it is a valid HTTP Status Code.</remarks>
+        </member>
+        <member name="T:Simple.Web.IPostAsync`1">
+            <summary>
+            Represents an asynchronous handler for a POST operation.
+            </summary>
+            <typeparam name="T">The type of the input model</typeparam>
+        </member>
+        <member name="M:Simple.Web.IPostAsync`1.Post(`0)">
+            <summary>
+            The entry point for the Handler
+            </summary>
+            <param name="input">The input model, deserialized from the Request stream.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the status of the operation.</returns>
+            <returns>The returned task should be the final task in a chain of continuations.
+            This is easiest if you use C# 5 and the async/await pattern, but in C# 4 you can use
+            Task.ContinueWith to achieve the same result, albeit in a head-hurting way.
+            When implementing async handlers, ensure that any output is fully materialised before
+            this task completes; for example, if you have an IEnumerable, call ToList on it. If the Output
+            property is lazily evaluated, you may still get unwanted blocking behavior when the response is written.</returns>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IMayRedirect">
+            <summary>
+            Represents an handler that may respond with a 301, 302, 303 or 307 Redirect status.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IMayRedirect.Location">
+            <summary>
+            Gets the Location value to be added to the Response header.
+            </summary>
+            <remarks>
+            This property must not be <c>null</c> if handler returns a 30x Redirect status.
+            </remarks>
+        </member>
+        <member name="T:Simple.Web.IPostedFile">
+            <summary>
+            Represents a file uploaded over HTTP.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IPostedFile.FileName">
+            <summary>
+            Gets the fully qualified name of the file on the client.
+            </summary>
+            <returns>
+            The name of the client's file, including the directory path.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.IPostedFile.ContentType">
+            <summary>
+            Gets the MIME content type of a file sent by a client.
+            </summary>
+            <returns>
+            The MIME content type of the uploaded file.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.IPostedFile.ContentLength">
+            <summary>
+            Gets the size of an uploaded file, in bytes.
+            </summary>
+            <returns>
+            The file length, in bytes.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.IPostedFile.InputStream">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> object that points to an uploaded file to prepare for reading the contents of the file.
+            </summary>
+            <returns>
+            A <see cref="T:System.IO.Stream"/> pointing to a file.
+            </returns>
+        </member>
+        <member name="T:Simple.Web.Http.IRequest">
+            <summary>
+            Abstraction for an HTTP request
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.Url">
+            <summary>
+            Gets the URL.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.QueryString">
+            <summary>
+            Gets the query string.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.InputStream">
+            <summary>
+            Gets the input stream.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.HttpMethod">
+            <summary>
+            Gets the HTTP method.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.Headers">
+            <summary>
+            Gets the request headers.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.Files">
+            <summary>
+            Gets the list of uploaded files.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IRequest.Host">
+            <summary>
+            Gets the Host header value.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IRequireAuthentication">
+            <summary>
+            Indicates that a handler resource is only available to authenticated users.
+            </summary>
+            <remarks>If a user is authenticated, the <see cref="P:Simple.Web.Behaviors.IRequireAuthentication.CurrentUser"/> property will be set.
+            If not, they will be redirected to the login page.</remarks>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IRequireAuthentication.CurrentUser">
+            <summary>
+            Used by the framework to set the current user.
+            </summary>
+            <value>
+            The current user.
+            </value>
+        </member>
+        <member name="T:Simple.Web.Http.IResponse">
+            <summary>
+            Abstraction for an HTTP response, to be implemented by hosting.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IResponse.Status">
+            <summary>
+            Gets or sets the status code and description.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="P:Simple.Web.Http.IResponse.WriteFunction">
+            <summary>
+            Gets the output stream.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Http.IResponse.Headers">
+            <summary>
+            The response headers.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.IStartupTask">
+            <summary>
+            Implement this interface to run code at application startup, before the first request is run.
+            For example, use a startup task to configure static files and folders, or an IoC container.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IStartupTask.Run(Simple.Web.IConfiguration,Simple.Web.IWebEnvironment)">
+            <summary>
+            Runs the startup task. This method is called by the framework.
+            </summary>
+            <param name="configuration">The active Simple.Web configuration.</param>
+            <param name="environment">The active Simple.Web environment.</param>
+        </member>
+        <member name="T:Simple.Web.Behaviors.IUploadFiles">
+            <summary>
+            Represents a handler which accepts uploaded files.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Behaviors.IUploadFiles.Files">
+            <summary>
+            Used by the framework to supply a list of uploaded files.
+            </summary>
+            <value>
+            The files.
+            </value>
+        </member>
+        <member name="T:Simple.Web.IWebEnvironment">
+            <summary>
+            Provides information about the environment for the application.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.IWebEnvironment.GetMediaTypeFromFileExtension(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Gets the content type from a file extension.
+            </summary>
+            <param name="file">The file.</param>
+            <param name="acceptedTypes">The accepted types.</param>
+            <returns>The acceptable type for the file.</returns>
+        </member>
+        <member name="P:Simple.Web.IWebEnvironment.AppRoot">
+            <summary>
+            Gets the root folder of the application in the host.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IWebEnvironment.PathUtility">
+            <summary>
+            Gets the path utility.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.IWebEnvironment.FileUtility">
+            <summary>
+            Gets the file utility.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.MediaTypeHandling.Content">
+            <summary>
+            Default implementation of the <see cref="T:Simple.Web.MediaTypeHandling.IContent"/> interface.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.Content.Handler">
+            <summary>
+            Gets the handler which generated the model.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.Content.Model">
+            <summary>
+            Gets the model.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.Content.Variables">
+            <summary>
+            Gets the variables from the handler.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.Content.Links">
+            <summary>
+            Gets the links which are valid for the model type, based on the <see cref="T:Simple.Web.Links.LinksFromAttribute"/> on handlers.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.MediaTypeHandling.Content.Uri">
+            <summary>
+            Gets the URI used to retrieve the resource.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Links.Link">
+            <summary>
+            Represents a link, to be sent as part of a resource in a RESTful API.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Links.Link.#ctor(System.Type,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Links.Link"/> class.
+            </summary>
+            <param name="handlerType">Type of the handler the link points to.</param>
+            <param name="href">The href: the URI pointing to the resource/handler.</param>
+            <param name="rel">The rel: the relationship of the link to the resource it is included with.</param>
+            <param name="type">The type: the Content-Type returned by the link.</param>
+            <param name="title">The title: a human-readable name for the link.</param>
+        </member>
+        <member name="M:Simple.Web.Links.Link.GetHandlerType">
+            <summary>
+            Gets the type of the handler.
+            </summary>
+            <returns>The type of the handler.</returns>
+        </member>
+        <member name="P:Simple.Web.Links.Link.Title">
+            <summary>
+            Gets the title: a human-readable name for the link.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Links.Link.Href">
+            <summary>
+            Gets the href: the URI pointing to the resource/handler.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Links.Link.Rel">
+            <summary>
+            Gets the rel: the relationship of the link to the resource it is included with.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Links.Link.Type">
+            <summary>
+            Gets the type: the Content-Type returned by the link.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Links.LinksFromAttribute">
+            <summary>
+            Denotes that a handler provides a transition for the specified model type.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Links.LinksFromAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Links.LinksFromAttribute"/> class.
+            </summary>
+            <param name="modelType">Type of the model.</param>
+            <param name="uriTemplate">The URI template.</param>
+        </member>
+        <member name="M:Simple.Web.Links.LinksFromAttribute.GetRel">
+            <summary>
+            Gets the rel: the relationship of the linked resource to the current one.
+            </summary>
+            <returns>The value of the <see cref="P:Simple.Web.Links.LinksFromAttribute.Rel"/> property.</returns>
+            <remarks>This method is used by Simple.Web</remarks>
+        </member>
+        <member name="P:Simple.Web.Links.LinksFromAttribute.Rel">
+            <summary>
+            Gets or sets the rel: the relationship of the linked resource to the current one.
+            </summary>
+            <value>
+            The relationship.
+            </value>
+            <remarks>Property exists for setting in Attribute declaration; GetRel is used by the framework.</remarks>
+        </member>
+        <member name="T:Simple.Web.OwinSupport.PostedFile">
+            <summary>
+            Provides a Simple.Web wrapper around an HttpPostedFile from HttpContext
+            </summary>
+        </member>
+        <member name="M:Simple.Web.OwinSupport.PostedFile.SaveAs(System.String)">
+            <summary>
+            Saves the contents of an uploaded file.
+            </summary>
+            <param name="filename">The name of the saved file. </param><exception cref="T:System.Web.HttpException">The <see cref="P:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath"/> property of the <see cref="T:System.Web.Configuration.HttpRuntimeSection"/> object is set to true, but <paramref name="filename"/> is not an absolute path.</exception>
+        </member>
+        <member name="P:Simple.Web.OwinSupport.PostedFile.FileName">
+            <summary>
+            Gets the fully qualified name of the file on the client.
+            </summary>
+            <returns>
+            The name of the client's file, including the directory path.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.OwinSupport.PostedFile.ContentType">
+            <summary>
+            Gets the MIME content type of a file sent by a client.
+            </summary>
+            <returns>
+            The MIME content type of the uploaded file.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.OwinSupport.PostedFile.ContentLength">
+            <summary>
+            Gets the size of an uploaded file, in bytes.
+            </summary>
+            <returns>
+            The file length, in bytes.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.OwinSupport.PostedFile.InputStream">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> object that points to an uploaded file to prepare for reading the contents of the file.
+            </summary>
+            <returns>
+            A <see cref="T:System.IO.Stream"/> pointing to a file.
+            </returns>
+        </member>
+        <member name="T:Simple.Web.Priority">
+            <summary>
+            Enumeration for things which need prioritising, such as Behaviours and URI resolution.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Highest">
+            <summary>
+            The highest priority. Things here happen first.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Higher">
+            <summary>
+            Higher than high, but not highest.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.High">
+            <summary>
+            High.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Normal">
+            <summary>
+            Normal, the default level.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Low">
+            <summary>
+            Low.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Lower">
+            <summary>
+            Lower than low, but not lowest.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Priority.Lowest">
+            <summary>
+            The lowest priority. Things here happen last.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Raw">
+            <summary>
+            Static methods for constructing <see cref="T:Simple.Web.RawHtml"/> objects.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Raw.Html(System.String)">
+            <summary>
+            Creates a <see cref="T:Simple.Web.RawHtml"/> object from a <see cref="T:System.String"/>.
+            </summary>
+            <param name="html">The HTML.</param>
+            <returns>A strongly-typed HTML object.</returns>
+        </member>
+        <member name="M:Simple.Web.Raw.Html(System.Text.StringBuilder)">
+            <summary>
+            Creates a <see cref="T:Simple.Web.RawHtml"/> object from a <see cref="T:System.Text.StringBuilder"/>.
+            </summary>
+            <param name="html">The HTML.</param>
+            <returns>A strongly-typed HTML object.</returns>
+        </member>
+        <member name="T:Simple.Web.RawHtml">
+            <summary>
+            Wraps a string and tells the framework that it should be treated as raw HTML.
+            </summary>
+            <remarks>This class is instantiated by implicit casting from <see cref="T:System.String"/> instances.</remarks>
+        </member>
+        <member name="M:Simple.Web.RawHtml.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.RawHtml.op_Implicit(System.String)~Simple.Web.RawHtml">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.String"/> to <see cref="T:Simple.Web.RawHtml"/>.
+            </summary>
+            <param name="html">The HTML.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.RawHtml.Html">
+            <summary>
+            Gets the HTML.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.RegexGenericResolverAttribute">
+            <summary>
+            Provides a list of Generic URI types from a regular expression.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.RegexGenericResolverAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.RegexGenericResolverAttribute"/> class.
+            </summary>
+            <param name="uriTemplateName">Name of the URI template part.</param>
+            <param name="regex">A regular expression to check all exported types' full names.</param>
+        </member>
+        <member name="M:Simple.Web.RegexGenericResolverAttribute.GetTypes">
+            <summary>
+            When implemented in a derived class, should return a list of all valid types for the generic parameter.
+            </summary>
+            <returns>
+            A list of valid types.
+            </returns>
+        </member>
+        <member name="T:Simple.Web.RespondsToAttribute">
+            <summary>
+            Specifies which Content-Types a handler can handle in the Request body.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.RespondsToAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.RespondsToAttribute"/> class.
+            </summary>
+            <param name="contentTypes">The types which the handler accepts.</param>
+        </member>
+        <member name="P:Simple.Web.RespondsToAttribute.ContentTypes">
+            <summary>
+            Gets the acceptable Content types.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.RespondsWithAttribute">
+            <summary>
+            Denotes which Content-Types a handler may serve.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.RespondsWithAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.RespondsWithAttribute"/> class.
+            </summary>
+            <param name="contentTypes">The Content-Types served by the handler.</param>
+        </member>
+        <member name="P:Simple.Web.RespondsWithAttribute.ContentTypes">
+            <summary>
+            Gets the Content-Types served by the handler.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Routing.RoutingException">
+            <summary>
+            Thrown when an error occurs in the URI routing system.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Routing.RoutingException"/> class.
+            </summary>
+            <param name="url">The URL that triggered the exception.</param>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Routing.RoutingException"/> class.
+            </summary>
+            <param name="url">The URL that triggered the exception.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Routing.RoutingException"/> class.
+            </summary>
+            <param name="url">The URL that triggered the exception.</param>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Routing.RoutingException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
+              
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> with information about the exception.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is a null reference (Nothing in Visual Basic). </exception>
+              
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="*AllFiles*" PathDiscovery="*AllFiles*"/>
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="SerializationFormatter"/>
+              </PermissionSet>
+        </member>
+        <member name="P:Simple.Web.Routing.RoutingException.Url">
+            <summary>
+            Gets the URL that triggered the exception.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Routing.RoutingTable">
+            <summary>
+            Handles routing for hosts.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingTable.Get(System.String,System.Collections.Generic.IDictionary{System.String,System.String}@,System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Gets the type of handler for the specified URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <param name="variables">The variables.</param>
+            <param name="contentType">Value of the Content-Type header from the Request.</param>
+            <param name="acceptTypes">Values of the Accepts header from the Request.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Simple.Web.Routing.RoutingTableBuilder">
+            <summary>
+            Factory class for building routing tables.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingTableBuilder.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Routing.RoutingTableBuilder"/> class.
+            </summary>
+            <param name="handlerBaseTypes">The handler base types.</param>
+        </member>
+        <member name="M:Simple.Web.Routing.RoutingTableBuilder.BuildRoutingTable">
+            <summary>
+            Builds the routing table.
+            </summary>
+            <returns>The routing table for the provided base types.</returns>
+        </member>
+        <member name="T:Simple.Web.SimpleWeb">
+            <summary>
+            Configuration and Environment information.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.SimpleWeb.Configuration">
+            <summary>
+            The current Configuration for the app.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.SimpleWeb.Environment">
+            <summary>
+            Environmental information for the app.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Hosting.StartupTaskRunner">
+            <summary>
+            Runs startup tasks (in types with the <see cref="T:Simple.Web.IStartupTask"/> interface). Should be called from the Hosting system.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Hosting.StartupTaskRunner.RunStartupTasks">
+            <summary>
+            Runs the startup tasks.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.Status">
+            <summary>
+            Represents the HTTP Status Code returned by a Handler.
+            </summary>
+            <remarks>Has an implicit cast from <see cref="T:System.Int32"/>.</remarks>
+        </member>
+        <member name="F:Simple.Web.Status.OK">
+            <summary>
+            The basic "everything's OK" status.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Status.Created">
+            <summary>
+            Indicates that a request was processed successfully and a new resource was created.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Status.NotFound">
+            <summary>
+            Indicates that the requested resource could not be found.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Status.Conflict">
+            <summary>
+            Indicates that a PUT or POST request conflicted with an existing resource.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.CreatedRedirect(System.String)">
+            <summary>
+            Indicates that a request was processed successfully and a new resource was created.
+            </summary>
+            <param name="location">The redirect location.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Simple.Web.Status.NoContent">
+            <summary>
+            Nothing to see here.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.MovedPermanently(System.String)">
+            <summary>
+            A redirect to another resource, telling the client to use the new URI for all future requests.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.Found(System.String)">
+            <summary>
+            A redirect to another resource, but telling the client to continue to use this URI for future requests.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.SeeOther(System.String)">
+            <summary>
+            A redirect to another resource, commonly used after a POST operation to prevent refreshes.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.TemporaryRedirect(System.String)">
+            <summary>
+            A Temporary redirect, e.g. for a login page.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.Accepted(System.String)">
+            <summary>
+            Indicated requerst accepted for processing, but the processing has not been completed. The
+            location is the URL used to check it's status.
+            </summary>
+        </member>
+        <member name="F:Simple.Web.Status.InternalServerError">
+            <summary>
+            Indicates that everything is horrible, and you should hide in a cupboard until it's all over.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.Status.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Status"/> struct.
+            </summary>
+            <param name="httpStatusCode">The HTTP status code.</param>
+        </member>
+        <member name="M:Simple.Web.Status.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Status"/> struct.
+            </summary>
+            <param name="httpStatusCode">The HTTP status code.</param>
+            <param name="httpStatusDescription">The HTTP status description.</param>
+        </member>
+        <member name="M:Simple.Web.Status.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.Status"/> struct.
+            </summary>
+            <param name="httpStatusCode">The HTTP status code.</param>
+            <param name="httpStatusDescription">The HTTP status description.</param>
+            <param name="locationHeader">Redirection Url</param>
+        </member>
+        <member name="M:Simple.Web.Status.op_Implicit(System.Int32)~Simple.Web.Status">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="T:Simple.Web.Status"/>.
+            </summary>
+            <param name="httpStatus">The HTTP status code.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.op_Implicit(System.String)~Simple.Web.Status">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.Int32"/> to <see cref="T:Simple.Web.Status"/>.
+            </summary>
+            <param name="source">The string source.</param>
+            <returns>A <see cref="T:Simple.Web.Status"/> object for the specified status.</returns>
+            <example>
+            Status status = 404 + "Not Found";
+            </example>
+            <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Simple.Web.Status.Equals(Simple.Web.Status)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.op_Equality(Simple.Web.Status,Simple.Web.Status)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.op_Inequality(Simple.Web.Status,Simple.Web.Status)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Simple.Web.Status.ToString">
+            <summary>
+            Returns an HTTP formatted representation of the <see cref="T:Simple.Web.Status"/>.
+            </summary>
+            <returns>
+            E.g. <c>200 OK</c> or <c>404 Not Found</c>.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.Status.Code">
+            <summary>
+            Gets the HTTP status code.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Status.Description">
+            <summary>
+            Gets the HTTP status description.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.Status.IsSuccess">
+            <summary>
+            Gets a value indicating whether this Status represents success.
+            </summary>
+            <value>
+            	<c>true</c> if this Status represents success; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Simple.Web.UnsupportedMediaTypeException">
+            <summary>
+            Thrown when a client offers or requests a Content-Type the system is unable to deal with.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.UnsupportedMediaTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.UnsupportedMediaTypeException"/> class.
+            </summary>
+            <param name="contentType">The Content-Type.</param>
+        </member>
+        <member name="M:Simple.Web.UnsupportedMediaTypeException.#ctor(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.UnsupportedMediaTypeException"/> class.
+            </summary>
+            <param name="contentTypes">An entire list of possible Content-Type values with which the system is still not able to deal.</param>
+        </member>
+        <member name="M:Simple.Web.UnsupportedMediaTypeException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Gets information about the exception and adds it to the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that holds the contextual information about the source or destination.</param>
+        </member>
+        <member name="P:Simple.Web.UnsupportedMediaTypeException.ContentTypes">
+            <summary>
+            Gets the content types.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.UriTemplateAttribute">
+            <summary>
+            Indicates that a type is a handler, and specifies the URI template that it matches.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.UriTemplateAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.UriTemplateAttribute"/> class.
+            </summary>
+            <param name="template">The URI template.</param>
+            <param name="inheritFromBaseClass">If set to <c>true</c> (the default) any URI template from a base class will be prepended to the specified template.</param>
+        </member>
+        <member name="P:Simple.Web.UriTemplateAttribute.InheritFromBaseClass">
+            <summary>
+            Gets a value indicating whether the URI template from the base class is inherited.
+            </summary>
+            <value>
+            	<c>true</c> if start of template is inherited from base class; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.UriTemplateAttribute.Template">
+            <summary>
+            Gets the template.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.User">
+            <summary>
+            Convenience implementation of the <see cref="T:Simple.Web.Authentication.IUser"/> interface. Feel free to make your own.
+            </summary>
+        </member>
+        <member name="M:Simple.Web.User.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.User"/> class.
+            </summary>
+            <param name="guid">The GUID.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Simple.Web.User.#ctor(System.Security.Principal.IPrincipal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Simple.Web.User"/> class.
+            </summary>
+            <param name="principal">The principal.</param>
+        </member>
+        <member name="P:Simple.Web.User.IsAuthenticated">
+            <summary>
+            Gets a value indicating whether this user is authenticated.
+            </summary>
+            <value>
+            	<c>true</c> if this user is authenticated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Simple.Web.User.Guid">
+            <summary>
+            Gets the GUID that uniquely identifies the user in the system.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.User.Name">
+            <summary>
+            Gets the user's name.
+            </summary>
+        </member>
+        <member name="T:Simple.Web.WebEnvironment">
+            <summary>
+            Default implementation of <see cref="T:Simple.Web.IWebEnvironment"/>
+            </summary>
+        </member>
+        <member name="M:Simple.Web.WebEnvironment.GetMediaTypeFromFileExtension(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Gets the content type from a file extension.
+            </summary>
+            <param name="file">The file.</param>
+            <param name="acceptedTypes">The accepted types.</param>
+            <returns>
+            The acceptable type for the file.
+            </returns>
+        </member>
+        <member name="P:Simple.Web.WebEnvironment.AppRoot">
+            <summary>
+            Gets the root folder of the application in the host.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.WebEnvironment.PathUtility">
+            <summary>
+            Gets the path utility.
+            </summary>
+        </member>
+        <member name="P:Simple.Web.WebEnvironment.FileUtility">
+            <summary>
+            Gets the file utility.
+            </summary>
+        </member>
+    </members>
+</doc>

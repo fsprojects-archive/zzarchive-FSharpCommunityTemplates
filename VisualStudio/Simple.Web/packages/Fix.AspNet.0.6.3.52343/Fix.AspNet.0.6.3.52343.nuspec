@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Fix.AspNet</id>
+    <version>0.6.3.52343</version>
+    <authors>Mark Rendle</authors>
+    <owners>Mark Rendle</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://github.com/markrendle/Fix</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Asp.Net support for Fix, a glue for OWIN.</description>
+    <summary>A glue for OWIN.</summary>
+    <copyright>Mark Rendle</copyright>
+    <tags>fix owin http</tags>
+    <dependencies>
+      <dependency id="Fix" version="[0.6.3.52343]" />
+    </dependencies>
+  </metadata>
+</package>
