@@ -53,7 +53,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Label="TemplateBuilder">
-    <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.22-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
+    <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.36-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="license.txt">
@@ -68,7 +68,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Web\Simple.Web\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\Simple.Web\_Definitions\fsharp.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ProjectTemplates\Web\Simple.Web\readme.txt" />
     <Content Include="ProjectTemplates\Web\Simple.Web\__TemplateIcon.ico" />
     <None Include="packages.config" />
@@ -78,18 +80,36 @@
     <Content Include="packages\FsWebAddRegistryEntries.0.1.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="packages\Fix.0.6.3.52343.nupkg" />
-    <None Include="packages\Fix.AspNet.0.6.3.52343.nupkg" />
-    <None Include="packages\Simple.Web.0.11.2.51750.nupkg" />
-    <None Include="packages\Simple.Web.AspNet.0.11.2.51750.nupkg" />
-    <None Include="packages\Simple.Web.JsonNet.0.11.2.51750.nupkg" />
-    <None Include="packages\Simple.Web.Razor.0.11.2.51750.nupkg" />
-    <None Include="packages\Simple.Web.StructureMap.0.11.2.51750.nupkg" />
-    <None Include="packages\structuremap.2.6.4.1.nupkg" />
+    <Content Include="packages\Fix.0.6.3.52343.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Fix.AspNet.0.6.3.52343.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Simple.Web.0.11.2.51750.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Simple.Web.AspNet.0.11.2.51750.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Simple.Web.JsonNet.0.11.2.51750.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Simple.Web.Razor.0.11.2.51750.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Simple.Web.StructureMap.0.11.2.51750.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\structuremap.2.6.4.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\Simple.Web\AssemblyInfo.fs" />
     <None Include="ProjectTemplates\Web\Simple.Web\Home.fs" />
     <None Include="ProjectTemplates\Web\Simple.Web\OwinAppSetup.fs" />
-    <None Include="ProjectTemplates\Web\Simple.Web\Simple.Web.fsproj" />
+    <None Include="ProjectTemplates\Web\Simple.Web\Simple.Web.fsproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ProjectTemplates\Web\Simple.Web\Views\Index.cshtml" />
     <None Include="ProjectTemplates\Web\Simple.Web\Web.config" />
     <None Include="Properties\template-builder.props">
@@ -116,6 +136,9 @@
     <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateBuilder">
+      <HintPath>..\packages\TemplateBuilder.1.0.3.36-beta\lib\TemplateBuilder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />

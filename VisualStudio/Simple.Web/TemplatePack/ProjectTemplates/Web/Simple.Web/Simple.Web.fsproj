@@ -109,7 +109,6 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Home.fs" />
     <Content Include="Web.config" />
-    <None Include="packages.config" />
     <Content Include="readme.txt" />
     <None Include="Views\Index.cshtml" />
     <Compile Include="OwinAppSetup.fs" />
