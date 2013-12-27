@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TemplateReport>
+  <ItemTemplates />
+  <ProjectTemplates>
+    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\Simple.Web\_Definitions\fsharp.vstemplate" Name="Simple.Web F# ASP.NET with Razor" Description="F# Simple.Web Application with ASP.NET hosting and the Razor view engine." ProjectType="FSharp" ProjectSubType="Web" />
+  </ProjectTemplates>
+  <Snippets />
+</TemplateReport>

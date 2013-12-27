@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Simple.Web</id>
+    <version>0.11.2.51750</version>
+    <authors>Mark Rendle,  Ian Battersby,  and contributors</authors>
+    <owners>Mark Rendle,  Ian Battersby,  and contributors</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://github.com/markrendle/Simple.Web</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A REST-focused, object-oriented Web Framework for .NET 4.</description>
+    <summary>A REST-focused, object-oriented Web Framework for .NET 4.</summary>
+    <copyright>Mark Rendle</copyright>
+    <tags>simple.web</tags>
+  </metadata>
+</package>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FsWebAddRegistryEntries</id>
+    <version>0.1.0.0</version>
+    <authors>FSharp.org and Daniel Mohl</authors>
+    <owners>FSharp.org and Daniel Mohl</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>http://bloggemdano.blogspot.com/2013/11/adding-new-items-to-pure-f-aspnet.html</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Adds the registry entries needed to allow F# item templates to appear in a pure F# web project.</description>
+    <summary>Adds the registry entries needed to allow F# item templates to appear in a pure F# web project.</summary>
+    <language>en-US</language>
+    <tags>F# fsharp web</tags>
+  </metadata>
+</package>

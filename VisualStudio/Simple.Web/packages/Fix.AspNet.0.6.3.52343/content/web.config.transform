@@ -1,0 +1,7 @@
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="Fix.AspNet" path="*" verb="*" type="Fix.AspNet.FixHttpHandler"/>
+    </handlers>
+  </system.webServer>
+</configuration>

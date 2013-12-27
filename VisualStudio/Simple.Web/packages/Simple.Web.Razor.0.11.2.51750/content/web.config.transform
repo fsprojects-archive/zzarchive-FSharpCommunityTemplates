@@ -1,0 +1,19 @@
+<configuration>
+  <configSections />
+  <appSettings>
+    <add key="webPages:Enabled" value="false" />
+    <add key="ViewCache:Enabled" value="true" />
+    <add key="ViewPath:Value" value="Views" />
+    <add key="ViewRecursiveDiscovery:Enabled" value="true" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true">
+      <assemblies>
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      </assemblies>
+    </compilation>
+  </system.web>
+</configuration>
