@@ -33,16 +33,16 @@
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="73669490-B0EA-4E28-8B06-DCD44AE9D92F">
-      <package id="Fix" version="0.6.3.52343" targetFramework="net451" />
-      <package id="Fix.AspNet" version="0.6.3.52343" targetFramework="net451" />
-      <package id="FsWebAddRegistryEntries" version="0.1.0.0" targetFramework="net451" />
+      <package id="Fix" skipAssemblyReferences="true" version="0.6.3.52343" targetFramework="net451" />
+      <package id="Fix.AspNet" version="0.6.3.52343" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="FsWebAddRegistryEntries" skipAssemblyReferences="true" version="0.1.0.0" targetFramework="net451" />
       <package id="Newtonsoft.Json" version="4.5.11" targetFramework="net451" />
-      <package id="Simple.Web" version="0.11.2.51750" targetFramework="net451" />
-      <package id="Simple.Web.AspNet" version="0.11.2.51750" targetFramework="net451" />
-      <package id="Simple.Web.JsonNet" version="0.11.2.51750" targetFramework="net451" />
-      <package id="Simple.Web.Razor" version="0.11.2.51750" targetFramework="net451" />
-      <package id="Simple.Web.StructureMap" version="0.11.2.51750" targetFramework="net451" />
-      <package id="structuremap" version="2.6.4.1" targetFramework="net451" />
+      <package id="Simple.Web" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.AspNet" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.JsonNet" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.Razor" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.StructureMap" skipAssemblyReferences="true" version="0.11.2.51750" targetFramework="net451" />
+      <package id="structuremap" skipAssemblyReferences="true" version="2.6.4.1" targetFramework="net451" />
     </packages>
   </WizardData>
 </VSTemplate>
