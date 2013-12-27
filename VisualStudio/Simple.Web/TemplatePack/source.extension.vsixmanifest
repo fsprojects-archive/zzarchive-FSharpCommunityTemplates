@@ -2,7 +2,7 @@
   <Metadata>
     <Identity Id="73669490-B0EA-4E28-8B06-DCD44AE9D92F" Version="0.1" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# Simple.Web</DisplayName>
-    <Description xml:space="preserve">Provides Visual Studio F# templates for Simple.Web projects by Ryan Riley and Daniel Mohl.</Description>
+    <Description xml:space="preserve">Provides Visual Studio F# templates for Simple.Web projects by James D'Angelo.</Description>
     <License>license.txt</License>
     <Tags>F#, fsharp, ASP.NET, Simple.Web</Tags>
   </Metadata>
@@ -18,6 +18,5 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="Output\ItemTemplates" />
   </Assets>
 </PackageManifest>
