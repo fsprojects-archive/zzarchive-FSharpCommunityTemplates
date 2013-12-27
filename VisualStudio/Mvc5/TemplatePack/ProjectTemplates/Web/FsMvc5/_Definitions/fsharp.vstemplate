@@ -10,7 +10,7 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-    <Icon>__TemplateIcon.ico</Icon>    
+    <Icon>file-icon.png</Icon>    
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="FSharpWeb.fsproj" File="FSharpWeb.fsproj" ReplaceParameters="true">
