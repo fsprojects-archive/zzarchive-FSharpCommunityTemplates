@@ -26,8 +26,7 @@
       If we copy the .csproj and source files under $(IntermediateOutputPath)\ then Visual Studio gets confused
       and tries to compile the files under obj\debug\ls-Templates\...\ which have been tokenized.
       Because of this we need to move this folder out of obj\debug\. I'm making it a sibling folder to obj\Debug
-    -->
-    
+    -->    
     <ls-TemplatesIntermediateOutputPath Condition=" '$(ls-TemplatesIntermediateOutputPath)'=='' ">$(BaseIntermediateOutputPath)..\obj-Templates\$(Configuration)\</ls-TemplatesIntermediateOutputPath>
     <!-- 
     Item Templates 
