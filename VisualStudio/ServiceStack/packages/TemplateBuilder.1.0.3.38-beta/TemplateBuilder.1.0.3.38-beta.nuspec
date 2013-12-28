@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>TemplateBuilder</id>
-    <version>1.0.3.37-beta</version>
+    <version>1.0.3.38-beta</version>
     <authors>Sayed Ibrahim Hashimi</authors>
     <owners>Sayed Ibrahim Hashimi</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
