@@ -1,10 +1,10 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.5.2" Language="en-US" Publisher="fsharp.org" />
-    <DisplayName>F# MVC 5</DisplayName>
-    <Description xml:space="preserve">F# Web Application templates (MVC 5 and Web API 2) by Ryan Riley and Daniel Mohl.</Description>
+    <Identity Id="FSharpServiceStacke6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.0.0" Language="en-US" Publisher="fsharp.org" />
+    <DisplayName>F# ServiceStack</DisplayName>
+    <Description xml:space="preserve">F# Web Application templates (ServiceStack) by Kunjan Dalal and Daniel Mohl.</Description>
     <License>license.txt</License>
-    <Tags>F#, fsharp, ASP.NET MVC, ASP.NET Web API</Tags>
+    <Tags>F#, fsharp, ASP.NET, REST, ServiceStack</Tags>
   </Metadata>
   <Installation AllUsers="true">
     <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.VWDExpress" />
