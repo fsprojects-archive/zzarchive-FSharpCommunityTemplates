@@ -26,11 +26,11 @@
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="FSharpServiceStacke6e2a48e-387d-4af2-9072-86a5276da6d4">
-      <package id="ServiceStack" version="3.9.71" skipAssemblyReferences="true" />
-      <package id="ServiceStack.Common" version="3.9.71" skipAssemblyReferences="true" />
-      <package id="ServiceStack.OrmLite.SqlServer" version="3.9.71" skipAssemblyReferences="true" />
-      <package id="ServiceStack.Redis" version="3.9.71" skipAssemblyReferences="true" />
-      <package id="ServiceStack.Text" version="3.9.71" skipAssemblyReferences="true" />
+      <package id="ServiceStack" version="3.9.71" />
+      <package id="ServiceStack.Common" version="3.9.71" />
+      <package id="ServiceStack.OrmLite.SqlServer" version="3.9.71" />
+      <package id="ServiceStack.Redis" version="3.9.71" />
+      <package id="ServiceStack.Text" version="3.9.71" />
       <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
     </packages>
   </WizardData>

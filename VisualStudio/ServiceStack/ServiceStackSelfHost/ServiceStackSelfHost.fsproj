@@ -57,13 +57,13 @@
   <Import Project="$(FSharpTargetsPath)" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
+    <None Include="_definitions\_project.vstemplate.xml"/>
     <None Include="App.config" />
     <Compile Include="HelloService.fs" />
     <None Include="packages.config" />
     <Compile Include="Program.fs" />
-    <Content Include="_Definitions\_project.vstemplate.xml" />
-    <Content Include="_preprocess.xml" />
     <None Include="file-icon.png" />
+    <Content Include="_preprocess.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

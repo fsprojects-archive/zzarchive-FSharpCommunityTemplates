@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Preprocess>
   <TemplateInfo Path="FSharp\Web\ServiceStack"/>
-  <Replacements Include="*.*" Exclude="*.vstemplate;*.fsproj;*.jpg;*.png;*.ico;*.xml">
+  <Replacements Include="*.*" Exclude="*.vstemplate;*.fsproj*.jpg;*.png;*.ico;*.xml">
     <add key="FsServiceStackService" value="$safeprojectname$"/>
   </Replacements>
 </Preprocess>

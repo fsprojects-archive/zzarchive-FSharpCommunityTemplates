@@ -115,7 +115,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ProjectTemplates\Web\" />
+    <ProjectReference Include="..\ServiceStackSelfHost\ServiceStackSelfHost.fsproj">
+      <Project>{f3c503a0-1a1c-49ea-93a9-c6baded46662}</Project>
+      <Name>ServiceStackSelfHost</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
