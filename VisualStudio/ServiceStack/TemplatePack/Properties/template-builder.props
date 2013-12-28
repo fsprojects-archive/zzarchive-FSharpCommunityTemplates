@@ -11,8 +11,9 @@
     You can override TemplateBuilder properties here.
    -->
   <PropertyGroup>
-    <!--<ls-TemplateSubFolder>ServiceStack</ls-TemplateSubFolder>
-    <UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>
-    <ls-TemplatesIntermediateOutputPath Condition=" '$(ls-TemplatesIntermediateOutputPath)'=='' ">$(LOCALAPPDATA)\Microsoft\MSBuild\SideWaffle\$(MSBuildProjectName)\$(Configuration)\</ls-TemplatesIntermediateOutputPath>-->
+    <!---
+    You can set the following property to false to disable creating the template report
+    -->
+    <!--<ls-GenerateTemplateReport>false</ls-GenerateTemplateReport>-->
   </PropertyGroup>
 </Project>
