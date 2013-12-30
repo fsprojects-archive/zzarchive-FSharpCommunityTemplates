@@ -1,0 +1,61 @@
+﻿<Window x:Class="MultiProjectDialog.TemplateWizardDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Project Creation Wizard"
+        Height="350" Width="525" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" Topmost="True" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid VerticalAlignment="Stretch">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.926,0.892" StartPoint="-3.039,-1.16">
+                <GradientStop Color="Gray"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Canvas VerticalAlignment="Center" Margin="29,151,31,0" Height="176">
+            <Button Name="btnOk" Content="OK" Width="50px" Height="20" Canvas.Left="347" Canvas.Top="145" Click="btnOk_Click" />
+            <Button Name="btnCancel" Canvas.Left="403" Canvas.Top="145" Content="Cancel" Height="20" Width="74" Click="btnCancel_Click" />
+        </Canvas>
+        <Label HorizontalContentAlignment="Center" Content="Please select the desired project." Height="28" HorizontalAlignment="Center" Margin="29,0,27,0" VerticalAlignment="Top" Width="447" />
+        <ListView Height="254" HorizontalAlignment="Left" Margin="10,34,0,0" Name="lvwProjectType" VerticalAlignment="Top" Width="499" SelectionMode="Single" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListViewItem IsSelected="True" >
+                <ContentControl>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="/MultiProjectDialog;component/images/file-icon.png" Grid.Row="0"></Image>
+                        <Label Content="MVC &amp; Web API" Grid.Row="1" HorizontalAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </ListViewItem>
+            <ListViewItem >
+                <ContentControl>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="/MultiProjectDialog;component/images/file-icon.png" Grid.Row="0"></Image>
+                        <Label Content="Web API" Grid.Row="1" HorizontalAlignment="Center"/>
+                    </Grid>
+                </ContentControl>
+            </ListViewItem>
+            <!--<ListViewItem >
+                <ContentControl>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="/FsMvc5Dialog;component/images/file-icon.png" Grid.Row="0"></Image>
+                        <Label Content="Single Page App" Grid.Row="1"/>
+                    </Grid>
+                </ContentControl>
+            </ListViewItem>-->
+        </ListView>
+    </Grid>
+</Window>

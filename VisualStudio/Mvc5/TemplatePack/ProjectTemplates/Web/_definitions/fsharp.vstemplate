@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<VSTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>F# ASP.NET MVC 5 and Web API 2</Name>
+    <Description>F# Web Application template with MVC 5 and Web API 2.</Description>
+    <Icon>file-icon.png</Icon>
+    <PreviewImage>file-icon.png</PreviewImage>
+    <ProjectType>FSharp</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FSharpWeb</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <LocationField>Enabled</LocationField>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+    </ProjectCollection>
+    <CustomParameters />
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>MultiProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Projects>
+      <ProjectInfo folderName="FsMvc5" displayText="MVC 5 and Web API" icon="FSharp"/>
+      <ProjectInfo folderName="WebApi" displayText="Web API" icon="FSharp"/>
+    </Projects>
+  </WizardData>
+</VSTemplate>

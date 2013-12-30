@@ -15,6 +15,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,12 +53,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Label="TemplateBuilder">
     <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.22-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="MultiProjectDialog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="MultiProjectTemplateWizard.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -102,13 +113,18 @@
     <Content Include="packages\WebGrease.1.5.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Web\FsMvc5\file-icon.png" />
-    <Content Include="logo-big.png" />
-    <Content Include="logo-small.png" />
+    <Content Include="ProjectTemplates\Web\file-icon.png" />
+    <Content Include="logo-big.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="logo-small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="ProjectTemplates\Web\WebApi\AssemblyInfo.fs" />
     <Content Include="ProjectTemplates\Web\WebApi\Content\Site.css" />
     <Content Include="ProjectTemplates\Web\WebApi\Controllers\CarsController.fs" />
-    <Content Include="ProjectTemplates\Web\WebApi\file-icon.png" />
     <Content Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ProjectTemplates\Web\WebApi\Global.asax" />
     <Content Include="ProjectTemplates\Web\WebApi\Global.asax.fs" />
@@ -116,10 +132,12 @@
     <Content Include="ProjectTemplates\Web\WebApi\Models\Car.fs" />
     <Content Include="ProjectTemplates\Web\WebApi\Scripts\main.js" />
     <Content Include="ProjectTemplates\Web\WebApi\Scripts\modernizr-2.6.2.js" />
-    <Content Include="ProjectTemplates\Web\WebApi\_Definitions\fsharp.vstemplate">
+    <Content Include="ProjectTemplates\Web\WebApi\MyTemplate.vstemplate">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="ProjectTemplates\Web\WebApi\__TemplateIcon.ico" />
+    <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
     <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -159,7 +177,7 @@
     <Content Include="ProjectTemplates\Web\FsMvc5\Global.asax" />
     <Content Include="ProjectTemplates\Web\FsMvc5\Global.asax.fs" />
     <Content Include="ProjectTemplates\Web\FsMvc5\Scripts\modernizr-2.6.2.js" />
-    <Content Include="ProjectTemplates\Web\FsMvc5\_Definitions\fsharp.vstemplate">
+    <Content Include="ProjectTemplates\Web\FsMvc5\MyTemplate.vstemplate">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\Web\FsMvc5\__TemplateIcon.ico" />
@@ -168,6 +186,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\EnvDTE80.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiProjectDialog, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\MultiProjectDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <HintPath>..\packages\MultiProjectWizard.0.1.0.0\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -186,7 +228,6 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
