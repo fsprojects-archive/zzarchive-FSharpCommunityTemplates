@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>MultiProjectWizard</id>
+    <version>0.1.0.0</version>
+    <authors>FSharp.org and Daniel Mohl</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Provides a reusable approach to handling project templates that contain multiple projects.</description>
+    <summary>
+	Provides a reusable approach to handling project templates that contain multiple projects. A reusable IWizard implementation and WPF dialog are included.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/fsharp/FSharpCommunityTemplates</projectUrl> 
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+	<tags>F# project templates</tags>
+  </metadata>
+  <files>
+	  <file src="Lib\NET40\*.*" target="lib\Net40" />
+  </files>
+</package>
