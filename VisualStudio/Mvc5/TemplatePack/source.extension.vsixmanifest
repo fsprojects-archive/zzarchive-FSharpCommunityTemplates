@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.5.2" Language="en-US" Publisher="fsharp.org" />
+    <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.6.1" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# MVC 5</DisplayName>
     <Description xml:space="preserve">F# Web Application templates (MVC 5 and Web API 2) by Ryan Riley and Daniel Mohl.</Description>
     <License>license.txt</License>
@@ -18,6 +18,7 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="Output\ItemTemplates" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|FsMvc5Dialog|" AssemblyName="|FsMvc5Dialog;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|FsMvc5TemplateWizard|" AssemblyName="|FsMvc5TemplateWizard;AssemblyName|" />
   </Assets>
 </PackageManifest>

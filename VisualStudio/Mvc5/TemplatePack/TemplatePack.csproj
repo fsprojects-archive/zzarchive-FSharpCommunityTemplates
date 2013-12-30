@@ -15,6 +15,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,6 +53,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Label="TemplateBuilder">
     <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.22-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
@@ -116,10 +119,13 @@
     <Content Include="ProjectTemplates\Web\WebApi\Models\Car.fs" />
     <Content Include="ProjectTemplates\Web\WebApi\Scripts\main.js" />
     <Content Include="ProjectTemplates\Web\WebApi\Scripts\modernizr-2.6.2.js" />
-    <Content Include="ProjectTemplates\Web\WebApi\_Definitions\fsharp.vstemplate">
+    <Content Include="ProjectTemplates\Web\WebApi\MyTemplate.vstemplate">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\Web\WebApi\__TemplateIcon.ico" />
+    <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
     <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -159,7 +165,7 @@
     <Content Include="ProjectTemplates\Web\FsMvc5\Global.asax" />
     <Content Include="ProjectTemplates\Web\FsMvc5\Global.asax.fs" />
     <Content Include="ProjectTemplates\Web\FsMvc5\Scripts\modernizr-2.6.2.js" />
-    <Content Include="ProjectTemplates\Web\FsMvc5\_Definitions\fsharp.vstemplate">
+    <Content Include="ProjectTemplates\Web\FsMvc5\MyTemplate.vstemplate">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\Web\FsMvc5\__TemplateIcon.ico" />
@@ -186,7 +192,20 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FsMvc5Dialog\FsMvc5Dialog.csproj">
+      <Project>{9ec3cec7-7b86-405b-bc41-0306588b693c}</Project>
+      <Name>FsMvc5Dialog</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\FsMvc5TemplateWizard\FsMvc5TemplateWizard.fsproj">
+      <Project>{0A759734-945A-494B-AC8C-F0B9F44A70ED}</Project>
+      <Name>FsMvc5TemplateWizard</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
