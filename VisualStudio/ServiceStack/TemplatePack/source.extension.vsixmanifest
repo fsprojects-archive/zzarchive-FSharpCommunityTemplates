@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FSharpServiceStacke6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.0.0" Language="en-US" Publisher="fsharp.org" />
+    <Identity Id="FSharpServiceStacke6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.0.2" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# ServiceStack</DisplayName>
     <Description xml:space="preserve">F# Web Application templates (ServiceStack) by Kunjan Dalal and Daniel Mohl.</Description>
     <License>license.txt</License>
@@ -18,6 +18,5 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="Output\ItemTemplates" />
   </Assets>
 </PackageManifest>

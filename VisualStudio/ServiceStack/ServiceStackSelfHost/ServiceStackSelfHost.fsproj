@@ -57,7 +57,8 @@
   <Import Project="$(FSharpTargetsPath)" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
-    <None Include="_definitions\_project.vstemplate.xml"/>
+    <None Include="_definitions\_project.vstemplate.xml" />
+    <Compile Include="AssemblyInfo.fs" />
     <None Include="App.config" />
     <Compile Include="HelloService.fs" />
     <None Include="packages.config" />
