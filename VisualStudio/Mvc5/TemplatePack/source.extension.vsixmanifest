@@ -20,7 +20,7 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|FsMvc5Dialog|" AssemblyName="|FsMvc5Dialog;AssemblyName|" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|FsMvc5TemplateWizard|" AssemblyName="|FsMvc5TemplateWizard;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|MultiProjectDialog|" AssemblyName="|MultiProjectDialog;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" Path="|MultiProjectTemplateWizard|" AssemblyName="|MultiProjectTemplateWizard;AssemblyName|" />
   </Assets>
 </PackageManifest>

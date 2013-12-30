@@ -7,10 +7,10 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0a759734-945a-494b-ac8c-f0b9f44a70ed}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FsMvc5TemplateWizard</RootNamespace>
-    <AssemblyName>FsMvc5TemplateWizard</AssemblyName>
+    <RootNamespace>MultiProjectTemplateWizard</RootNamespace>
+    <AssemblyName>MultiProjectTemplateWizard</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Name>FsMvc5TemplateWizard</Name>
+    <Name>MultiProjectTemplateWizard</Name>
     <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -22,8 +22,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\FsMvc5TemplateWizard.XML</DocumentationFile>
-    <OtherFlags>--keyfile:"FsMvc5Template.snk"</OtherFlags>
+    <DocumentationFile>bin\Debug\MultiProjectTemplateWizard.XML</DocumentationFile>
+    <OtherFlags>--keyfile:"MultiProjectTemplate.snk"</OtherFlags>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +32,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\FsMvc5TemplateWizard.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\MultiProjectTemplateWizard.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -53,15 +53,21 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="TemplateWizard.fs" />
-    <None Include="FsMvc5Template.snk" />
+    <None Include="MultiProjectTemplate.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -70,11 +76,12 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FsMvc5Dialog\FsMvc5Dialog.csproj">
-      <Name>FsMvc5Dialog</Name>
+    <ProjectReference Include="..\MultiProjectDialog\MultiProjectDialog.csproj">
+      <Name>MultiProjectDialog</Name>
       <Project>{9ec3cec7-7b86-405b-bc41-0306588b693c}</Project>
       <Private>True</Private>
     </ProjectReference>

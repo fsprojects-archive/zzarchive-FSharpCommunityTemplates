@@ -19,7 +19,13 @@
     <CustomParameters />
   </TemplateContent>
   <WizardExtension>
-    <Assembly>FsMvc5TemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
-    <FullClassName>FsMvc5TemplateWizard.TemplateWizard</FullClassName>
+    <Assembly>MultiProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
   </WizardExtension>
+  <WizardData>
+    <Projects>
+      <ProjectInfo folderName="FsMvc5" displayText="MVC 5 and Web API" icon="FSharp"/>
+      <ProjectInfo folderName="WebApi" displayText="Web API" icon="FSharp"/>
+    </Projects>
+  </WizardData>
 </VSTemplate>

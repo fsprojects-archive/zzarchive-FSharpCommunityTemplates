@@ -197,17 +197,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FsMvc5Dialog\FsMvc5Dialog.csproj">
+    <ProjectReference Include="..\MultiProjectDialog\MultiProjectDialog.csproj">
       <Project>{9ec3cec7-7b86-405b-bc41-0306588b693c}</Project>
-      <Name>FsMvc5Dialog</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+      <Name>MultiProjectDialog</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FsMvc5TemplateWizard\FsMvc5TemplateWizard.fsproj">
-      <Project>{0A759734-945A-494B-AC8C-F0B9F44A70ED}</Project>
-      <Name>FsMvc5TemplateWizard</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    <ProjectReference Include="..\MultiProjectTemplateWizard\MultiProjectTemplateWizard.fsproj">
+      <Project>{0a759734-945a-494b-ac8c-f0b9f44a70ed}</Project>
+      <Name>MultiProjectTemplateWizard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

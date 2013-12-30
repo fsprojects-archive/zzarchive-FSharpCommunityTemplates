@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FsMvc5Dialog")]
+[assembly: AssemblyTitle("MultiProjectDialog")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Daniel Mohl")]
-[assembly: AssemblyProduct("FsMvc5Dialog")]
+[assembly: AssemblyProduct("MultiProjectDialog")]
 [assembly: AssemblyCopyright("Copyright © Daniel Mohl 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

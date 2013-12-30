@@ -8,8 +8,8 @@
     <ProjectGuid>{9EC3CEC7-7B86-405B-BC41-0306588B693C}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FsMvc5Dialog</RootNamespace>
-    <AssemblyName>FsMvc5Dialog</AssemblyName>
+    <RootNamespace>MultiProjectDialog</RootNamespace>
+    <AssemblyName>MultiProjectDialog</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -40,7 +40,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>FsMvc5Template.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>MultiProjectTemplate.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -78,7 +78,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="FsMvc5Template.snk" />
+    <None Include="MultiProjectTemplate.snk" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,7 +92,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\file-icon.png" />
+    <EmbeddedResource Include="images\file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\generic-file-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

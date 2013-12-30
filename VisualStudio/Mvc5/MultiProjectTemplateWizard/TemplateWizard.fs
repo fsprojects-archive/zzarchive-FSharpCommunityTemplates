@@ -1,24 +1,21 @@
-﻿namespace FsMvc5TemplateWizard
+﻿namespace MultiProjectTemplateWizard
 
 open System
 open System.IO
+open System.Xml
 open System.Windows.Forms
 open System.Collections.Generic
 open EnvDTE
 open EnvDTE80
 open Microsoft.VisualStudio.TemplateWizard
-open FsMvc5Dialog
+open MultiProjectDialog
 
 type TemplateWizard() =
-    [<DefaultValue>] val mutable solution : Solution2
-    [<DefaultValue>] val mutable dte : DTE
     [<DefaultValue>] val mutable dte2 : DTE2
     [<DefaultValue>] val mutable destinationPath : string
     [<DefaultValue>] val mutable vsixInstallPath : string
     [<DefaultValue>] val mutable selectedProjectName : string
     [<DefaultValue>] val mutable safeProjectName : string
-
-    let projectNames = [| "FsMvc5"; "WebApi" |]
 
     let addProjects (templatePath:string) (dte2:DTE2) destinationPath selectedProjectName safeProjectName =
         let currentCursor = Cursor.Current
@@ -37,22 +34,38 @@ type TemplateWizard() =
         finally
             Cursor.Current <- currentCursor
 
+    let getProjectInfo (vsTemplateFilePath:string) =
+        try
+            let xmlDoc = XmlDocument() in xmlDoc.Load vsTemplateFilePath
+            let nodes = xmlDoc.DocumentElement.GetElementsByTagName("ProjectInfo")
+            nodes
+            |> Seq.cast<XmlNode>
+            |> Seq.map(fun node -> node.Attributes.["folderName"].Value, node.Attributes.["displayText"].Value, node.Attributes.["icon"].Value)
+            |> Seq.toArray
+        with
+        | ex -> failwith (sprintf "%s\n\r%s" "The project creation has failed while reading the Template file settings. The actual exception message is: " ex.Message)
 
     interface IWizard with
         member this.RunStarted (automationObject:Object, 
                                 replacementsDictionary:Dictionary<string,string>, 
                                 runKind:WizardRunKind, customParams:Object[]) =
-            this.vsixInstallPath <- customParams |> Seq.cast |> Seq.find(fun x -> x.Contains ".vstemplate")
-            this.dte <- automationObject :?> DTE
-            this.dte2 <- automationObject :?> DTE2
-            this.solution <- this.dte2.Solution :?> EnvDTE80.Solution2
-            this.destinationPath <- replacementsDictionary.["$destinationdirectory$"]
-            this.safeProjectName <- replacementsDictionary.["$safeprojectname$"]
-            let dialog = new TemplateWizardDialog()
             try
+                this.vsixInstallPath <- customParams |> Seq.cast |> Seq.find(fun x -> x.Contains ".vstemplate")
+
+                let projects = getProjectInfo(this.vsixInstallPath)
+
+                if (projects.Length = 0) then 
+                    raise (new WizardBackoutException("No project information has been provided. Please add Projects/ProjectInfo elements to the WizardData element in the vstemplate file."))
+                
+                this.dte2 <- automationObject :?> DTE2
+                this.destinationPath <- replacementsDictionary.["$destinationdirectory$"]
+                this.safeProjectName <- replacementsDictionary.["$safeprojectname$"]
+
+                let dialog = new TemplateWizardDialog(projects |> Array.toSeq)
                 match dialog.ShowDialog().Value with
                 | true -> 
-                    this.selectedProjectName <- projectNames.[dialog.SelectedProjectTypeIndex]
+                    let folderName, _, _ = projects.[dialog.SelectedProjectTypeIndex]
+                    this.selectedProjectName <- folderName
                 | _ ->
                     raise (new WizardCancelledException())
             with

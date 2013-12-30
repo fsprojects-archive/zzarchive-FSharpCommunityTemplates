@@ -22,9 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CF6C5B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePack", "TemplatePack\TemplatePack.csproj", "{66E5E42A-2905-4A93-A3F7-FD26DA48A25F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsMvc5TemplateWizard", "FsMvc5TemplateWizard\FsMvc5TemplateWizard.fsproj", "{0A759734-945A-494B-AC8C-F0B9F44A70ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiProjectDialog", "MultiProjectDialog\MultiProjectDialog.csproj", "{9EC3CEC7-7B86-405B-BC41-0306588B693C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FsMvc5Dialog", "FsMvc5Dialog\FsMvc5Dialog.csproj", "{9EC3CEC7-7B86-405B-BC41-0306588B693C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MultiProjectTemplateWizard", "MultiProjectTemplateWizard\MultiProjectTemplateWizard.fsproj", "{0A759734-945A-494B-AC8C-F0B9F44A70ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +36,14 @@ Global
 		{66E5E42A-2905-4A93-A3F7-FD26DA48A25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E5E42A-2905-4A93-A3F7-FD26DA48A25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E5E42A-2905-4A93-A3F7-FD26DA48A25F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A759734-945A-494B-AC8C-F0B9F44A70ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

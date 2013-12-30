@@ -1,4 +1,4 @@
-﻿namespace FsMvc5TemplateWizard
+﻿namespace MultiProjectTemplateWizard
 
 open System.Reflection
 open System.Runtime.CompilerServices
