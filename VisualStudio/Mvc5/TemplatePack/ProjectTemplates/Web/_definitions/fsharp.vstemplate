@@ -3,8 +3,8 @@
   <TemplateData>
     <Name>F# ASP.NET MVC 5 and Web API 2</Name>
     <Description>F# Web Application template with MVC 5 and Web API 2.</Description>
-    <Icon>__Template_small.png</Icon>
-    <PreviewImage>__Template_large.png</PreviewImage>
+    <Icon>file-icon.png</Icon>
+    <PreviewImage>file-icon.png</PreviewImage>
     <ProjectType>FSharp</ProjectType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>

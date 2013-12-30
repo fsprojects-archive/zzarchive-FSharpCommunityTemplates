@@ -105,13 +105,18 @@
     <Content Include="packages\WebGrease.1.5.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Web\FsMvc5\file-icon.png" />
-    <Content Include="logo-big.png" />
-    <Content Include="logo-small.png" />
+    <Content Include="ProjectTemplates\Web\file-icon.png" />
+    <Content Include="logo-big.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="logo-small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="ProjectTemplates\Web\WebApi\AssemblyInfo.fs" />
     <Content Include="ProjectTemplates\Web\WebApi\Content\Site.css" />
     <Content Include="ProjectTemplates\Web\WebApi\Controllers\CarsController.fs" />
-    <Content Include="ProjectTemplates\Web\WebApi\file-icon.png" />
     <Content Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ProjectTemplates\Web\WebApi\Global.asax" />
     <Content Include="ProjectTemplates\Web\WebApi\Global.asax.fs" />
@@ -122,7 +127,6 @@
     <Content Include="ProjectTemplates\Web\WebApi\MyTemplate.vstemplate">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="ProjectTemplates\Web\WebApi\__TemplateIcon.ico" />
     <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
       <SubType>Designer</SubType>
     </Content>

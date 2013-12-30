@@ -4,6 +4,8 @@
     <DisplayName>F# MVC 5</DisplayName>
     <Description xml:space="preserve">F# Web Application templates (MVC 5 and Web API 2) by Ryan Riley and Daniel Mohl.</Description>
     <License>license.txt</License>
+    <Icon>logo-small.png</Icon>
+    <PreviewImage>logo-big.png</PreviewImage>
     <Tags>F#, fsharp, ASP.NET MVC, ASP.NET Web API</Tags>
   </Metadata>
   <Installation AllUsers="true">
