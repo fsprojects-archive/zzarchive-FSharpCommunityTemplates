@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<VSTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>F# Nancy Applications</Name>
+    <Description>F# Nancy Applications with ASP.NET hosting or self hosting options.</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AspNetHost</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>icon.jpg</Icon>
+  </TemplateData>
+  <TemplateContent>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>MultiProjectTemplateWizard, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Projects>
+      <ProjectInfo folderName="AspNetHost" displayText="ASP.NET" icon="FSharp"/>
+      <ProjectInfo folderName="AspNetHostWithRazor" displayText="ASP.NET &#x0a;with Razor" icon="FSharp"/>
+      <ProjectInfo folderName="Demo" displayText="Nancy Demo App" icon="FSharp"/>
+      <ProjectInfo folderName="EmptyAspNetHost" displayText="Empty ASP.NET" icon="FSharp"/>
+      <ProjectInfo folderName="EmptyAspNetHostWithRazor" displayText="Empty ASP.NET &#x0a;with Razor" icon="FSharp"/>
+      <ProjectInfo folderName="EmptySelfHost" displayText="Empty Self-Host" icon="FSharp"/>
+      <ProjectInfo folderName="EmptySelfHostWithRazor" displayText="Empty Self-Host &#x0a;with Razor" icon="FSharp"/>
+      <ProjectInfo folderName="SelfHost" displayText="Self-Host" icon="FSharp"/>
+      <ProjectInfo folderName="SelfHostWithRazor" displayText="Self-Host &#x0a;with Razor" icon="FSharp"/>
+    </Projects>
+  </WizardData>
+
+</VSTemplate>

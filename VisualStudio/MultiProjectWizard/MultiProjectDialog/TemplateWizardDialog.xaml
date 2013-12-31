@@ -14,7 +14,7 @@
             <Button Name="btnCancel" Canvas.Left="403" Canvas.Top="145" Content="Cancel" Height="20" Width="74" Click="btnCancel_Click" />
         </Canvas>
         <Label HorizontalContentAlignment="Center" Content="Please select the desired project." Height="28" HorizontalAlignment="Center" Margin="29,0,27,0" VerticalAlignment="Top" Width="447" />
-        <ListView Height="254" HorizontalAlignment="Left" Margin="10,34,0,0" Name="lvwProjectType" VerticalAlignment="Top" Width="499" SelectionMode="Single" >
+        <ListView Height="254"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Margin="10,34,0,0" Name="lvwProjectType" VerticalAlignment="Top" Width="499" SelectionMode="Single" MouseDoubleClick="lvwProjectType_MouseDoubleClick" >
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal"/>
@@ -22,7 +22,7 @@
             </ListBox.ItemsPanel>
             <ListViewItem IsSelected="True" >
                 <ContentControl>
-                    <Grid>
+                    <Grid Width="100">
                         <Grid.RowDefinitions>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -34,7 +34,7 @@
             </ListViewItem>
             <ListViewItem >
                 <ContentControl>
-                    <Grid>
+                    <Grid Width="100">
                         <Grid.RowDefinitions>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -44,18 +44,6 @@
                     </Grid>
                 </ContentControl>
             </ListViewItem>
-            <!--<ListViewItem >
-                <ContentControl>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Image Source="/FsMvc5Dialog;component/images/file-icon.png" Grid.Row="0"></Image>
-                        <Label Content="Single Page App" Grid.Row="1"/>
-                    </Grid>
-                </ContentControl>
-            </ListViewItem>-->
         </ListView>
     </Grid>
 </Window>

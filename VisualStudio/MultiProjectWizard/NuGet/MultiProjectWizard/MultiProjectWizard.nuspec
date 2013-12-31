@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>MultiProjectWizard</id>
-    <version>0.1.0.0</version>
+    <version>0.1.1.0</version>
     <authors>FSharp.org and Daniel Mohl</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Provides a reusable approach to handling project templates that contain multiple projects.</description>

@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MultiProjectTemplateWizard"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiProjectDialog", "MultiProjectDialog\MultiProjectDialog.csproj", "{9EC3CEC7-7B86-405B-BC41-0306588B693C}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DialogTester", "DialogTester\DialogTester.fsproj", "{22288B88-4E34-4E1C-8683-CC5BA9E3753A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC3CEC7-7B86-405B-BC41-0306588B693C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22288B88-4E34-4E1C-8683-CC5BA9E3753A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22288B88-4E34-4E1C-8683-CC5BA9E3753A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22288B88-4E34-4E1C-8683-CC5BA9E3753A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22288B88-4E34-4E1C-8683-CC5BA9E3753A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,12 +11,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FC0EB355-6ECF-4357-80E9-C70098877741}</ProjectGuid>
-    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>fsharporg.Nancy_Templates_Package</RootNamespace>
     <AssemblyName>Nancy.Templates.Package</AssemblyName>
     <SignAssembly>True</SignAssembly>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -39,6 +40,10 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.1.0\lib\Net40\FSharp.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
@@ -51,11 +56,21 @@
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0">
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MultiProjectWizard.0.1.1.0\lib\Net40\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.12.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0" />
+    <Reference Include="MultiProjectDialog, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <HintPath>..\packages\MultiProjectWizard.0.1.1.0\lib\Net40\MultiProjectDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiProjectTemplateWizard, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <HintPath>..\packages\MultiProjectWizard.0.1.1.0\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -143,8 +158,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <Content Include="icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="MultiProjectDialog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="MultiProjectTemplateWizard.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -163,12 +187,18 @@
     <Content Include="packages\System.Web.Razor.Unofficial.2.0.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\MyTemplate.vstemplate" />
     <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\Bootstrapper.fs" />
     <Resource Include="ProjectTemplates\Web\AspNetHostWithRazor\Content\nancy-logo.png" />
     <Content Include="ProjectTemplates\Web\AspNetHostWithRazor\IndexModule.fs" />
     <Resource Include="ProjectTemplates\Web\AspNetHostWithRazor\__TemplateIcon.jpg" />
-    <Content Include="ProjectTemplates\Web\AspNetHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\AspNetHost\MyTemplate.vstemplate" />
+    <Resource Include="ProjectTemplates\Web\icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ProjectTemplates\Web\AspNetHost\Bootstrapper.fs" />
     <Resource Include="ProjectTemplates\Web\AspNetHost\Content\nancy-logo.png" />
     <Content Include="ProjectTemplates\Web\AspNetHost\IndexModule.fs" />
@@ -183,19 +213,19 @@
     <Content Include="ProjectTemplates\Web\Demo\Content\scripts\bootstrap.js" />
     <Content Include="ProjectTemplates\Web\Demo\Content\scripts\highlight.min.js" />
     <Content Include="ProjectTemplates\Web\Demo\Content\scripts\jquery.min.js" />
-    <Content Include="ProjectTemplates\Web\Demo\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\Demo\MyTemplate.vstemplate" />
     <Content Include="ProjectTemplates\Web\Demo\Modules\IndexModule.fs" />
     <Content Include="ProjectTemplates\Web\Demo\Views\index.html" />
     <Content Include="ProjectTemplates\Web\Demo\Views\layout.html" />
     <Resource Include="ProjectTemplates\Web\Demo\__TemplateIcon.jpg" />
-    <Content Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\MyTemplate.vstemplate" />
     <Resource Include="ProjectTemplates\Web\EmptyAspNetHostWithRazor\__TemplateIcon.jpg" />
-    <Content Include="ProjectTemplates\Web\EmptyAspNetHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptyAspNetHost\MyTemplate.vstemplate" />
     <Resource Include="ProjectTemplates\Web\EmptyAspNetHost\__TemplateIcon.jpg" />
-    <Content Include="ProjectTemplates\Web\EmptySelfHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHostWithRazor\MyTemplate.vstemplate" />
     <Content Include="ProjectTemplates\Web\EmptySelfHostWithRazor\Program.fs" />
     <Resource Include="ProjectTemplates\Web\EmptySelfHostWithRazor\__TemplateIcon.jpg" />
-    <Content Include="ProjectTemplates\Web\EmptySelfHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\EmptySelfHost\MyTemplate.vstemplate" />
     <Content Include="ProjectTemplates\Web\EmptySelfHost\Program.fs" />
     <Resource Include="ProjectTemplates\Web\EmptySelfHost\__TemplateIcon.jpg" />
     <Content Include="packages\FsWebAddRegistryEntries.0.1.0.0.nupkg">
@@ -252,13 +282,13 @@
     <Resource Include="ProjectTemplates\Web\SelfHostWithRazor\Content\nancy-logo.png" />
     <Content Include="ProjectTemplates\Web\SelfHostWithRazor\IndexModule.fs" />
     <Content Include="ProjectTemplates\Web\SelfHostWithRazor\Program.fs" />
-    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\SelfHostWithRazor\MyTemplate.vstemplate" />
     <Resource Include="ProjectTemplates\Web\SelfHostWithRazor\__TemplateIcon.jpg" />
     <Content Include="ProjectTemplates\Web\SelfHost\Bootstrapper.fs" />
     <Resource Include="ProjectTemplates\Web\SelfHost\Content\nancy-logo.png" />
     <Content Include="ProjectTemplates\Web\SelfHost\IndexModule.fs" />
     <Content Include="ProjectTemplates\Web\SelfHost\Program.fs" />
-    <Content Include="ProjectTemplates\Web\SelfHost\_Definitions\fsharp.vstemplate" />
+    <Content Include="ProjectTemplates\Web\SelfHost\MyTemplate.vstemplate" />
     <Resource Include="ProjectTemplates\Web\SelfHost\__TemplateIcon.jpg" />
     <Content Include="Resources\Package.ico" />
   </ItemGroup>
