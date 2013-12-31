@@ -42,7 +42,7 @@ namespace MultiProjectDialog
                 Grid.SetRow(label, 1);
 
                 // Build the Grid
-                var grid = new Grid();
+                var grid = new Grid { Width = 130 };
                 var row1 = new RowDefinition();
                 var row2 = new RowDefinition();
                 grid.RowDefinitions.Add(row1);
@@ -59,16 +59,26 @@ namespace MultiProjectDialog
             }
         }
 
-        private void btnOk_Click(object sender, RoutedEventArgs e)
+        private void SelectAndClose()
         {
             SelectedProjectTypeIndex = lvwProjectType.SelectedIndex;
             DialogResult = true;
             Close();
         }
 
+        private void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            SelectAndClose();
+        }
+
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void lvwProjectType_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            SelectAndClose();
         }
     }
 }
