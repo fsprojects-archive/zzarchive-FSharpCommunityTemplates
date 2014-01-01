@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RootNamespace>$safeprojectname$</RootNamespace>
-    <AssemblyName>Simple.Web.FSharp</AssemblyName>
+    <AssemblyName>$safeprojectname$</AssemblyName>
     <UseIISExpress>true</UseIISExpress>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <TargetFrameworkProfile />
@@ -72,9 +72,8 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>48213</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:48213/</IISUrl>
+          <IISUrl></IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -107,11 +106,11 @@
   </ProjectExtensions>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Home.fs" />
-    <Content Include="Web.config" />
-    <Content Include="readme.txt" />
-    <None Include="Views\Index.cshtml" />
     <Compile Include="OwinAppSetup.fs" />
+    <None Include="Views\Index.cshtml" />
+    <Compile Include="Home.fs" />
+    <Content Include="readme.txt" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Fix">

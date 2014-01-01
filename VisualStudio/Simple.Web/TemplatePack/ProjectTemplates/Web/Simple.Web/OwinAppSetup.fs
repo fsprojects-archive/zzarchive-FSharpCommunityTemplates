@@ -9,6 +9,7 @@ type UseAction = Action<Func<IDictionary<string, obj>, Func<IDictionary<string, 
 
 type OwinAppSetup() =
     static member Setup(useMethod:UseAction) =
+        Application.LegacyStaticContentSupport <- true
         let run x y = Application.Run(x, y)
         run |> useMethod.Invoke
 
