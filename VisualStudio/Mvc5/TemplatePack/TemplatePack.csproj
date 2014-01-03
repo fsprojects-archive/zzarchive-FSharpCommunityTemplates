@@ -151,6 +151,9 @@
     <Content Include="packages\FsWebAddRegistryEntries.0.1.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.eot" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.woff" />

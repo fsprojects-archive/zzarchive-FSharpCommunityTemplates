@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.6.1" Language="en-US" Publisher="fsharp.org" />
+    <Identity Id="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4" Version="1.7.1" Language="en-US" Publisher="fsharp.org" />
     <DisplayName>F# MVC 5</DisplayName>
     <Description xml:space="preserve">F# Web Application templates (MVC 5 and Web API 2) by Ryan Riley and Daniel Mohl.</Description>
     <License>license.txt</License>
