@@ -19,7 +19,7 @@
     <CustomParameters />
   </TemplateContent>
   <WizardExtension>
-    <Assembly>MultiProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <Assembly>MultiProjectTemplateWizard, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
     <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
   </WizardExtension>
   <WizardData>
