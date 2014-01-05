@@ -16,14 +16,14 @@
   <TemplateContent>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>MultiProjectTemplateWizard, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <Assembly>MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
     <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
   </WizardExtension>
   <WizardData>
     <Projects>
       <ProjectInfo folderName="AspNetHost" displayText="ASP.NET" icon="FSharp"/>
       <ProjectInfo folderName="AspNetHostWithRazor" displayText="ASP.NET &#x0a;with Razor" icon="FSharp"/>
-      <ProjectInfo folderName="Demo" displayText="Nancy Demo App" icon="FSharp"/>
+      <ProjectInfo folderName="Demo" displayText="Nancy Demo&#x0a;App" icon="FSharp"/>
       <ProjectInfo folderName="EmptyAspNetHost" displayText="Empty ASP.NET" icon="FSharp"/>
       <ProjectInfo folderName="EmptyAspNetHostWithRazor" displayText="Empty ASP.NET &#x0a;with Razor" icon="FSharp"/>
       <ProjectInfo folderName="EmptySelfHost" displayText="Empty Self-Host" icon="FSharp"/>

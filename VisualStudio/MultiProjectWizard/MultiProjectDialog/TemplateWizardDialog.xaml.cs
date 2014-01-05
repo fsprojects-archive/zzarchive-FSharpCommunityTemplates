@@ -42,7 +42,7 @@ namespace MultiProjectDialog
                 Grid.SetRow(label, 1);
 
                 // Build the Grid
-                var grid = new Grid { Width = 130 };
+                var grid = new Grid { Width = 96 };
                 var row1 = new RowDefinition();
                 var row2 = new RowDefinition();
                 grid.RowDefinitions.Add(row1);
