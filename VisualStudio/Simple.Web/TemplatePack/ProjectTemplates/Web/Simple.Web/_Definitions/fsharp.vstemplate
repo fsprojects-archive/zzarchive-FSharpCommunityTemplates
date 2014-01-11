@@ -38,11 +38,11 @@
       <package id="FsWebAddRegistryEntries" skipAssemblyReferences="true" version="0.1.0.0" targetFramework="net451" />
       <package id="Newtonsoft.Json" version="4.5.11" targetFramework="net451" />
       <package id="Simple.Web" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
-      <package id="Simple.Web.AspNet" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
       <package id="Simple.Web.JsonNet" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
       <package id="Simple.Web.Razor" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
       <package id="Simple.Web.StructureMap" skipAssemblyReferences="true" version="0.11.2.51750" targetFramework="net451" />
       <package id="structuremap" skipAssemblyReferences="true" version="2.6.4.1" targetFramework="net451" />
+      <package id="MSBuild.Extension.Pack" version="1.3.0" />
     </packages>
   </WizardData>
 </VSTemplate>

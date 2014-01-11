@@ -3,8 +3,6 @@
 open Simple.Web
 
 [<UriTemplate("/")>]
-type Index() as this =
-    member __.Get() = Status 200
-
+type Index() =
     interface IGet with
-        member __.Get() = this.Get()
+        member __.Get() = Status 200

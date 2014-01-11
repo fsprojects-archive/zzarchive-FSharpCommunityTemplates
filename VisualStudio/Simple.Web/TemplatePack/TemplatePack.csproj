@@ -89,9 +89,6 @@
     <Content Include="packages\Simple.Web.0.11.2.51750.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="packages\Simple.Web.AspNet.0.11.2.51750.nupkg">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="packages\Simple.Web.JsonNet.0.11.2.51750.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -102,6 +99,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="packages\structuremap.2.6.4.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="ProjectTemplates\Web\Simple.Web\AssemblyInfo.fs" />
