@@ -1,0 +1,19 @@
+﻿@using HelloService
+@inherits ViewPage<HelloResponse> 
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Hello Page";
+}
+
+<div>
+    Hello Page
+    <a href="/hello">Default Hello</a>
+    <a href="/hello/fsharp">Hello With get Request</a>
+
+
+    <br />
+    <br />
+    <p>Model binding with DTO Response</p>
+    <p>@Model.Result</p>
+
+</div>

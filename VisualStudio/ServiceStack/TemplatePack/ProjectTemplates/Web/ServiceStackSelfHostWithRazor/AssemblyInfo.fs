@@ -1,9 +1,9 @@
-module ServiceStackSelfHost.AssemblyInfo
+module $safeprojectname$.AssemblyInfo
 open System.Reflection
 open System.Runtime.CompilerServices
 
 
-[<assembly: AssemblyTitle("ServiceStackSelfHost")>]
+[<assembly: AssemblyTitle("$safeprojectname$")>]
 [<assembly: AssemblyDescription("")>]
 [<assembly: AssemblyConfiguration("")>]
 [<assembly: AssemblyCompany("")>]

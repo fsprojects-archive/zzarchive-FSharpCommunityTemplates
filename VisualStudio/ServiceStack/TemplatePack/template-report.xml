@@ -2,7 +2,7 @@
 <TemplateReport>
   <ItemTemplates />
   <ProjectTemplates>
-    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\FsMvc5\_Definitions\fsharp.vstemplate" Name="F# ASP.NET MVC 5 and Web API 2" Description="F# Web Application template with MVC 5 and Web API 2." ProjectType="FSharp" ProjectSubType="Web" />
+    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\_Definations\fsharp.vstemplate" Name="F# Servicestack Applications" Description="Servicestack with self and asp.net host with and without Razor view engine for FSharp" ProjectType="FSharp" ProjectSubType="&#xA;      Web&#xA;    " />
   </ProjectTemplates>
   <Snippets />
 </TemplateReport>

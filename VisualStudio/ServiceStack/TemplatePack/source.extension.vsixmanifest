@@ -18,5 +18,7 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="MultiProjectDialog.dll" AssemblyName="MultiProjectDialog, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="MultiProjectTemplateWizard.dll" AssemblyName="MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166" />
   </Assets>
 </PackageManifest>

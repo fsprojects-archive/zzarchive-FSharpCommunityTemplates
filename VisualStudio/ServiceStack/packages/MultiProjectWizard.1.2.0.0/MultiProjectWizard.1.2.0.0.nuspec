@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MultiProjectWizard</id>
+    <version>1.2.0.0</version>
+    <authors>FSharp.org and Daniel Mohl</authors>
+    <owners>FSharp.org and Daniel Mohl</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/fsharp/FSharpCommunityTemplates</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Provides a reusable approach to handling project templates that contain multiple projects.</description>
+    <summary>Provides a reusable approach to handling project templates that contain multiple projects. A reusable IWizard implementation and WPF dialog are included.</summary>
+    <language>en-US</language>
+    <tags>F# project templates</tags>
+  </metadata>
+</package>

@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>F# Servicestack Applications</Name>
+    <Description>Servicestack with self and asp.net host with and without Razor view engine for FSharp</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>
+      Web
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AspNetHost</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
+    <FullClassName>MultiProjectTemplateWizard.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+
+    <Projects>
+      <!--<ProjectInfo folderName="FsMvc5" displayText="MVC 5 and Web API" icon="FSharp"/>-->
+      <ProjectInfo folderName="ServiceStackAspNetHost" displayText="Servicestack &#x0a;with &#x0a;Asp.Net host" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackAspNetHostWithRazor" displayText="Servicestack &#x0a;with &#x0a;Asp.Net host &#x0a;and Razor" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackSelfHost" displayText="Servicestack &#x0a;with &#x0a;self host" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackSelfHostWithRazor" displayText="Servicestack &#x0a;with &#x0a;self host &#x0a;and Razor" icon="FSharp"/>
+    </Projects>
+  </WizardData>
+</VSTemplate>
