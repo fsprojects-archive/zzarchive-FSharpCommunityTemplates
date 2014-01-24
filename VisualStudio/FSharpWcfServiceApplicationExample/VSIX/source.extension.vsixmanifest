@@ -3,7 +3,7 @@
   <Identifier Id="FsharpWcfVSIX.Microsoft.b56accd1-10e8-425e-a822-e2f90b231b67">
     <Name>F# and C# Web Service (ASP.NET, WSDL)</Name>
     <Author>fsharp.org</Author>
-    <Version>1.11</Version>
+    <Version>1.12</Version>
     <Description xml:space="preserve">F# and C# Web Service (ASP.NET, WSDL)</Description>
     <Locale>1033</Locale>
     <MoreInfoUrl>http://bloggemdano.blogspot.com/2010/06/standard-wcf-service-application.html</MoreInfoUrl>
@@ -14,19 +14,19 @@
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-		    <Edition>VSWinDesktopExpress</Edition>
+		    <Edition>VWDExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="13.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VSWinDesktopExpress</Edition>
+        <Edition>VWDExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="12.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-		    <Edition>VSWinDesktopExpress</Edition>
+		    <Edition>VWDExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="11.0">
         <Edition>Ultimate</Edition>
