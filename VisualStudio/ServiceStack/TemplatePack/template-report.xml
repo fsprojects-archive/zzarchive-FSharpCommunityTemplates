@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TemplateReport>
-  <ItemTemplates />
-  <ProjectTemplates>
-    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\_Definations\fsharp.vstemplate" Name="F# Servicestack Applications" Description="Servicestack with self and asp.net host with and without Razor view engine for FSharp" ProjectType="FSharp" ProjectSubType="&#xA;      Web&#xA;    " />
-  </ProjectTemplates>
-  <Snippets />
-</TemplateReport>

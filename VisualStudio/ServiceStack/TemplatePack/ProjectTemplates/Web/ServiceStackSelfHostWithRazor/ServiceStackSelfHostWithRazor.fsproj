@@ -73,7 +73,6 @@
     <None Include="packages.config" />
     <Compile Include="Program.fs" />
     <None Include="file-icon.png" />
-    <Content Include="readme.txt" />
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>

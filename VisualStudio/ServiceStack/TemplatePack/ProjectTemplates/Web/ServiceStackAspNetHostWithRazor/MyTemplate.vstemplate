@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>ServiceStackAspNetHostWithRazor</Name>
-    <Description>Servicestack with asp.net host and razor view engine for FSharp</Description>
+    <Description>Servicestack with asp.net host and razor view engine</Description>
     <ProjectType>FSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
@@ -29,6 +29,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="Hello.cshtml">Hello.cshtml</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="Default.cshtml">Default.cshtml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

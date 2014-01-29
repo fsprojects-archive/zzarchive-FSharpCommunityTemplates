@@ -7,13 +7,10 @@
         After editing this file you may need to restart Visual Studio for the changes take effect.
   -->
 
-  <!-- 
-    You can override TemplateBuilder properties here.
-   -->
   <PropertyGroup>
-    <!---
-    You can set the following property to false to disable creating the template report
+    <!-- 
+          Custom properties will be included here
     -->
-    <!--<ls-GenerateTemplateReport>false</ls-GenerateTemplateReport>-->
+    <ls-TemplateSubFolder>ServiceStack</ls-TemplateSubFolder>
   </PropertyGroup>
 </Project>

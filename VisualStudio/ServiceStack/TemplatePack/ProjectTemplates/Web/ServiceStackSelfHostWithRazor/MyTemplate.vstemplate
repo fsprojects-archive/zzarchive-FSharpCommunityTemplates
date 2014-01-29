@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>ServiceStackSelfHostWithRazor</Name>
-    <Description>Servicestack with self host and razor view engine for FSharp</Description>
+    <Description>Servicestack with self host and razor view engine</Description>
     <ProjectType>FSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
@@ -26,7 +26,6 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Program.fs">Program.fs</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="file-icon.png">file-icon.png</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="readme.txt">readme.txt</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="web.config">web.config</ProjectItem>
     </Project>
   </TemplateContent>

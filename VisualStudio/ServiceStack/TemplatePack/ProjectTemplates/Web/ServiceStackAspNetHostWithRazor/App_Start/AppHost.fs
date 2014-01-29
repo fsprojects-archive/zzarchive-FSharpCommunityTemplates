@@ -14,11 +14,6 @@
                                         typeof<HelloService>.Assembly)
         override this.Configure container =
             this.Plugins.Add(new RazorFormat())
-//            EndpointHostConfig.RazorNamespaces.Add("ServiceStack.Razor")|> ignore
-//            EndpointHostConfig.RazorNamespaces.Add("ServiceStackAspNetHost") |> ignore
-            let newEndPointConfig = new EndpointHostConfig()
-            newEndPointConfig.DebugMode <- true
-            this.SetConfig(newEndPointConfig)
             ignore()
 
        

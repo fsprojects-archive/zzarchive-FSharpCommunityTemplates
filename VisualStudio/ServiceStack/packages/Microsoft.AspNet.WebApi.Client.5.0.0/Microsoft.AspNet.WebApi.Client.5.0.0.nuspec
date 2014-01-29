@@ -19,10 +19,13 @@
       <group targetFramework=".NETFramework4.5">
         <dependency id="Newtonsoft.Json" version="4.5.11" />
       </group>
-      <group targetFramework=".NETPortable0.0-wp8+netcore45+net45">
+      <group targetFramework=".NETPortable0.0-wp80+win+net45">
         <dependency id="Newtonsoft.Json" version="4.5.11" />
         <dependency id="Microsoft.Net.Http" version="2.2.13" />
       </group>
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
   </metadata>
 </package>

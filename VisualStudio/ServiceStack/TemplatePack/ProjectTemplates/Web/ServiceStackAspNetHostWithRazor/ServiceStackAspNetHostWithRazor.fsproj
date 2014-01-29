@@ -103,6 +103,7 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Hello.cshtml" />
     <Content Include="Default.cshtml" />
+    <None Include="Global.asax" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

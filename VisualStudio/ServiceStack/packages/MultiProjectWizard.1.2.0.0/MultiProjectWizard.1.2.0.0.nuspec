@@ -12,5 +12,10 @@
     <summary>Provides a reusable approach to handling project templates that contain multiple projects. A reusable IWizard implementation and WPF dialog are included.</summary>
     <language>en-US</language>
     <tags>F# project templates</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="EnvDTE" targetFramework="" />
+      <frameworkAssembly assemblyName="EnvDTE80" targetFramework="" />
+      <frameworkAssembly assemblyName="Microsoft.VisualStudio.TemplateWizardInterface" targetFramework="" />
+    </frameworkAssemblies>
   </metadata>
 </package>
