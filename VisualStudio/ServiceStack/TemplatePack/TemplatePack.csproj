@@ -172,12 +172,24 @@
     <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="packages\ServiceStack.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Common.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Host.AspNet.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.OrmLite.SqlServer.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Redis.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Text.3.9.71.nupkg" />
+    <Content Include="packages\ServiceStack.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Common.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Host.AspNet.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.OrmLite.SqlServer.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Redis.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Text.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\Default.cshtml" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\packages.config" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\ServiceStackAspNetHostWithRazor.fsproj" />
