@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TemplateReport>
-  <ItemTemplates />
-  <ProjectTemplates>
-    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\FsMvc5\_Definitions\fsharp.vstemplate" Name="F# ASP.NET MVC 5 and Web API 2" Description="F# Web Application template with MVC 5 and Web API 2." ProjectType="FSharp" ProjectSubType="Web" />
-  </ProjectTemplates>
-  <Snippets />
-</TemplateReport>

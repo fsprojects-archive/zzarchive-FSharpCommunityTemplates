@@ -7,10 +7,11 @@
         After editing this file you may need to restart Visual Studio for the changes take effect.
   -->
 
+  <!-- 
+    You can override TemplateBuilder properties here.
+   -->
   <PropertyGroup>
-    <!-- 
-          Custom properties will be included here
-    -->
-    <ls-TemplateSubFolder>ServiceStack</ls-TemplateSubFolder>
+    <!-- This is the subfolder name where the templates will show up in Visual Studio. -->
+    <ls-TemplateSubFolder>My Custom Templates</ls-TemplateSubFolder>
   </PropertyGroup>
 </Project>
