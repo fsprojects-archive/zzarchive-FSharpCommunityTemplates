@@ -59,6 +59,11 @@
     <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.22-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="ItemTemplates\Misc\ReadmeMd\icon.png" />
+    <Content Include="ItemTemplates\Misc\ReadmeMd\_Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Misc\ReadmeMd\_Definitions\VB.vstemplate" />
+    <Content Include="ItemTemplates\Misc\ReadmeMd\_Definitions\Web.csharp.vstemplate" />
+    <Content Include="ItemTemplates\Misc\ReadmeMd\_Definitions\Web.VB.vstemplate" />
     <Content Include="license.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -141,7 +146,6 @@
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHostWithRazor\HelloService.fs" />
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHostWithRazor\MyTemplate.vstemplate" />
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHostWithRazor\Program.fs" />
-    <Content Include="ProjectTemplates\Web\ServiceStackSelfHostWithRazor\readme.txt" />
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHostWithRazor\__TemplateIcon.ico" />
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHost\HelloService.fs" />
     <Content Include="ProjectTemplates\Web\ServiceStackSelfHost\MyTemplate.vstemplate" />
@@ -150,6 +154,8 @@
     <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="ItemTemplates\Misc\ReadmeMd\icon.pdn" />
+    <None Include="ItemTemplates\Misc\ReadmeMd\readme.md" />
     <None Include="packages.config" />
     <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -166,12 +172,33 @@
     <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="packages\ServiceStack.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Common.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Host.AspNet.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.OrmLite.SqlServer.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Redis.3.9.71.nupkg" />
-    <None Include="packages\ServiceStack.Text.3.9.71.nupkg" />
+    <Content Include="packages\ServiceStack.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Common.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Host.AspNet.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.OrmLite.SqlServer.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Redis.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Text.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Razor.3.9.71.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\System.Web.Razor.Unofficial.2.0.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\WebActivator.1.5.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\Default.cshtml" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\packages.config" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\ServiceStackAspNetHostWithRazor.fsproj" />
@@ -214,12 +241,10 @@
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\FSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MultiProjectDialog, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MultiProjectDialog">
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\MultiProjectDialog.dll</HintPath>
     </Reference>
-    <Reference Include="MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MultiProjectTemplateWizard">
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <VSTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>Servicestack API</Name>
+    <Name>F# Servicestack</Name>
     <Description>F# Web Application template with Servicestack.</Description>
     <Icon>file-icon.png</Icon>
     <PreviewImage>file-icon.png</PreviewImage>
@@ -16,7 +16,6 @@
   <TemplateContent>
     <ProjectCollection>
     </ProjectCollection>
-    <CustomParameters />
   </TemplateContent>
   <WizardExtension>
     <Assembly>MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166</Assembly>
@@ -24,10 +23,10 @@
   </WizardExtension>
   <WizardData>
     <Projects>
-      <ProjectInfo folderName="ServiceStackAspNetHost" displayText="Servicestack &#x0a;with &#x0a;Asp.Net host" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackAspNetHostWithRazor" displayText="Servicestack &#x0a;with &#x0a;Asp.Net host &#x0a;and Razor" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackSelfHost" displayText="Servicestack &#x0a;with &#x0a;self host" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackSelfHostWithRazor" displayText="Servicestack &#x0a;with &#x0a;self host &#x0a;and Razor" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackAspNetHost" displayText="ASP.NET Host" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackAspNetHostWithRazor" displayText="ASP.NET Host &#x0a;and Razor" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackSelfHost" displayText="Self Host" icon="FSharp"/>
+      <ProjectInfo folderName="ServiceStackSelfHostWithRazor" displayText="Self Host &#x0a;and Razor" icon="FSharp"/>
     </Projects>
   </WizardData>
 </VSTemplate>
