@@ -196,6 +196,9 @@
     <Content Include="packages\System.Web.Razor.Unofficial.2.0.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="packages\WebActivator.1.5.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\Default.cshtml" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\packages.config" />
     <None Include="ProjectTemplates\Web\ServiceStackAspNetHostWithRazor\ServiceStackAspNetHostWithRazor.fsproj" />
