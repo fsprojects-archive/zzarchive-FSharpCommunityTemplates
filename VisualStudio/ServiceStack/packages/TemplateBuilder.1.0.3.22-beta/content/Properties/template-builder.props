@@ -12,6 +12,6 @@
    -->
   <PropertyGroup>
     <!-- This is the subfolder name where the templates will show up in Visual Studio. -->
-    <ls-TemplateSubFolder>ServiceStack</ls-TemplateSubFolder>
+    <ls-TemplateSubFolder>My Custom Templates</ls-TemplateSubFolder>
   </PropertyGroup>
 </Project>
