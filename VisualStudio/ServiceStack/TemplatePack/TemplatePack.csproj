@@ -214,12 +214,10 @@
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\FSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MultiProjectDialog, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MultiProjectDialog">
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\MultiProjectDialog.dll</HintPath>
     </Reference>
-    <Reference Include="MultiProjectTemplateWizard, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MultiProjectTemplateWizard">
       <HintPath>..\packages\MultiProjectWizard.1.2.0.0\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
