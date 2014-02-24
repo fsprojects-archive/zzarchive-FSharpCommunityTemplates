@@ -25,3 +25,11 @@ type StructureMapStartup() =
     override __.Configure(config) =
         // config.For<IMySerivce>().Use<MyService>() |> ignore
         ()
+        
+open System.Web.Hosting
+open Simple.Web.Helpers
+
+type PathUtility() =
+    interface IPathUtility with
+        member __.MapPath virtualPath =
+            virtualPath |> HostingEnvironment.MapPath
