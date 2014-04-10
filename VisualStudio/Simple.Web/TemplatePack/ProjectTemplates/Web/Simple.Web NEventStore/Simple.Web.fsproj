@@ -110,8 +110,12 @@
   </ProjectExtensions>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <None Include="Views\Index.cshtml" />
-    <Compile Include="Home.fs" />
+    <Compile Include="Communication.fs" />
+    <Content Include="App/app.js" />
+    <Content Include="App/index.html" />
+    <Content Include="Content/bootstrap.min.css" />
+    <Compile Include="Domain Startup/EventBusStartup.fs" />
+    <Compile Include="Domain Startup/DomainStartup.fs" />
     <Compile Include="OwinAppSetup.fs" />
     <Content Include="Web.config" />
     <Content Include="readme.txt" />
@@ -123,6 +127,14 @@
     </Reference>
     <Reference Include="Fix.AspNet">
       <HintPath>..\packages\Fix.AspNet.0.6.3.52343\lib\net45\Fix.AspNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FsPickler">
+      <HintPath>..\packages\FsPickler.0.8.6\lib\net45\FsPickler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NEventStore">
+      <HintPath>..\packages\NEventStore.4.1.0.10\lib\net40\NEventStore.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -137,10 +149,6 @@
       <HintPath>..\packages\Simple.Web.JsonNet.0.11.2.51750\lib\net40\Simple.Web.JsonNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Simple.Web.Razor">
-      <HintPath>..\packages\Simple.Web.Razor.0.11.2.51750\lib\net40\Simple.Web.Razor.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Simple.Web.StructureMap">
       <HintPath>..\packages\Simple.Web.StructureMap.0.11.2.51750\lib\net40\Simple.Web.StructureMap.dll</HintPath>
       <Private>True</Private>
@@ -153,14 +161,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices.dll" />
-    <Reference Include="System.Web.Mvc">
-      <HintPath>..\packages\Simple.Web.Razor.0.11.2.51750\lib\net40\AspNetWebStack\System.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Razor">
-      <HintPath>..\packages\Simple.Web.Razor.0.11.2.51750\lib\net40\AspNetWebStack\System.Web.Razor.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>

@@ -1,0 +1,55 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Simple.Web F# ASP.NET with NEventStore</Name>
+    <Description>F# Simple.Web Application with ASP.NET hosting and a simple bus using NEventStore.</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SimpleWebNEventStoreFSharp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Simple.Web.fsproj" File="Simple.Web.fsproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.fs">AssemblyInfo.fs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Communication.fs">Communication.fs</ProjectItem>
+      <Folder Name="App" TargetFolderName="App">
+        <ProjectItem TargetFileName="app.js">app.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts" />
+      <Folder Name="Domain Startup" TargetFolderName="Domain Startup">
+        <ProjectItem ReplaceParameters="true" TargetFileName="EventBusStartup.fs">EventBusStartup.fs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DomainStartup.fs">DomainStartup.fs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="OwinAppSetup.fs">OwinAppSetup.fs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="readme.txt">readme.txt</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="73669490-B0EA-4E28-8B06-DCD44AE9D92F">
+      <package id="Fix" skipAssemblyReferences="true" version="0.6.3.52343" targetFramework="net451" />
+      <package id="Fix.AspNet" version="0.6.3.52343" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="FsPickler" version="0.8.6" targetFramework="net451" />
+      <package id="FsWebAddRegistryEntries" skipAssemblyReferences="true" version="0.1.0.0" targetFramework="net451" />
+      <package id="NEventStore" version="4.1.0.10" targetFramework="net451" />
+      <package id="Newtonsoft.Json" version="4.5.11" targetFramework="net451" />
+      <package id="Simple.Web" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.JsonNet" version="0.11.2.51750" skipAssemblyReferences="true" targetFramework="net451" />
+      <package id="Simple.Web.StructureMap" skipAssemblyReferences="true" version="0.11.2.51750" targetFramework="net451" />
+      <package id="structuremap" skipAssemblyReferences="true" version="2.6.4.1" targetFramework="net451" />
+      <package id="MSBuild.Extension.Pack" version="1.3.0" />
+    </packages>
+  </WizardData>
+</VSTemplate>

@@ -2,6 +2,7 @@
 <TemplateReport>
   <ItemTemplates />
   <ProjectTemplates>
+    <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\Simple.Web NEventStore\_Definitions\fsharp.vstemplate" Name="Simple.Web F# ASP.NET with NEventStore" Description="F# Simple.Web Application with ASP.NET hosting and a simple bus using NEventStore." ProjectType="FSharp" ProjectSubType="Web" />
     <ProjectTemplate Path="TemplatePack\ProjectTemplates\Web\Simple.Web\_Definitions\fsharp.vstemplate" Name="Simple.Web F# ASP.NET with Razor" Description="F# Simple.Web Application with ASP.NET hosting and the Razor view engine." ProjectType="FSharp" ProjectSubType="Web" />
   </ProjectTemplates>
   <Snippets />
