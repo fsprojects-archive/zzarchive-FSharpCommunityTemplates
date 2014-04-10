@@ -85,6 +85,9 @@
     <Content Include="ItemTemplates\FSharp\Web\RazorViewPage.zip">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="ItemTemplates\FSharp\Web\WebTypeScript.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
