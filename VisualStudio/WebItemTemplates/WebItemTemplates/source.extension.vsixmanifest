@@ -3,7 +3,7 @@
   <Identifier Id="WebItemTemplates.06fffff9-555b-4041-8b43-1dc8956fffff">
     <Name>F# Web Item Templates</Name>
     <Author>fsharp.org</Author>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <Description xml:space="preserve">Provides item templates for pure F# web projects by Daniel Mohl.</Description>
     <Locale>1033</Locale>
     <License>license.txt</License>
