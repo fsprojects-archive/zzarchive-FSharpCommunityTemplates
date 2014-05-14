@@ -21,6 +21,11 @@ type Global() =
             "api/{controller}/{id}", // URL with parameters
             { controller = "{controller}"; id = RouteParameter.Optional } // Parameter defaults
         ) |> ignore
+
+        // Configure serialization
+        config.Formatters.XmlFormatter.UseXmlSerializer <- true
+        config.Formatters.JsonFormatter.SerializerSettings.ContractResolver <- Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+
         // Additional Web API settings
 
     member x.Application_Start() =
