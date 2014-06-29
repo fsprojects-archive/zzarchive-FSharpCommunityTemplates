@@ -3,8 +3,8 @@
   <TemplateData>
     <Name>F# Servicestack</Name>
     <Description>F# Web Application template with Servicestack.</Description>
-    <Icon>file-icon.png</Icon>
-    <PreviewImage>file-icon.png</PreviewImage>
+    <Icon>servicestack.png</Icon>
+    <PreviewImage>servicestack.png</PreviewImage>
     <ProjectType>FSharp</ProjectType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
@@ -23,10 +23,14 @@
   </WizardExtension>
   <WizardData>
     <Projects>
-      <ProjectInfo folderName="ServiceStackAspNetHost" displayText="ASP.NET Host" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackAspNetHostWithRazor" displayText="ASP.NET Host &#x0a;and Razor" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackSelfHost" displayText="Self Host" icon="FSharp"/>
-      <ProjectInfo folderName="ServiceStackSelfHostWithRazor" displayText="Self Host &#x0a;and Razor" icon="FSharp"/>
+      <ProjectInfo folderName="V3.ServiceStackAspNetHost" displayText="V3 ASP.NET &#x0a;Host" icon="FSharp"/>
+      <ProjectInfo folderName="V3.ServiceStackAspNetHostWithRazor" displayText="V3 ASP.NET &#x0a;Host and &#x0a;Razor" icon="FSharp"/>
+      <ProjectInfo folderName="V3.ServiceStackSelfHost" displayText="V3 Self Host" icon="FSharp"/>
+      <ProjectInfo folderName="V3.ServiceStackSelfHostWithRazor" displayText="V3 Self Host &#x0a;and Razor" icon="FSharp"/>
+      <ProjectInfo folderName="V4.ServiceStackAspNetHost" displayText="V4 ASP.NET &#x0a;Host" icon="FSharp"/>
+      <ProjectInfo folderName="V4.ServiceStackAspNetHostWithRazor" displayText="V4 ASP.NET &#x0a;Host and &#x0a;Razor" icon="FSharp"/>
+      <ProjectInfo folderName="V4.ServiceStackSelfHost" displayText="V4 Self Host" icon="FSharp"/>
+      <ProjectInfo folderName="V4.ServiceStackSelfHostWithRazor" displayText="V4 Self Host &#x0a;and Razor" icon="FSharp"/>
     </Projects>
   </WizardData>
 </VSTemplate>
