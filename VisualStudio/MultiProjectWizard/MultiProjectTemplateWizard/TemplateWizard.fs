@@ -49,30 +49,30 @@ type TemplateWizard() =
         member this.RunStarted (automationObject:Object, 
                                 replacementsDictionary:Dictionary<string,string>, 
                                 runKind:WizardRunKind, customParams:Object[]) =
-            try
-                this.vsixInstallPath <- customParams |> Seq.cast |> Seq.find(fun x -> x.Contains ".vstemplate")
+            this.vsixInstallPath <- customParams |> Seq.cast |> Seq.find(fun x -> x.Contains ".vstemplate")
 
-                let projects = getProjectInfo(this.vsixInstallPath)
+            let projects = getProjectInfo(this.vsixInstallPath)
 
-                if (projects.Length = 0) then 
-                    raise (new WizardBackoutException("No project information has been provided. Please add Projects/ProjectInfo elements to the WizardData element in the vstemplate file."))
+            if (projects.Length = 0) then 
+                raise (new WizardBackoutException("No project information has been provided. Please add Projects/ProjectInfo elements to the WizardData element in the vstemplate file."))
                 
-                this.dte2 <- automationObject :?> DTE2
-                this.destinationPath <- replacementsDictionary.["$destinationdirectory$"]
-                this.safeProjectName <- replacementsDictionary.["$safeprojectname$"]
+            this.dte2 <- automationObject :?> DTE2
+            this.destinationPath <- replacementsDictionary.["$destinationdirectory$"]
+            this.safeProjectName <- replacementsDictionary.["$safeprojectname$"]
 
-                let dialog = new TemplateWizardDialog(projects |> Array.toSeq)
-                match dialog.ShowDialog().Value with
-                | true -> 
-                    let folderName, _, _ = projects.[dialog.SelectedProjectTypeIndex]
-                    this.selectedProjectName <- folderName
-                | _ ->
-                    raise (new WizardCancelledException())
-            with
-            | ex -> failwith (sprintf "%s\n\r%s" "The project creation has failed. The actual exception message is: " ex.Message)
+            let dialog = new TemplateWizardDialog(projects |> Array.toSeq)
+            match dialog.ShowDialog().Value with
+            | true -> 
+                let folderName, _, _ = projects.[dialog.SelectedProjectTypeIndex]
+                this.selectedProjectName <- folderName
+            | _ -> raise (new WizardCancelledException())
         member this.ProjectFinishedGenerating project = "Not Implemented" |> ignore
         member this.ProjectItemFinishedGenerating projectItem = "Not Implemented" |> ignore
         member this.ShouldAddProjectItem filePath = true
         member this.BeforeOpeningFile projectItem = "Not Implemented" |> ignore
         member this.RunFinished() = 
-            addProjects this.vsixInstallPath this.dte2 this.destinationPath this.selectedProjectName this.safeProjectName
+            try
+                addProjects this.vsixInstallPath this.dte2 this.destinationPath this.selectedProjectName this.safeProjectName
+            with
+            | ex -> failwith (sprintf "%s\n\r%s" "The project creation was not successful. The actual exception message is: " ex.Message)
+
