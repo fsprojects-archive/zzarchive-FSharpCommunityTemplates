@@ -110,44 +110,44 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="ServiceStack">
-      <HintPath>..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Common">
-      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.OrmLite">
-      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.3.9.71\lib\net35\ServiceStack.OrmLite.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.OrmLite.SqlServer.3.9.71\lib\net35\ServiceStack.OrmLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.OrmLite.SqlServer">
-      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.3.9.71\lib\net35\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.OrmLite.SqlServer.3.9.71\lib\net35\ServiceStack.OrmLite.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Razor">
-      <HintPath>..\packages\ServiceStack.Razor.3.9.71\lib\net40\ServiceStack.Razor.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.Razor.3.9.71\lib\net40\ServiceStack.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Redis">
-      <HintPath>..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.ServiceInterface">
-      <HintPath>..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Text">
-      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -162,13 +162,13 @@
     <Reference Include="System.Web.Entity.dll" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Razor.Unofficial">
-      <HintPath>..\packages\System.Web.Razor.Unofficial.2.0.2\lib\net40\System.Web.Razor.Unofficial.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\System.Web.Razor.Unofficial.2.0.2\lib\net40\System.Web.Razor.Unofficial.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq.dll" />
     <Reference Include="WebActivator">
-      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
