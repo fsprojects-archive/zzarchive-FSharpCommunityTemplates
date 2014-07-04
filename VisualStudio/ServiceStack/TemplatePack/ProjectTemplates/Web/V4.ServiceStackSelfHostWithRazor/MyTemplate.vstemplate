@@ -30,4 +30,21 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
     </Project>
   </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="FSharpServiceStacke6e2a48e-387d-4af2-9072-86a5276da6d4">
+      <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+      <package id="ServiceStack" version="4.0.21" />
+      <package id="ServiceStack.Client" version="4.0.21" />
+      <package id="ServiceStack.Common" version="4.0.21" />
+      <package id="ServiceStack.Interfaces" version="4.0.21" />
+      <package id="ServiceStack.Text" version="4.0.21" />
+      <package id="ServiceStack.OrmLite" version="4.0.21" />
+      <package id="ServiceStack.Razor" version="4.0.21" />
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
+    </packages>
+  </WizardData>
 </VSTemplate>
