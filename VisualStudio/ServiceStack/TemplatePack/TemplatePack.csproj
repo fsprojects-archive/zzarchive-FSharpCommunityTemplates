@@ -230,6 +230,39 @@
     <Content Include="packages\WebActivator.1.5.3.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="packages\ServiceStack.4.0.21.nupkg">
+        <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\ServiceStack.Client.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Common.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Host.AspNet.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Interfaces.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.OrmLite.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.OrmLite.SqlServer.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Razor.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Redis.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Server.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
+    <Content Include="packages\ServiceStack.Text.4.0.21.nupkg" >
+        <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
     <None Include="ProjectTemplates\Web\V3.ServiceStackAspNetHostWithRazor\Default.cshtml" />
     <None Include="ProjectTemplates\Web\V3.ServiceStackAspNetHostWithRazor\packages.config" />
     <None Include="ProjectTemplates\Web\V3.ServiceStackAspNetHostWithRazor\ServiceStackAspNetHostWithRazor.fsproj" />
