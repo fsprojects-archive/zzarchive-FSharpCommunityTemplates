@@ -89,9 +89,6 @@
     <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.2.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.0.0.nupkg">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -121,6 +118,19 @@
     <Content Include="logo-small.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Web\FsMvc5_Empty\AssemblyInfo.fs" />
+    <Content Include="ProjectTemplates\Web\FsMvc5_Empty\Global.asax" />
+    <Content Include="ProjectTemplates\Web\FsMvc5_Empty\Global.asax.fs" />
+    <Content Include="ProjectTemplates\Web\FsMvc5_Empty\MyTemplate.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProjectTemplates\Web\FsMvc5_Empty\__TemplateIcon.ico" />
+    <Content Include="ProjectTemplates\Web\WebApi_Empty\AssemblyInfo.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi_Empty\Global.asax" />
+    <Content Include="ProjectTemplates\Web\WebApi_Empty\Global.asax.fs" />
+    <Content Include="ProjectTemplates\Web\WebApi_Empty\MyTemplate.vstemplate">
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\Web\WebApi\AssemblyInfo.fs" />
     <Content Include="ProjectTemplates\Web\WebApi\Content\Site.css" />
@@ -154,16 +164,25 @@
     <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="ProjectTemplates\Web\FsMvc5_Empty\FSharpWeb.fsproj" />
+    <None Include="ProjectTemplates\Web\FsMvc5_Empty\Web.config" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.eot" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="ProjectTemplates\Web\FsMvc5\FSharpWeb.fsproj" />
+    <None Include="ProjectTemplates\Web\FsMvc5\FSharpWeb.fsproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ProjectTemplates\Web\FsMvc5\Views\Home\Index.cshtml" />
     <None Include="ProjectTemplates\Web\FsMvc5\Views\Shared\Error.cshtml" />
     <None Include="ProjectTemplates\Web\FsMvc5\Views\Shared\_Layout.cshtml" />
     <None Include="ProjectTemplates\Web\FsMvc5\Views\Web.config" />
     <None Include="ProjectTemplates\Web\FsMvc5\Views\_ViewStart.cshtml" />
     <None Include="ProjectTemplates\Web\FsMvc5\Web.config" />
+    <None Include="ProjectTemplates\Web\WebApi_Empty\FSharpWeb.fsproj" />
+    <None Include="ProjectTemplates\Web\WebApi_Empty\Web.config" />
     <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.eot" />
     <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="ProjectTemplates\Web\WebApi\fonts\glyphicons-halflings-regular.woff" />

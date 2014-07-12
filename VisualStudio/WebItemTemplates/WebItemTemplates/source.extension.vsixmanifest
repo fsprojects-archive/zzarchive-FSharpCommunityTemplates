@@ -3,7 +3,7 @@
   <Identifier Id="WebItemTemplates.06fffff9-555b-4041-8b43-1dc8956fffff">
     <Name>F# Web Item Templates</Name>
     <Author>fsharp.org</Author>
-    <Version>0.2.2</Version>
+    <Version>0.3.0</Version>
     <Description xml:space="preserve">Provides item templates for pure F# web projects by Daniel Mohl.</Description>
     <Locale>1033</Locale>
     <License>license.txt</License>
@@ -18,19 +18,19 @@
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VSWinDesktopExpress</Edition>
+        <Edition>VWDExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="13.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VSWinDesktopExpress</Edition>
+        <Edition>VWDExpress</Edition>
       </VisualStudio>
       <VisualStudio Version="14.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
-        <Edition>VSWinDesktopExpress</Edition>
+        <Edition>VWDExpress</Edition>
       </VisualStudio>
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
