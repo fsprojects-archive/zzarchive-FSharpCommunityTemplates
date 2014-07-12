@@ -85,9 +85,6 @@
     <Content Include="ItemTemplates\FSharp\Web\WebTypeScript.zip">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ItemTemplates\FSharp\Web\RazorView.zip">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="ItemTemplates\FSharp\Web\FazorView.zip">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

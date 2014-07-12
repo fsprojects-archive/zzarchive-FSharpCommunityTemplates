@@ -24,8 +24,10 @@
   </WizardExtension>
   <WizardData>
     <Projects>
-      <ProjectInfo folderName="FsMvc5" displayText="MVC 5 and &#x0a;Web API" icon="FSharp"/>
-      <ProjectInfo folderName="WebApi" displayText="Web API" icon="FSharp"/>
+      <ProjectInfo folderName="FsMvc5" displayText="MVC 5 and &#x0a;Web API 2 &#x0a;" icon="FSharp"/>
+      <ProjectInfo folderName="FsMvc5_Empty" displayText="MVC 5 and &#x0a;Web API 2 &#x0a;(Empty)" icon="FSharp"/>
+      <ProjectInfo folderName="WebApi" displayText="Web API 2 &#x0a; &#x0a;" icon="FSharp"/>
+      <ProjectInfo folderName="WebApi_Empty" displayText="Web API 2 &#x0a;(Empty) &#x0a;" icon="FSharp"/>
     </Projects>
   </WizardData>
 </VSTemplate>
