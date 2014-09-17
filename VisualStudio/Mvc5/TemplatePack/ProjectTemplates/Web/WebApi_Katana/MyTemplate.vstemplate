@@ -1,0 +1,60 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>F# ASP.NET Web API 2.2 and Katana 3</Name>
+    <Description>F# Web API 2.2 and Katana 3 Application template.</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FSharpWeb</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>file-icon.png</Icon>    
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="FSharpWeb.fsproj" File="FSharpWeb.fsproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.fs">AssemblyInfo.fs</ProjectItem>
+      <Folder Name="Scripts" TargetFolderName="Scripts" >
+        <ProjectItem ReplaceParameters="true" TargetFileName="main.js">main.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="modernizr-2.6.2.js">modernizr-2.6.2.js</ProjectItem>
+      </Folder>
+      <Folder Name="fonts" TargetFolderName="fonts" >
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.eot">glyphicons-halflings-regular.eot</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.svg">glyphicons-halflings-regular.svg</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.ttf">glyphicons-halflings-regular.ttf</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="glyphicons-halflings-regular.woff">glyphicons-halflings-regular.woff</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Car.fs">Car.fs</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CarsController.fs">CarsController.fs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Index.html">Index.html</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.fs">Startup.fs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages>
+      <package id="bootstrap" version="3.0.2" targetFramework="net45" />
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" targetFramework="net45" />
+      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" targetFramework="net45" />
+      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" targetFramework="net45" />
+      <package id="Microsoft.AspNet.WebApi.Owin" version="5.2.2" targetFramework="net45" />
+      <package id="Microsoft.Owin" version="3.0.0" targetFramework="net45" />
+      <package id="Microsoft.Owin.Host.SystemWeb" version="3.0.0" targetFramework="net45" />
+      <package id="Newtonsoft.Json" version="6.0.4" targetFramework="net45" />
+      <package id="Owin" version="1.0" targetFramework="net45" />
+      <package id="Twitter.Bootstrap" version="3.0.1.1" targetFramework="net45" />
+    </packages>
+  </WizardData>
+</VSTemplate>
