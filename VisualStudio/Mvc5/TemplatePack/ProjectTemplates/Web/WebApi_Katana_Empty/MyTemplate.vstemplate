@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Empty F# ASP.NET Web API 2.2 and Katana 3</Name>
-    <Description>Empty F# Web API 2.2 and Katana 3 Application template.</Description>
+    <Name>Empty F# ASP.NET Web API 2.2 and Katana 3 (Empty)</Name>
+    <Description>Empty F# Web API 2.2 and Katana 3 (Empty) Application template.</Description>
     <ProjectType>FSharp</ProjectType>
     <ProjectSubType>Web</ProjectSubType>
     <SortOrder>1000</SortOrder>
@@ -25,14 +25,15 @@
   </WizardExtension>
   <WizardData>
     <packages>
-      <package id="FsWebAddRegistryEntries" version="0.1.0.0" targetFramework="net45" />
-      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" targetFramework="net45" />
-      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" targetFramework="net45" />
-      <package id="Microsoft.AspNet.WebApi.Owin" version="5.2.2" targetFramework="net45" />
-      <package id="Microsoft.Owin" version="3.0.0" targetFramework="net45" />
+      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
+      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Owin" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.Owin" version="3.0.0" skipAssemblyReferences="true" />
       <package id="Microsoft.Owin.Host.SystemWeb" version="3.0.0" targetFramework="net45" />
-      <package id="Newtonsoft.Json" version="6.0.4" targetFramework="net45" />
-      <package id="Owin" version="1.0" targetFramework="net45" />
+      <package id="Newtonsoft.Json" version="6.0.4" skipAssemblyReferences="true" />
+      <package id="Owin" version="1.0" skipAssemblyReferences="true" />
+      <package id="MSBuild.Extension.Pack" version="1.3.0" />
     </packages>
   </WizardData>
 </VSTemplate>
