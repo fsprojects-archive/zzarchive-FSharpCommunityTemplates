@@ -44,7 +44,7 @@
     <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
   </WizardExtension>
   <WizardData>
-    <packages>
+    <packages repository="extension" repositoryId="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4">
       <package id="bootstrap" version="3.0.2" />
       <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
       <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" skipAssemblyReferences="true" />
