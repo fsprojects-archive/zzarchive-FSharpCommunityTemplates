@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>F# ASP.NET Web API 2.2 (Empty)</Name>
-    <Description>F# Web API 2.2 (Empty) Application template.</Description>
+    <Name>Empty F# ASP.NET Web API 2.2 and Katana 3 (Empty)</Name>
+    <Description>Empty F# Web API 2.2 and Katana 3 (Empty) Application template.</Description>
     <ProjectType>FSharp</ProjectType>
     <ProjectSubType>Web</ProjectSubType>
     <SortOrder>1000</SortOrder>
@@ -16,8 +16,7 @@
     <Project TargetFileName="FSharpWeb.fsproj" File="FSharpWeb.fsproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.fs">AssemblyInfo.fs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.fs">Global.asax.fs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.fs">Startup.fs</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
@@ -27,12 +26,14 @@
   <WizardData>
     <packages repository="extension" repositoryId="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4">
       <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
-      <package id="Microsoft.AspNet.WebApi" version="5.2.2" skipAssemblyReferences="true"/>
-      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" skipAssemblyReferences="true"/>
-      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" skipAssemblyReferences="true"/>
-      <package id="Microsoft.AspNet.WebApi.WebHost" version="5.2.2" skipAssemblyReferences="true"/>
-      <package id="MSBuild.Extension.Pack" version="1.3.0"/>
-      <package id="Newtonsoft.Json" version="6.0.4" skipAssemblyReferences="true"/>
+      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Owin" version="5.2.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.Owin" version="3.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.Owin.Host.SystemWeb" version="3.0.0" targetFramework="net45" />
+      <package id="Newtonsoft.Json" version="6.0.4" skipAssemblyReferences="true" />
+      <package id="Owin" version="1.0" skipAssemblyReferences="true" />
+      <package id="MSBuild.Extension.Pack" version="1.3.0" />
     </packages>
   </WizardData>
 </VSTemplate>
