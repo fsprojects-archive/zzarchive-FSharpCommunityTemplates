@@ -153,7 +153,9 @@
     <Content Include="ProjectTemplates\Web\WebApi_Katana\Scripts\modernizr-2.6.2.js" />
     <Content Include="ProjectTemplates\Web\WebApi_Katana\Startup.fs" />
     <Content Include="ProjectTemplates\Web\WebApi_Katana_Empty\AssemblyInfo.fs" />
-    <Content Include="ProjectTemplates\Web\WebApi_Katana_Empty\MyTemplate.vstemplate" />
+    <Content Include="ProjectTemplates\Web\WebApi_Katana_Empty\MyTemplate.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ProjectTemplates\Web\WebApi_Katana_Empty\Startup.fs" />
     <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
       <SubType>Designer</SubType>
@@ -165,15 +167,42 @@
     <Content Include="packages\MSBuild.Extension.Pack.1.3.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="packages\Microsoft.AspNet.WebApi.5.2.2.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Client.5.2.2.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Core.5.2.2.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Owin.5.2.2.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.2.nupkg" />
-    <None Include="packages\Microsoft.Bcl.1.1.9.nupkg" />
-    <None Include="packages\Microsoft.Bcl.Build.1.0.21.nupkg" />
-    <None Include="packages\Microsoft.Net.Http.2.2.28.nupkg" />
-    <None Include="packages\Newtonsoft.Json.6.0.4.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.5.2.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.AspNet.WebApi.Owin.5.2.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.Bcl.1.1.9.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.Bcl.Build.1.0.21.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.Net.Http.2.2.28.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.Owin.3.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.3.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Newtonsoft.Json.6.0.4.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="packages\Owin.1.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\Web\FsMvc5_Empty\FSharpWeb.fsproj" />
     <None Include="ProjectTemplates\Web\FsMvc5_Empty\Web.config" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.eot" />
@@ -200,7 +229,9 @@
     <None Include="ProjectTemplates\Web\WebApi_Katana\fonts\glyphicons-halflings-regular.woff" />
     <None Include="ProjectTemplates\Web\WebApi_Katana\FSharpWeb.fsproj" />
     <None Include="ProjectTemplates\Web\WebApi_Katana\Web.config" />
-    <None Include="ProjectTemplates\Web\WebApi_Katana_Empty\FSharpWeb.fsproj" />
+    <None Include="ProjectTemplates\Web\WebApi_Katana_Empty\FSharpWeb.fsproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ProjectTemplates\Web\WebApi_Katana_Empty\Web.config" />
     <None Include="Properties\template-builder.props">
       <SubType>Designer</SubType>
