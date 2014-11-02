@@ -160,7 +160,6 @@
     <Content Include="ProjectTemplates\Web\_definitions\fsharp.vstemplate">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="packages.config" />
     <Content Include="packages\FsWebAddRegistryEntries.0.1.0.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -203,6 +202,7 @@
     <Content Include="packages\Owin.1.0.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="packages.config" />
     <None Include="ProjectTemplates\Web\FsMvc5_Empty\FSharpWeb.fsproj" />
     <None Include="ProjectTemplates\Web\FsMvc5_Empty\Web.config" />
     <None Include="ProjectTemplates\Web\FsMvc5\fonts\glyphicons-halflings-regular.eot" />
@@ -256,26 +256,28 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>True</Private>
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\EnvDTE.dll</HintPath>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\EnvDTE.dll</HintPath>
     </Reference>
     <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <Private>True</Private>
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\EnvDTE80.dll</HintPath>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\EnvDTE80.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\FSharp.Core.dll</HintPath>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\FSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
-    <Reference Include="MultiProjectDialog, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\MultiProjectDialog.dll</HintPath>
+    <Reference Include="MultiProjectDialog, Version=1.3.2.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\MultiProjectDialog.dll</HintPath>
     </Reference>
-    <Reference Include="MultiProjectTemplateWizard, Version=1.3.1.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
-      <HintPath>..\packages\MultiProjectWizard.1.3.1.0\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
+    <Reference Include="MultiProjectTemplateWizard, Version=1.3.2.0, Culture=neutral, PublicKeyToken=3b261ddc29be1166, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MultiProjectWizard.1.3.2.3\lib\Net40\MultiProjectTemplateWizard.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net.Http" />

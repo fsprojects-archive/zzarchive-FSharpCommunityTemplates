@@ -25,7 +25,7 @@ namespace MultiProjectDialog
             {
                 // Get the project related info
                 var displayText = project.Item2;
-                var iconFileName = project.Item3.ToLower() == "fsharp" ? "MultiProjectDialog.images.file-icon.png" : "MultiProjectDialog.images.generic-file-icon.png";
+                var iconFileName = project.Item3.ToLower() == "fsharp" ? "MultiProjectDialog.images.fsharp-icon.png" : "MultiProjectDialog.images.generic-file-icon.png";
 
                 // Build the image
                 var iconImage = new Image();

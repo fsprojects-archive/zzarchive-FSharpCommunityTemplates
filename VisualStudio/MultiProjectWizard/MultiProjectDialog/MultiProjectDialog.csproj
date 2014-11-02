@@ -92,10 +92,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="images\file-icon.png" />
+    <EmbeddedResource Include="images\generic-file-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="images\generic-file-icon.png" />
+    <EmbeddedResource Include="images\fsharp-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -27,7 +27,7 @@
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Image Source="/MultiProjectDialog;component/images/file-icon.png" Grid.Row="0"></Image>
+                        <Image Source="/MultiProjectDialog;component/images/fsharp-icon.png" Grid.Row="0"></Image>
                         <Label Content="MVC &amp; Web API" Grid.Row="1" HorizontalAlignment="Center"/>
                     </Grid>
                 </ContentControl>
@@ -39,7 +39,7 @@
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Image Source="/MultiProjectDialog;component/images/file-icon.png" Grid.Row="0"></Image>
+                        <Image Source="/MultiProjectDialog;component/images/fsharp-icon.png" Grid.Row="0"></Image>
                         <Label Content="Web API" Grid.Row="1" HorizontalAlignment="Center"/>
                     </Grid>
                 </ContentControl>
