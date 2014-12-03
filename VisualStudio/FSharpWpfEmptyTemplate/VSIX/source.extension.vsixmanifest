@@ -3,7 +3,7 @@
   <Identifier Id="VSIX.Microsoft.aabb5115-15d2-4c39-ab63-98bd00bfa3ac">
     <Name>F# Empty Windows App (WPF)</Name>
     <Author>fsharp.org</Author>
-    <Version>1.12</Version>
+    <Version>2.0</Version>
     <Description xml:space="preserve">F# Empty Windows Application (WPF)</Description>
     <Locale>1033</Locale>
     <License>MicrosoftPublicLicense.txt</License>
@@ -31,12 +31,6 @@
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
         <Edition>VWDExpress</Edition>
-      </VisualStudio>
-      <VisualStudio Version="10.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-        <Edition>IntegratedShell</Edition>
       </VisualStudio>
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />

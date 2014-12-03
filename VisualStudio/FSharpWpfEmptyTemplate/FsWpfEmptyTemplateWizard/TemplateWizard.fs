@@ -48,22 +48,16 @@ type TemplateWizard() =
                         this.solution.AddFromTemplate(path, Path.Combine(this.destinationPath, projectName), 
                             projectName, false) |> ignore
                 
-                    match (this.targetFramework > 4.), templatePath.ToLower().Contains(@"\visualstudio\11") with
-                    | true, _ | _, true -> 
-                        AddProject "Adding the F# project..." 
-                            (Path.Combine("App", "App.vstemplate")) this.safeProjectName
-                        let projects = BuildProjectMap (this.dte.Solution.Projects)
-                        try
-                            this.dte2.StatusBar.Text <- "Adding NuGet packages..."
-                            (projects.TryFind this.safeProjectName).Value |> InstallPackages this.serviceProvider (templatePath.Replace(templateName + ".vstemplate", ""))
-                            <| [("FSharpx.TypeProviders.Xaml", "1.8.41")]
-                        with
-                        | ex -> let msg = ex
-                                ()// do nothing...
-                    | _ -> 
-                        AddProject "Adding the F# project..." 
-                            (Path.Combine("App2", "App.vstemplate")) this.safeProjectName
-                        
+                    AddProject "Adding the F# project..." 
+                        (Path.Combine("App", "App.vstemplate")) this.safeProjectName
+                    let projects = BuildProjectMap (this.dte.Solution.Projects)
+                    try
+                        this.dte2.StatusBar.Text <- "Adding NuGet packages..."
+                        (projects.TryFind this.safeProjectName).Value |> InstallPackages this.serviceProvider (templatePath.Replace(templateName + ".vstemplate", ""))
+                        <| [("FsXaml.Wpf", "0.9.9"); ("FSharp.ViewModule.Core", "0.9.9.1"); ("Expression.Blend.Sdk", "1.0.2")]
+                    with
+                    | ex -> let msg = ex
+                            ()// do nothing...                        
                 with
                 | ex -> failwith (sprintf "%s\n\r%s\n\r%s" 
                             "The project creation has failed."
