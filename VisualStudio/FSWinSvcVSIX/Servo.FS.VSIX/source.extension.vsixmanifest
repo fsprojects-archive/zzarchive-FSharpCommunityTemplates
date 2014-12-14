@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Servo.FS.VSIX..d79697f8-aef6-42dc-8975-2e086b4dc101" Version="0.6" Language="en-US" Publisher="dc0d@outlook.com" />
+    <DisplayName>Servo.FS.VSIX</DisplayName>
+    <Description xml:space="preserve">A Project Template for developing Windows Service easily;</Description>
+    <MoreInfo>https://github.com/dc0d/Servo</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>servo.ico</Icon>
+    <PreviewImage>servo.png</PreviewImage>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Servo.FS.zip" />
+  </Assets>
+</PackageManifest>
