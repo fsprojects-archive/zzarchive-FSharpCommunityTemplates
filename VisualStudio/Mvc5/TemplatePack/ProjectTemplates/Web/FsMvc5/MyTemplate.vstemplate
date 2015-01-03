@@ -54,11 +54,10 @@
   <WizardData>
     <packages repository="extension" repositoryId="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4">
       <package id="Antlr" version="3.4.1.9004"/>
-      <package id="bootstrap" version="3.0.2"/>
+      <package id="bootstrap" version="3.3.1"/>
       <package id="jQuery" version="2.0.3"/>
       <package id="Modernizr" version="2.6.2" />
       <package id="Respond" version="1.3.0" />
-      <package id="Twitter.Bootstrap" version="3.0.1.1" />
       <package id="WebGrease" version="1.5.2" />
       <package id="Microsoft.AspNet.Mvc" version="5.0.0" skipAssemblyReferences="true"/>
       <package id="Microsoft.AspNet.Razor" version="3.0.0" skipAssemblyReferences="true"/>
