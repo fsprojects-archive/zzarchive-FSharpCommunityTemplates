@@ -26,7 +26,7 @@
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="FSharpMvc5e6e2a48e-387d-4af2-9072-86a5276da6d4">
-      <package id="FsWebAddRegistryEntries" version="0.1.0.0" />
+      <package id="FsWebAddRegistryEntries" version="0.1.1.0" />
       <package id="Microsoft.AspNet.WebApi" version="5.2.2" skipAssemblyReferences="true"/>
       <package id="Microsoft.AspNet.WebApi.Client" version="5.2.2" skipAssemblyReferences="true"/>
       <package id="Microsoft.AspNet.WebApi.Core" version="5.2.2" skipAssemblyReferences="true"/>

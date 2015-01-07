@@ -8,8 +8,10 @@ Add-Registry-Keys 'HKCU:\Software\Microsoft\VWDExpress\11.0_Config\Projects\{349
 Add-Registry-Keys 'HKCU:\Software\Microsoft\VisualStudio\11.0_Config\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 Add-Registry-Keys 'HKCU:\Software\Microsoft\VSWinDesktopExpress\12.0_Config\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 Add-Registry-Keys 'HKCU:\Software\Microsoft\VisualStudio\12.0_Config\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
+Add-Registry-Keys 'HKCU:\Software\Microsoft\VisualStudio\14.0_Config\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 
 Add-Registry-Keys 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\VWDExpress\11.0\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 Add-Registry-Keys 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 Add-Registry-Keys 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\VSWinDesktopExpress\12.0\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
 Add-Registry-Keys 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\12.0\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
+Add-Registry-Keys 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Projects\{349C5851-65DF-11DA-9384-00065B846F21}\LanguageTemplates'
