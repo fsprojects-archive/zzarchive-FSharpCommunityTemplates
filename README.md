@@ -1,3 +1,6 @@
+[![Issue Stats](http://issuestats.com/github/fsprojects/FSharpCommunityTemplates/badge/issue)](http://issuestats.com/github/fsprojects/FSharpCommunityTemplates)
+[![Issue Stats](http://issuestats.com/github/fsprojects/FSharpCommunityTemplates/badge/pr)](http://issuestats.com/github/fsprojects/FSharpCommunityTemplates)
+
 community-templates
 ===================
 
