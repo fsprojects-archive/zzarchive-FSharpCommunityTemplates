@@ -22,6 +22,7 @@
     <DebugType>full</DebugType>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
     <ErrorReport>prompt</ErrorReport>
     <PlatformTarget>
     </PlatformTarget>
