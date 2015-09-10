@@ -27,7 +27,7 @@ type ExpenseItHomeViewModel(expenseReportRepository : ExpenseReportRepository) =
         | ApprovalStatus.Rejected ->
             this.LastApprovalDisplayMessage <- sprintf "Expense report rejected for %s" name
     new () = ExpenseItHomeViewModel(ExpenseReportRepository())
-    member x.ExpenseReports = 
+    member val ExpenseReports = 
         new ObservableCollection<ExpenseReport>(
             expenseReportRepository.GetAll())
     member x.SelectedExpenseReport 
